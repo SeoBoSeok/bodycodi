@@ -224,7 +224,7 @@ const lockerController = {
 	list : function(seqPartnerLocker) {
 		return new Promise(function(resolve, reject) {
 			$.ajax({
-				url			: "/myset/lockerList",
+				url			: "/myset/lockerList.php",
 				type		: "post",
 				contentType : "application/x-www-form-urlencoded",
 				dataType	: "json",

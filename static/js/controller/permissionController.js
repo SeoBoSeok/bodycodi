@@ -2,7 +2,7 @@ const permissionController = {
 	getList : function() {
 		return new Promise(function(resolve, reject) {
 			$.ajax({
-				url			: "/permission/ajax/get",
+				url			: "/permission/ajax/get.php",
 				type		: "post",
 				contentType : "application/json;charset=utf-8",
 				dataType	: "json",

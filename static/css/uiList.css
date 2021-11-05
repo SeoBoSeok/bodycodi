@@ -1,0 +1,120 @@
+main											{padding:20px 40px; height:100%}
+main .hidden									{display:none}
+
+main > .top										{position:relative; margin:15px 0; height:35px; font-size:0}
+main > .top .left								{}
+main > .top .left a button,
+main > .top .left button:first-child			{margin-left:0}
+main > .top .right								{position:absolute; top:0; right:0}
+main > .top div *								{vertical-align:top; font-size:13.5px}
+main > .top input								{margin-right:10px; width:225px; max-width:225px; text-align:center}
+main > .top select								{margin-right:10px; width:150px; text-align-last:center}
+main > .top button								{margin-left:10px; width:135px}
+main > .top .keyword							{position:relative; display:inline-block}
+main > .top .keyword a							{display:none; position:absolute; right:0; top:0; width:30px; height:35px; background:url(/static/img/icon/icon_close_black.png) no-repeat center center / 10px; opacity:0.33;}
+main > .top .keyword input						{margin:0}
+main > .top .keyword.focus a					{display:block}
+main > .top .keyword.focus input				{padding-right:35px}
+
+main > .middle									{position:relative; height:calc(100% - 80px)}
+main > .middle i								{font-style:normal}
+main > .middle > div							{position:absolute; height:100%; background-color:#ccc; /*border:1px solid #ccc;*/ box-sizing:border-box}
+main > .middle .left							{left:0; width:350px}
+main > .middle .right							{right:0; left:375px; border:1px solid #ccc; overflow-y:auto}
+
+main > .middle .left							{padding:35px 0; line-height:36px}
+main > .middle .left li							{position:relative; background-color:white; border:1px solid #ccc}
+main > .middle .left li.empty					{line-height:35px; text-align:center}
+main > .middle .left li:first-child				{border-top-color:transparent}
+main > .middle .left li:last-child				{border-bottom-color:transparent}
+main > .middle .left li + li					{border-top:none}
+main > .middle .left li a						{display:block; padding:0 75px 0 10px}
+main > .middle .left li a:hover					{background-color:rgba(33,150,243,0.15); cursor:pointer}
+main > .middle .left li a.focus					{background-color:rgba(33,150,243,0.15); outline:1px solid #004fec}
+main > .middle .left li button					{position:absolute; right:10px; top:50%; margin-top:-11px}
+
+main > .middle .left .top						{position:absolute; left:0; top:0; width:100%; height:38px; background-color:#686d7b; line-height:38px; text-align:center; color:white; z-index:2}
+main > .middle .left .middle					{position:absolute; left:0; top:38px; right:0; bottom:38px; overflow-y:auto}
+main > .middle .left .bottom					{position:absolute; left:0; bottom:0; width:100%; height:38px; background-color:white; z-index:2}
+main > .middle .left .bottom span				{display:inline-block; vertical-align:middle; margin-top:-2px; margin-right:4px; width:16px; height:16px; background:url(/static/img/icon/icon_plus_white.png) no-repeat center center / 16px; border-radius:100%; overflow:hidden}
+main > .middle .left .bottom button				{width:100%; height:38px; background-color:#004fec; border:1px solid #004fec; /*border-top-color:#c0c0c0;*/ line-height:36px; text-align:center; color:white}
+/*
+main > .middle .left .bottom button:hover		{background-color:rgba(33,150,243,0.15)}
+*/
+main > .middle .right .ui-table					{background-color:white; border:none}
+main > .middle .right .ui-table tr > *			{border:none}
+main > .middle .right .ui-table thead tr > *	{position:sticky; position:-webkit-sticky; top:0px; padding:10px; background-color:#686d7b; border:none; z-index:2}
+main > .middle .right .ui-table tbody tr > *	{padding:8px}
+main > .middle .right .ui-table tbody tr + tr	{border-top:1px solid #ccc}
+main > .middle .right .ui-table tr > * + *		{border-left:1px solid #ccc !important}
+main > .middle .right .ui-table a + button		{margin-left:4px}
+main > .middle .right.empty:after				{content:"ì„ íƒëœ ë‚´ìš©ì´ ì—†ìŠµë‹ˆë‹¤."; position:absolute; left:50%; top:50%; margin-top:-5px; font-size:21px; font-weight:500; color:rgba(0,0,0,0.25); transform:translate(-50%,-50%);}
+
+main .dataTables_wrapper						{margin:0}
+
+
+
+.ui-public-payment								{padding:30px; max-width:1024px; min-height:100%; background-color:white; line-height:1.3; box-sizing:border-box}
+.ui-public-payment dd							{vertical-align:top}
+.ui-public-payment dd > div + div				{margin-top:30px}
+.ui-public-payment > dl > dd:first-child		{padding-right:20px}
+.ui-public-payment > dl > dd:first-child + dd	{padding-left:20px}
+
+.ui-public-payment .top > dl					{table-layout:auto}
+.ui-public-payment .top > dl > dd				{width:50%}
+.ui-public-payment .top > dl > dd:first-child	{padding-right:40px}
+.ui-public-payment .bottom						{margin-top:20px; text-align:center}
+.ui-public-payment .bottom button				{width:135px}
+
+
+.ui-public-payment hr							{margin:15px 0; border:1px dashed #ccc}
+.ui-public-payment input						{max-width:200px !important; text-align:center}
+.ui-public-payment textarea						{max-width:375px; height:88px; min-height:auto}
+
+.ui-public-payment .ui-form th					{width:30%; max-width:200px}
+.ui-public-payment .ui-form tr > *				{padding:5px 0 !important}
+
+.ui-public-payment .ui-select					{width:100%; text-align-last:center}
+.ui-public-payment .ui-table					{max-width:420px; text-align:center !important}
+.ui-public-payment .ui-table button				{width:auto}
+.ui-public-payment .ui-table th					{vertical-align:middle !important; background-color:#f0f0f0}
+.ui-public-payment .ui-table th + td			{text-align:right !important}
+.ui-public-payment .ui-table tr > *				{border:1px solid #ccc !important}
+
+.ui-public-payment .productInfo .ui-table						{margin-top:5px; max-width:295px; line-height:33px !important}
+.ui-public-payment .productInfo .ui-table tr > *				{padding:0 7px !important}
+.ui-public-payment .productInfo .ui-table tr th					{width:118px}
+
+.ui-public-payment .paymentInfo .ui-table						{line-height:33px !important}
+.ui-public-payment .paymentInfo .ui-table tr > *				{padding:0 7px !important}
+.ui-public-payment .paymentInfo .ui-table td:last-child button	{vertical-align:initial}
+
+
+
+.ui-public-payment .keypad						{max-width:375px; padding:10px; border:1px solid #ccc; box-sizing:border-box}
+.ui-public-payment .keypad input				{max-width:200px}
+.ui-public-payment .keypad button				{font-size:12.5px}
+
+.ui-public-payment .keypad table				{margin:10px 0; font-size:13px}
+.ui-public-payment .keypad table td				{padding:0 !important; border:1px solid #ccc; font-size:0}
+.ui-public-payment .keypad td button			{vertical-align:top; width:100% !important; border:none !important}
+.ui-public-payment .keypad td button:focus		{background-color:#f0f0f0 !important; box-shadow:none}
+.ui-public-payment .keypad dl + dl				{margin-top:8px}
+
+.ui-public-payment .keypad dd					{padding:0 5px}
+.ui-public-payment .keypad dd button			{width:100%; background-color:white; border:1px solid #ccc}
+.ui-public-payment .keypad div					{margin-left:-5px; margin-right:-5px}
+
+.ui-public-payment .keypad .input				{position:relative; margin:0}
+/*
+.ui-public-payment .keypad .input input			{margin:0; padding-left:100px; padding-right:35px; width:100%; max-width:100% !important}
+.ui-public-payment .keypad .input:before		{content:"ì›"; position:absolute; right:10px; color:#999}
+.ui-public-payment .keypad .input button		{position:absolute; left:10px; top:50%; margin-top:-12px; width:auto; font-size:12px}
+.ui-public-payment .keypad .input button		{margin-left:12px; width:auto; font-size:12px}
+ */
+.ui-public-payment .keypad .input input			{margin:0; padding-right:87px; width:100%; max-width:100% !important}
+.ui-public-payment .keypad .input button		{position:absolute; right:8px; top:50%; margin-top:-11.5px; width:72px; font-size:12px}
+.ui-public-payment .keypad .input.create input	{padding-right:10px}
+.ui-public-payment .keypad .input.create button	{display:none}
+
+.ui-public-payment tr:last-child td				{padding-bottom:0 !important}
