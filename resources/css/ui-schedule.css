@@ -1,0 +1,187 @@
+.ui-popup.ui-schedule > div > div > div					{min-width:1024px; max-width:1280px}
+.ui-popup.ui-schedule .middle							{font-size:13px !important}
+.ui-popup.ui-schedule .middle							{display:table; margin:0 !important; padding:0; width:100%; font-size:14px; color:#646464; table-layout:fixed}
+.ui-popup.ui-schedule .middle > .left					{border-right:1px solid #ccc}
+.ui-popup.ui-schedule .middle > .left,
+.ui-popup.ui-schedule .middle > .right					{position:relative; display:table-cell; padding:20px 25px; width:50%}
+
+.ui-schedule .middle									{font-size:13px !important}
+.ui-schedule .middle .right > div > div					{position:absolute; padding:25px; right:-100%; top:0; width:100%; height:100%; background-color:white; box-sizing:border-box; visibility:hidden; opacity:0; overflow-y:auto; transition:right 0.4s, visibility 0.4s, opacity 0.4s; z-index:2}
+.ui-schedule .middle .right > div > div.focus			{right:0; visibility:visible; opacity:1}
+
+main.ui-schedule										{padding:0}
+.ui-schedule hr											{margin:0; border-top:1px dashed #999}
+.ui-schedule button										{width:100%; transition:background-color 0.2s}
+.ui-schedule select										{min-width:100%}
+
+.ui-schedule input										{font-size:inherit !important}
+.ui-schedule input[type=text]							{width:100% !important; text-align:left}
+.ui-schedule input[type=number]							{width:100%; text-align:center}
+.ui-schedule input:disabled								{background-color:#ebebe4}
+
+
+.ui-schedule table										{text-align:left}
+.ui-schedule table h5									{position:relative; height:20px; line-height:20px; font-size:16px; color:#646464}
+.ui-schedule table h5 a									{position:absolute; right:0; top:0; width:20px; height:20px; background:url(/resources/img/icon/icon_close_red.png) no-repeat center center / 75%; overflow:hidden}
+.ui-schedule.ui-popup table h5							{font-size:14px}
+
+
+.ui-schedule table th,
+.ui-schedule table td									{padding:6px 0; height:35px; background-color:white; border:none !important; line-height:35px; text-align:left}
+.ui-schedule table th									{width:140px; vertical-align:top; font-size:14px}
+
+.ui-schedule table th.two								{padding-top:18px !important; line-height:1.4}
+.ui-schedule table td.unit								{position:relative; padding-right:135px !important; white-space:nowrap}
+.ui-schedule table td.unit > input + span				{position:absolute; right:0; width:130px; line-height:35px}
+.ui-schedule table td.unit > input + span > span		{display:inline-block; vertical-align:baseline; margin-left:5px; font-size:12px; color:black}
+.ui-schedule table td.button							{position:relative; padding-right:135px !important}
+.ui-schedule table td.button button						{position:absolute; right:0; top:11px; width:125px; height:35px}
+
+
+.ui-schedule thead th,
+.ui-schedule thead td									{padding-top:0 /* !important*/}
+.ui-schedule tfoot										{padding:25px 0}
+.ui-schedule tfoot td									{text-align:center !important}
+.ui-schedule tfoot button								{display:inline-block; width:125px}
+.ui-schedule tfoot button + button						{margin-left:15px}
+
+.ui-schedule colgroup col:first-child					{width:140px}
+.ui-schedule.ui-pop table + div							{padding:15px 0}
+
+
+
+.ui-schedule .SumoSelect								{width:100%}
+/*
+.ui-schedule .SumoSelect i								{border-radius:3px !important; border-color:#ccc !important; box-shadow:none !important}
+.ui-schedule .SumoSelect li.selected i					{border-color:rgb(17,169,17) !important}
+.ui-schedule .SumoSelect label,
+.ui-schedule .SumoSelect select 						{height:35px !important; line-height: 35px  !important}
+.ui-schedule .SumoSelect li:first-child					{display:none}
+.ui-schedule .SumoSelect li								{padding:0px 35px !important}
+*/
+.ui-schedule .period select								{min-width:75px; text-align-last:center}
+.ui-schedule .period input								{padding-right:35px; width:125px !important; text-align:center; font-size:13px}
+.ui-schedule .period select + span,
+.ui-schedule .period input + span						{padding:0 5px}
+
+.ui-schedule .autoOpen 									{}
+.ui-schedule .autoOpen label							{display:inline-block; margin-right:15px; font-size:14px}
+.ui-schedule .autoOpen input[type=text]					{padding-right:35px; width:125px !important; text-align:center}
+.ui-schedule .autoOpen select							{margin-left:15px; min-width:75px; text-align-last:center}
+.ui-schedule .autoOpen input:disabled					{background-color:#ebebe4 !important}
+
+.ui-schedule .schedule_set								{overflow:hidden}
+.ui-schedule .schedule_set label	 					{line-height:35px !important}
+.ui-schedule .schedule_set input:checked + label		{background-color:#004fec !important; border-left:1px solid #f0f0f2}
+.ui-schedule .schedule_set .week > *					{flex:1; width:auto}
+
+.ui-schedule .naver a									{float:right; margin-top:2px; font-size:12px; text-decoration:underline; color:black}
+.ui-schedule .naver p									{line-height:1.3}
+.ui-schedule .naver p b									{color:#22b2fb}
+.ui-schedule .naver	img									{margin-top:-4px; height:15px}
+
+
+
+
+
+
+
+
+.ui-schedule .ellipsis									{text-overflow:ellipsis; white-space:nowrap; overflow:hidden}
+.ui-schedule .note										{position:relative; margin-bottom:12px; padding-left:22px; line-height:1.45; text-align:justify; font-size:13.5px; color:#646464}
+.ui-schedule .note:before								{content:"ⓘ"; position:absolute; left:0}
+
+main.ui-schedule .note									{margin-bottom:5px; padding:10px 12px; background-color:#f2f2f2}
+main.ui-schedule .note:before							{display:none}
+
+.ui-schedule .block										{display:block; padding:0 10px; height:35px; background-color:#ebebe4; border:1px solid #ccc; line-height:33px}
+.ui-schedule .block > span								{display:block}
+
+.ui-schedule .middle									{margin-top:15px}
+
+
+
+
+.ui-list ul												{border:1px solid #ccc; font-size:14px; color:#666; overflow:hidden; overflow-y:auto}
+.ui-list ul li											{position:relative; padding:5px 10px; padding-right:140px; line-height:35px; border-bottom:1px solid #ccc}
+.ui-list ul li:last-child								{border-bottom:none !important}
+.ui-list ul li time										{height:35px; white-space:nowrap; text-align:right; font-size:12px}
+.ui-list ul li time,
+.ui-list ul li button									{position:absolute; margin:auto 0; right:10px; top:0; bottom:0; width:125px}
+.ui-list ul li + li										{margin:0}
+.ui-list ul li.focus									{background-color:#e9f5fe; border-bottom:1px solid #ccc}
+.ui-list ul li.disabled									{background-color:#f0f0f0}
+.ui-list ul li span.sequence							{position:absolute; right:15px; top:50%; margin-top:-17.5px; text-align:right; font-size:12.5px; color:#bbb}
+.ui-list ul li span.state								{position:absolute; right:85px; top:50%; margin-top:-17.5px; width:50px; text-align:center; font-size:12.5px}
+.ui-list ul li span.state.orange						{color:#f39800}
+.ui-list ul li.group									{background-color:#f0f0f0; line-height:20px; font-size:13.5px; font-weight:500}
+
+
+.ui-list td												{width:100%}
+.ui-list thead td										{padding-left:11px}
+.ui-list thead label									{display:inline-block; margin-top:15px; line-height:20px}
+.ui-list thead label div span							{margin-left:0.5em; font-size:12px}
+
+.ui-list thead .state									{float:right; margin-top:18px; line-height:1; font-size:12px; font-weight:500}
+.ui-list thead .state var								{text-decoration:underline}
+
+
+
+.ui-payment												{}
+.ui-payment ul											{line-height:35px}
+.ui-payment li + li										{margin-top:15px; padding:0}
+
+.ui-payment dt											{vertical-align:top; padding-top:7.5px}
+.ui-payment dl											{table-layout:auto}
+.ui-payment dl dd:nth-child(even)						{padding:0 5px}
+.ui-payment dd:last-child								{width:3em; text-align:right}
+.ui-payment dd:last-child a								{padding:2px 5px; ; background-color:#f0f0f2; text-decoration:none; font-size:12px}
+.ui-payment dd:last-child a:hover						{background-color:#ff5722; color:white}
+.ui-payment li:first-child dd:last-child a				{display:none}
+
+/*
+.ui-payment dl:after									{content:""; display:table-cell; width:25px}
+*/
+.ui-payment dl dd:first-child + dd						{width:4em}
+.ui-payment dl dd:first-child + dd + dd + dd			{width:4em}
+.ui-payment dl dd:first-child + dd + dd + dd + dd + dd	{width:1.5em}
+.ui-payment dd.person									{max-width:70px}
+.ui-payment dd.currency									{max-width:100px}
+
+
+
+.ui-attachment											{margin-left:-4px; margin-right:-4px; font-size:0}
+.ui-attachment dd										{position:relative; padding:0 4px; padding-bottom:25%}
+.ui-attachment dd div									{position:absolute; left:4px; right:4px; top:10px; bottom:0; border:1px solid #ccc; overflow:hidden}
+.ui-attachment dd a										{position:absolute; right:2px; top:2px; width:20px; height:20px; background:url(/resources/img/btn/remove.png) no-repeat center center / 90%}
+.ui-attachment dd img									{position:absolute; left:0; top:0; width:100%; height:100%; object-fit:cover}
+
+.ui-popup .ui-attachment dd div							{top:0}
+.ui-popup table th a									{font-weight:normal; color:inherit}
+
+
+
+.ui-image-list											{}
+.ui-image-list dd										{padding:0 6px; width:25%}
+.ui-image-list dd label									{position:relative; width:100%; overflow:hidden}
+.ui-image-list dd label div								{position:relative; padding-bottom:100%; border:1px solid #bbb; overflow:hidden}
+.ui-image-list dd label div img							{position:absolute; left:0; top:0; width:100%; height:100%; border:none; object-fit:cover}
+.ui-image-list dd label input							{position:absolute; left:-9999px; top:0}
+.ui-image-list dd label input:checked + div:after		{content:""; position:absolute; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.5) url(/resources/img/icon/icon_check_white.png) no-repeat center center / 40px}
+
+
+.naverButton button + a									{display:none; color:inherit; cursor:default}
+.naverButton button + a u								{cursor:pointer}
+.naverButton button + a:hover							{text-decoration:none}
+.naverButton button.disabled + a						{display:block}
+
+
+.ui-schedule table td.freeYn label						{display:inline-block; margin-left:15px}
+.ui-schedule table td.freeYn div.ratio					{line-height:25px; font-size:13.5px}
+
+
+.ui-schedule .tip-naver									{position:relative}
+.ui-schedule .tip-naver h5								{margin-bottom:0.5em; font-size:13px !important; font-weight:bold; color:#333 !important}
+.ui-schedule .tip-naver div								{position:absolute; left:0; top:50px; width:540px; padding:15px; background-color:white; box-shadow:2px 2px 8px rgba(0,0,0,0.15); box-sizing:border-box; border:1px solid #ccc; line-height:1.5; text-align:justify; font-size:13px; z-index:4; visibility:hidden; opacity:0; transition:visibility 0.4s, opacity 0.4s}
+.ui-schedule .tip-naver div:before						{content:""; position:absolute; left:45px; top:-8px; width:15px; height:15px; background-color:white; border-top-right-radius:4px; border-top:1px solid #ccc; border-right:1px solid #ccc; transform:rotate(-45deg)}
+.ui-schedule .tip-naver .focus div						{visibility:visible; opacity:1}

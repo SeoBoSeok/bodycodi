@@ -1,0 +1,126 @@
+::-webkit-input-placeholder								{font-weight:300; color:#bbb}
+::-moz-placeholder 										{font-weight:300; color:#bbb; opacity:1}
+:-moz-placeholder 										{font-weight:300; color:#bbb; opacity:1}
+:-ms-input-placeholder									{font-weight:300; color:#bbb}
+
+
+/* ******** UI-STYLE ******** */
+
+.ui-checkbox													{}
+.ui-checkbox label												{position:relative; display:block; padding-left:28px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; cursor:pointer}
+.ui-checkbox label input										{position:absolute; left:-9999px; top:0}
+.ui-checkbox label input[type=checkbox] + span					{position:absolute; left:0; top:0; bottom:0; margin:auto 0; width:20px; height:20px; border:1px solid #ccc}
+.ui-checkbox label input[type=checkbox]:checked + span			{background:#37b772 url("/resources/img/form/list_check.png") no-repeat center center / 60%; border:1px solid #37b772}
+.ui-checkbox label input[type=checkbox]:disabled + span			{background-color:#ebebe4; border-color:#ccc}
+.ui-checkbox label input[type=checkbox]:checked:disabled + span	{background-color:#ccc; border-color:#ccc}
+
+
+
+.ui-radio														{}
+.ui-radio label													{position:relative; display:inline-block; padding-left:26px}
+.ui-radio label input											{position:absolute; left:-9999px; top:0}
+.ui-radio label input[type=radio] + span						{position:absolute; left:0; top:0; bottom:0; margin:auto 0; width:18px; height:18px; border-radius:100%; border:1px solid #ccc /* background-image:url("/resources/img/form/radio.png"); background-position:0 0 */}
+.ui-radio label input[type=radio]:checked + span:after			{content:""; position:absolute; left:2px; top:2px; width:12px; height:12px; background-color:#37b772; border-radius:100%; /* background-position:0 -20px */}
+.ui-radio label input[type=radio]:disabled + span				{background-color:#ebebe4; border-color:#ccc}
+.ui-radio label input[type=radio]:disabled + span:after			{background-color:#ebebe4}
+.ui-radio label input[type=radio]:checked:disabled + span		{border-color:#ccc}
+.ui-radio label input[type=radio]:checked:disabled + span:after	{background-color:#ccc}
+.ui-radio label + label											{margin-left:22px}
+
+
+
+.ui-switch												{}
+.ui-switch label										{position:relative; display:inline-block; padding-left:48px}
+.ui-switch label input									{position:absolute; left:-9999px; top:0}
+.ui-switch label input + span							{position:absolute; left:0; top:0; bottom:0; margin:auto 0; width:40px; height:22px; border-radius:20px; border:1px solid #ccc; display:block}
+.ui-switch label input + span:after						{content:""; position:absolute; left:2px; top:2px; width:16px; height:16px; background-color:#bababa; border-radius:100%; transition:left 0.4s}
+.ui-switch label input:checked + span:after				{left:20px; background-color:#37b772}
+.ui-switch label input + span + span + span,
+.ui-switch label input:checked + span + span			{display:none}
+.ui-switch label input:checked + span + span + span		{display:inline-block}
+
+
+.ui-upload												{}
+.ui-upload label										{position:relative; padding-right:135px; width:100%; height:35px; line-height:33px}
+.ui-upload label span									{display:block; padding:0 10px; width:100%; height:100%; border:1px solid #ccc; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; box-sizing:border-box}
+.ui-upload label form,
+.ui-upload label button									{position:absolute; right:0; top:0; width:125px; height:100%}
+.ui-upload label input:disabled + span					{background-color:#ebebe4}
+
+
+
+
+/* ******** UI-STYLE ******** */
+body													{/*min-width:1333px*/}
+
+.ui-style												{}
+.ui-style ul											{list-style:none}
+.ui-style var											{font-style:normal}
+.ui-style label											{cursor:pointer}
+.ui-style table											{width:100%; vertical-align:middle; text-align:center; border-collapse:collapse; border-spacing:0; table-layout:fixed}
+.ui-style table th,
+.ui-style table td										{margin:0; padding:0; height:auto; background-color:transparent; border:none}
+
+.ui-stlye input											{width:100%; height:35px}
+.ui-style input[type=file],
+.ui-style input[type=file]::-webkit-file-upload-button	{position:absolute; left:0; top:0; width:100%; height:100%; opacity:0; cursor:pointer; z-index:2}
+/*
+.ui-style input:focus									{background-color:#e9f5fe}
+*/
+.ui-style input											{padding:0 10px; height:35px; /*font-size:14px*/}
+.ui-style input.error									{background-color:rgba(255,87,34,0.1); border-color:#ff5722 !important}
+
+
+.ui-style dl											{display:table; margin:0; width:100%; table-layout:fixed}
+.ui-style dt,
+.ui-style dd											{display:table-cell; vertical-align:middle}
+
+.ui-style button										{padding:0 10px; height:35px; background-color:#004fec !important; border:none !important; font-size:14px; font-weight:normal; color:white !important}
+.ui-style button.wide									{width:300px}
+
+.ui-style button.red									{background-color:#ff5722 !important}
+.ui-style button.green									{background-color:#37b772 !important}
+.ui-style button.black									{background-color:#3a3a3a !important}
+.ui-style button.gray									{background-color:#bababa !important}
+.ui-style button.white									{background-color:white !important; border:1px solid #babbc2 !important; color:#333 !important}
+
+.ui-style button:focus									{box-shadow:0 0 0 3px rgba(33,150,243,0.4)}
+.ui-style button.red:focus								{box-shadow:0 0 0 3px rgba(255,87,34,0.4)}
+.ui-style button.green:focus							{box-shadow:0 0 0 3px rgba(55,183,114,0.4)}
+.ui-style button.black:focus							{box-shadow:0 0 0 3px rgba(0,0,0,0.2)}
+.ui-style button.gray:focus								{box-shadow:0 0 0 3px rgba(0,0,0,0.1)}
+.ui-style button.white:focus							{box-shadow:0 0 0 3px rgba(0,0,0,0.1)}
+
+.ui-style select										{height:35px; line-height:33px}
+.ui-style select option:first-child						{display:none}
+.ui-style textarea										{}
+.ui-style select:disabled,
+.ui-style textarea:disabled								{background-color:#ebebe4 !important;}
+
+.ui-style .SumoSelect i									{width:16px !important; height:16px !important; border-radius:0px !important; border-color:#ccc !important; box-shadow:none !important}
+.ui-style .SumoSelect .CaptionCont i					{top:50% !important; margin-top:-8px !important; background-position-y:center !important}
+.ui-style .SumoSelect li.selected i						{border-color:rgb(17,169,17) !important}
+.ui-style .SumoSelect label,
+.ui-style .SumoSelect select,
+.ui-style .SumoSelect > .CaptionCont 					{height:35px !important; line-height: 35px !important; border-radius:0}
+.ui-style .SumoSelect > .CaptionCont > span.placeholder	{padding-right:0}
+.ui-style .SumoSelect li:first-child					{/*display:none*/}
+.ui-style .SumoSelect li								{padding:0px 35px !important}
+
+.ui-style .pagination									{display:block; margin:25px; text-align:center}
+.ui-style .pagination > li								{display:inline-block}
+.ui-style .pagination > li > a							{padding:0 10px; min-width:37px; line-height:35px; border-color:#ccc; outline:none; color:inherit}
+.ui-style .pagination > li > a:hover					{color:inherit}
+.ui-style .pagination > .active > a,
+.ui-style .pagination > .active > a:hover,
+.ui-style .pagination > .active > a:focus				{background-color:#004fec; border-color:#004fec; color:white}
+.ui-style .pagination > .disabled > a					{color:#ccc !important}
+
+
+
+/* ******** UI-DESCRIPTION ******** */
+
+.ui-description											{position:relative; margin-top:12px; line-height:1.5; font-size:13px; color:#626262}
+.ui-description li										{padding-left:1.5em}
+.ui-description li:before								{content:"※"; position:absolute; left:0}
+

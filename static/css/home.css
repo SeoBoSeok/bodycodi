@@ -1,0 +1,77 @@
+main											{display:block; padding:0; font-size:0} /* height:calc(100% - 115px); */
+main section + section							{margin-top:0}
+main li											{display:inline-block; vertical-align:top}
+main .wrap										{display:block; margin:0 auto; max-width:1240px; clear: both;}
+main .ui-button									{font-size:13px}
+
+main > .top										{padding:20px 0; height:35px;}
+main > .top li + li								{margin-left:8px}
+main > .top input								{font-size:13px}
+main > .top button								{display:inline-block; vertical-align:top; height:35px; background-color:white; border:1px solid #ccc; font-size:13px}
+main > .top button:focus						{box-shadow:0 0 0 3px rgba(66,72,90,0.1)}
+main > .top button.focus:focus					{box-shadow:0 0 0 3px rgba(33,150,243,0.3)}
+main > .top .left								{float:left}
+main > .top .left button.prev,
+main > .top .left button.next					{width:35px}
+main > .top .left button.today					{width:100px}
+main > .top .right								{float:right}
+main > .top .right button						{width:100px; background-color:#bababa !important; color:white}
+main > .top .right button.focus					{background-color:#004fec !important; border-color:#004fec !important}
+
+main > .middle 									{height:330px; border-bottom:1px solid #ccc; font-size:13px; box-sizing:border-box}
+main > .middle > div,
+main > .middle > div > ul,
+main > .middle > div > ul > li					{height:100%}
+main > .middle > div > ul > li					{display:none}
+main > .middle > div > ul > li.focus			{display:block}
+
+main > .middle .todo							{}
+main > .middle .todo .top						{margin-bottom:12px; margin-top: 12px; height:35px; line-height:35px}
+main > .middle .todo .top .left					{float:left}
+main > .middle .todo .top .right				{float:right}
+main > .middle .todo .top .right button			{width:135px}
+main > .middle .todo .bottom					{position:relative; height:260px; background-color:#ccc; border:1px solid #ccc; overflow-y:auto}
+
+main > .middle .todo table						{background-color:white}
+main > .middle .todo table tr > *				{border:none}
+main > .middle .todo table tr > td + td			{border-left:1px solid #ccc}
+main > .middle .todo table thead tr > *			{position:sticky; position:-webkit-sticky; top:0px; background-color:#686d7b; z-index:2}
+main > .middle .todo table tbody tr + tr		{border-top:1px solid #ccc}
+main > .middle .todo table tbody td:last-child	{font-size:0 !important}
+main > .middle .todo table tbody tr:hover		{background-color:rgba(33,150,243,0.1) !important; cursor:pointer}
+main > .middle .todo table tbody tr.empty		{background-color:white !important; cursor:default}
+main > .middle .todo table tbody tr.empty td	{font-size:13px !important}
+
+main > .bottom									{padding-bottom:20px}
+main > .bottom .icon_calendar					{background-image:url(/static/img/menu/icon_calendar_blue.png)}
+main > .bottom .icon_member						{background-image:url(/static/img/menu/icon_member_blue.png)}
+main > .bottom .icon_calculate					{background-image:url(/static/img/menu/icon_calc_blue.png)}
+main > .bottom .icon_report						{background-image:url(/static/img/menu/icon_report_blue.png)}
+main > .bottom .icon_center						{background-image:url(/static/img/menu/icon_center_blue.png)}
+main > .bottom .icon_locker						{background-image:url(/static/img/menu/icon_locker_blue.png)}
+main > .bottom .icon_book						{background-image:url(/static/img/menu/icon_book_blue.png)}
+main > .bottom .icon_enter						{background-image:url(/static/img/menu/icon_enter_blue.png)}
+main > .bottom .icon_navigator					{background-image:url(/static/img/menu/icon_navigator.png)}
+
+main > .bottom .menu							{margin:10px -10px}
+main > .bottom .menu li							{display:inline-block; vertical-align:top; padding:10px; width:25%; text-align:center; font-size:15px; font-weight:500; box-sizing:border-box}
+main > .bottom .menu li.empty					{filter:grayscale(1)}
+main > .bottom .menu li a						{display:block; padding:15px; padding-bottom:20px; border:1px solid #ccc; color:#333}
+main > .bottom .menu li span					{display:block; margin-bottom:5px; height:80px; background-repeat:no-repeat; background-position:center center}
+
+main > .bottom .quick							{margin-top:10px; text-align:right; font-weight:500}
+main > .bottom .quick li a						{display:block; padding-right:20px; width:135px; background:url(/static/img/icon/icon_next_black.png) no-repeat right 12px center / 8px; border:1px solid #ccc; line-height:40px; text-align:center; font-size:13px; color:#333}
+main > .bottom .quick li span					{display:inline-block; vertical-align:middle; margin-bottom:2px; margin-right:5px; width:20px; height:20px; background-repeat:no-repeat; background-position:center center; background-size:20px}
+main > .bottom .quick li + li					{margin-left:10px}
+
+main > .middle .chart							{position:relative; width:100%; height:100%}
+main > .middle .chart .canvas,
+main > .middle .chart .canvas canvas			{position:absolute; left:0; right:0; bottom:20px; top:0}
+main > .middle .chart .canvas.empty				{background-color:#f0f0f0}
+main > .middle .chart .canvas.empty:after		{content:"í•´ë‹¹ ë‚ ì§œì— í‘œì‹œí•  ë‚´ìš©ì´ ì—†ìŠµë‹ˆë‹¤."; position:absolute; left:50%; top:50%; font-size:17px; color:#999; transform:translate(-50%, -50%)}
+main > .middle .chart .canvas.empty canvas,
+main > .middle .chart .canvas.empty button		{display:none !important}
+main > .middle .chart .prev						{left:-50px}
+main > .middle .chart .next						{right:-50px; transform:rotate(180deg)}
+main > .middle .chart button					{display:none; position:absolute; top:50%; margin-top:-50px; width:35px; height:100px; background:white url("/static/img/icon/icon_back_gray.png") no-repeat center center / 45px; border:1px solid #ddd}
+main > .middle .chart button.focus				{display:block}
