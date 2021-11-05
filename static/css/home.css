@@ -18,7 +18,7 @@ main > .top .right								{float:right}
 main > .top .right button						{width:100px; background-color:#bababa !important; color:white}
 main > .top .right button.focus					{background-color:#004fec !important; border-color:#004fec !important}
 
-main > .middle 									{height:330px; border-bottom:1px solid #ccc; font-size:13px; box-sizing:border-box}
+main > .middle 									{height:auto; border-bottom:1px solid #ccc; font-size:13px; box-sizing:border-box}
 main > .middle > div,
 main > .middle > div > ul,
 main > .middle > div > ul > li					{height:100%}
