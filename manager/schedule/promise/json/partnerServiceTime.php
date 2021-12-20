@@ -5,7 +5,7 @@
 
 $data = array(
   "seqPartner" => 0,
-  "seqPartnerBranch" => 21697,
+  "seqPartnerBranch" => 0,
   "openTime" => "08:00",
   "closeTime" => "22:00",
 );

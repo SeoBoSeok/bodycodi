@@ -69,7 +69,7 @@ const commonController = {
 				dataType	: "json",
 				success 	: function(data) {
 					data = data || [];
-					resolve(data.data.sort(function (a, b) {
+					resolve(data.sort(function (a, b) {
 						return a.coachName < b.coachName ? -1 : a.coachName > b.coachName ? 1 : 0;
 					}));
 				},
@@ -427,7 +427,7 @@ const commonController = {
 		list : function() {
 			return new Promise(function(resolve, reject) {
 				$.ajax({
-					url			: "/partner/branch/list",
+					url			: "/partner/branch/list.php",
 					type		: "get",
 					contentType : "application/json;charset=utf-8",
 					dataType	: "json",

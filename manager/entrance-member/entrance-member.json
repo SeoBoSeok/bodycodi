@@ -1,0 +1,97 @@
+{
+  "senderList": [
+    {
+      "verify_yn": "Y",
+      "handle_key": "",
+      "reg_dt": 1598995846000,
+      "phone": "010-6711-8282",
+      "seq_sms_sender": 823,
+      "sender_name": "바디코디"
+    }
+  ],
+  "refusedList": [],
+  "standByList": [],
+  "counselingPurposeList": [
+    {
+      "seqAttrValue": 49,
+      "attrValue": "재등록",
+      "seqAttrName": 6,
+      "displayOrder": 1,
+      "useYn": "Y"
+    },
+    {
+      "seqAttrValue": 50,
+      "attrValue": "이용권 추가",
+      "seqAttrName": 6,
+      "displayOrder": 2,
+      "useYn": "Y"
+    },
+    {
+      "seqAttrValue": 51,
+      "attrValue": "회원소개",
+      "seqAttrName": 6,
+      "displayOrder": 3,
+      "useYn": "Y"
+    },
+    {
+      "seqAttrValue": 52,
+      "attrValue": "레슨문의",
+      "seqAttrName": 6,
+      "displayOrder": 4,
+      "useYn": "Y"
+    },
+    {
+      "seqAttrValue": 53,
+      "attrValue": "양도",
+      "seqAttrName": 6,
+      "displayOrder": 5,
+      "useYn": "Y"
+    },
+    {
+      "seqAttrValue": 54,
+      "attrValue": "환불",
+      "seqAttrName": 6,
+      "displayOrder": 6,
+      "useYn": "Y"
+    }
+  ],
+  "list": [],
+  "entranceDate": "2021-12-19",
+  "counselingMeansList": [
+    {
+      "seqAttrValue": 1,
+      "attrValue": "방문",
+      "seqAttrName": 1,
+      "displayOrder": 1,
+      "useYn": "Y"
+    },
+    {
+      "seqAttrValue": 2,
+      "attrValue": "전화",
+      "seqAttrName": 1,
+      "displayOrder": 2,
+      "useYn": "Y"
+    },
+    {
+      "seqAttrValue": 3,
+      "attrValue": "문자",
+      "seqAttrName": 1,
+      "displayOrder": 3,
+      "useYn": "Y"
+    },
+    {
+      "seqAttrValue": 4,
+      "attrValue": "메신저",
+      "seqAttrName": 1,
+      "displayOrder": 4,
+      "useYn": "Y"
+    },
+    {
+      "seqAttrValue": 5,
+      "attrValue": "기타",
+      "seqAttrName": 1,
+      "displayOrder": 5,
+      "useYn": "Y"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+	"processing":     "잠시만 기다려 주세요.",
+	"search":         "검색",
+	"lengthMenu":     "페이지 당_MENU_개 표시",
+	"info":           "조회결과 : _TOTAL_건",
+	"infoEmpty":      "표시할 아이템이 없습니다.",
+	"infoFiltered":   "(전체 : _MAX_건)",
+	"infoPostFix":    "",
+	"loadingRecords": "잠시만 기다려 주세요.",
+	"zeroRecords":    "검색 결과가 없습니다.",
+	"emptyTable":     "검색 결과가 없습니다.",
+	"paginate": {
+	    "first":      "처음",
+	    "previous":   "이전",
+	    "next":       "다음",
+	    "last":       "끝"
+	},
+	"aria": {
+	    "sortAscending":  ": 오름차순 정렬",
+	    "sortDescending": ": 내림차순 정렬"
+	}
+}

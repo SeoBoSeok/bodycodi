@@ -27,14 +27,14 @@
 $data = array();
 
 array_push($data, array(
-  "end_date" => "2021-10-25 12:50",
+  "end_date" => "2021-12-17 12:50",
   "off_day" => "",
   "off_time" => "",
-  "seq_coach" => "9817",
+  "seq_coach" => "9807",
   "coach_text" => "(그룹수업) 리포머 5:1_8명",
   "seq_temp" => "C_4289546",
   "text" => "리포머 5:1 / 김반석_8명",
-  "start_date" => "2021-10-25 12:00",
+  "start_date" => "2021-12-17 12:00",
 ));
 
 $return = array();

@@ -19,7 +19,7 @@ array_push($data, array(
 ));
 array_push($data, array(
   "label" => "이석훈",
-  "key" => 9806,
+  "key" => 9807,
 ));
 array_push($data, array(
   "label" => "이민주",
@@ -31,6 +31,6 @@ $return = array();
 $return["status"] = 200;
 $return["data"] = $data;
 
-echo json_encode($return);
+echo json_encode($data);
 
 ?>

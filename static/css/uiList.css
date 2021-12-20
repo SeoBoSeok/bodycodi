@@ -108,7 +108,7 @@ main .dataTables_wrapper						{margin:0}
 .ui-public-payment .keypad .input				{position:relative; margin:0}
 /*
 .ui-public-payment .keypad .input input			{margin:0; padding-left:100px; padding-right:35px; width:100%; max-width:100% !important}
-.ui-public-payment .keypad .input:before		{content:"ì›"; position:absolute; right:10px; color:#999}
+.ui-public-payment .keypad .input:before		{content: "ì›"; position:absolute; right:10px; color:#999}
 .ui-public-payment .keypad .input button		{position:absolute; left:10px; top:50%; margin-top:-12px; width:auto; font-size:12px}
 .ui-public-payment .keypad .input button		{margin-left:12px; width:auto; font-size:12px}
  */

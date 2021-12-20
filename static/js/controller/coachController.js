@@ -85,7 +85,7 @@ const coachController = {
 	list : function() {
 		return new Promise(function(resolve, reject) {
 			$.ajax({
-				url			: "/coachInfo/list",
+				url			: "/coachInfo/list.php",
 				type		: "get",
 				contentType : "application/json;charset=utf-8",
 				dataType	: "json",

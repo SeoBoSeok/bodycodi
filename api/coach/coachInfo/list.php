@@ -51,41 +51,46 @@
 //   {"seqPartnerCoach":20587,"seqPartner":774,"employeeTypeCode":"04","coachName":"황의천(부스터)","breakTime":0,"mobileNo":"010-2898-9976","profile":"","birthday":"..","sex":"M","imgUrl":"","email":"","schedulerDisplayOrder":24,"pwdActive":"N","seqPosition":3285,"retirementYn":"N","retirementDate":null,"seqTeam":226,"salesYn":"Y","appointmentYn":"N","classYn":"Y","useYn":"Y","regDt":"2021-09-17T14:55:28","regId":20533,"updateDt":"2021-09-17T14:55:28","updateId":20533,"joinDate":null,"payrollSettings":null},
 // ]
 
-$data = array();
+// $data = array();
 
-array_push($data, array(
-  "seqPartnerCoach" => 1444,
-  "seqPartner" => 9807,
-  "employeeTypeCode" => "2021-02-01T09:00:00+09:00",
-  "coachName" => "2021-12-31T09:00:00+09:00",
-  "breakTime" => "출근 (바디코디 프로그램 로그인)",
-  "mobileNo" => "",
-  "profile" => 1444,
-  "birthday" => 9807,
-  "sex" => "2021-02-01T09:00:00+09:00",
-  "imgUrl" => "2021-12-31T09:00:00+09:00",
-  "email" => "출근 (바디코디 프로그램 로그인)",
-  "schedulerDisplayOrder" => "",
-  "pwdActive" => 1444,
-  "seqPosition" => 9807,
-  "retirementYn" => "2021-02-01T09:00:00+09:00",
-  "retirementDate" => "2021-12-31T09:00:00+09:00",
-  "seqTeam" => "출근 (바디코디 프로그램 로그인)",
-  "salesYn" => "",
-  "appointmentYn" => true,
-  "classYn" => 1444,
-  "useYn" => 9807,
-  "regDt" => "2021-02-01T09:00:00+09:00",
-  "regId" => "2021-12-31T09:00:00+09:00",
-  "updateDt" => "출근 (바디코디 프로그램 로그인)",
-  "updateId" => "",
-  "joinDate" => true,
-  "payrollSettings" => null 
-));
+// array_push($data, array(
+//   "seqPartnerCoach" => 1444,
+//   "seqPartner" => 9807,
+//   "employeeTypeCode" => "2021-02-01T09:00:00+09:00",
+//   "coachName" => "2021-12-31T09:00:00+09:00",
+//   "breakTime" => "출근 (바디코디 프로그램 로그인)",
+//   "mobileNo" => "",
+//   "profile" => 1444,
+//   "birthday" => 9807,
+//   "sex" => "2021-02-01T09:00:00+09:00",
+//   "imgUrl" => "2021-12-31T09:00:00+09:00",
+//   "email" => "출근 (바디코디 프로그램 로그인)",
+//   "schedulerDisplayOrder" => "",
+//   "pwdActive" => 1444,
+//   "seqPosition" => 9807,
+//   "retirementYn" => "2021-02-01T09:00:00+09:00",
+//   "retirementDate" => "2021-12-31T09:00:00+09:00",
+//   "seqTeam" => "출근 (바디코디 프로그램 로그인)",
+//   "salesYn" => "",
+//   "appointmentYn" => true,
+//   "classYn" => 1444,
+//   "useYn" => 9807,
+//   "regDt" => "2021-02-01T09:00:00+09:00",
+//   "regId" => "2021-12-31T09:00:00+09:00",
+//   "updateDt" => "출근 (바디코디 프로그램 로그인)",
+//   "updateId" => "",
+//   "joinDate" => true,
+//   "payrollSettings" => null 
+// ));
 
-$return = array();
+// $return = array();
 
-$return["status"] = 200;
-$return["data"] = $data;
+// $return["status"] = 200;
+// $return["data"] = $data;
 
-echo json_encode($return);
+// echo json_encode($return);
+
+$string = file_get_contents("./list.json");
+$data = json_decode($string, true);
+
+echo json_encode($data);

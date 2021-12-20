@@ -367,7 +367,7 @@ var scheduleList = {
 				$.ajax({
 					type : "POST",
 					contentType : 'application/x-www-form-urlencoded; charset=UTF-8',
-					url : "/manager/schedule/promise/json/coachScheduleOffChk",
+					url : "/manager/schedule/promise/json/coachScheduleOffChk.php",
 					async : false,
 					data : {
 						searchDate : thisDate,
@@ -846,7 +846,7 @@ var scheduleList = {
 				try {
 					const promiseArr = [];
 
-					$.each(returnData.data, function(k, v) { //현재기준 다음달 1일전에 등록된 모든 강의를 가지고 온다
+					$.each(returnData, function(k, v) { //현재기준 다음달 1일전에 등록된 모든 강의를 가지고 온다
 						const getText = (item) => {
 							try {
 								const textList = [];
