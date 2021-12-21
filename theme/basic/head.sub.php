@@ -1,9 +1,14 @@
 <?php
 // 이 파일은 새로운 파일 생성시 반드시 포함되어야 함
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
-if (!$member['mb_id'])
+$link = $_SERVER['REQUEST_URI'];
+$link_array = explode('/',$link);
+$pagel = end($link_array);
+if (!$member['mb_id'] && ($pagel !== "login.php"))
 	header('Location: /bbs/login.php');
-    
+
+// print_r($_SERVER);
+
 $g5_debug['php']['begin_time'] = $begin_time = get_microtime();
 
 if (!isset($g5['title'])) {
