@@ -315,7 +315,7 @@ function uiHeader() {
 						<li><a href="/sales/member-prospective">잠재고객<span class="icon"></span></a></li>
 						<li>문자 잔여 건 수 <span data-msg="sms-remain-count">${remainSms}건</span> <a href="/sms/charge?popup=charge"><button>충전</button></a></li>
 						<li>센터관리자 <span>${employeeName}</span> <a onclick="popupLoginCoach.open()"><button>변경</button></a></li>
-						<li><a href="/common/logout">로그아웃</a></li>
+						<li><a href="/bbs/logout.php">로그아웃</a></li>
 					</ul>
 				</div>
 			</div>
