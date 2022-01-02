@@ -8263,3 +8263,89 @@ table thead tr .hidden-th {
 .body .tableDiv a {
 	margin: 0.5rem;
 }
+
+/* ******** COMMON ******** */
+
+*															{margin:0; padding:0}
+html														{margin:0 auto; min-width:1280px; max-width:1920px; background-color:white; letter-spacing:0.25px; font-size:13.25px; -webkit-overflow-scrolling:touch}
+body														{background-color:white; line-height:1.5; text-align:justify; word-break:break-all; font-family:"Pretendard", "Noto Sans KR", "AppleSDGothicNeo", "AppleSDGothicNeo-Regular", "Malgun Gothic", Helvetica, sans-serif; color:#333; /* -webkit-tap-highlight-color:transparent; -webkit-touch-callout:none; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none */}
+
+table														{border-collapse:collapse; border-spacing:0; table-layout:fixed}
+img															{border:none; outline:none; pointer-events:none}
+ul															{list-style:none}
+
+a															{color:inherit; text-decoration:none; outline:none}
+a:hover														{cursor:pointer}
+a:disabled													{opacity:0.33}
+a.hover														{border-bottom:1px solid #333; line-height:1.4}
+a.hover:hover												{border-bottom-color:#004fec; color:#004fec}
+a.underline													{position:relative; text-decoration:underline}
+input, select, button, textarea								{border-radius:0; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; appearance:none}
+
+input:disabled												{background-color:#ebebe4; border-color:#ccc}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button				{-webkit-appearance:none}
+select::-ms-expand											{display:none}
+
+label, button, select										{cursor:pointer}
+input[type=file]											{opacity:0; cursor:pointer}
+
+em, var, ins, del											{text-decoration:none}
+var, time													{font-style:normal}
+p															{text-align:justify}
+
+
+
+/* ******** DEFAULT ******** */
+
+h1															{line-height:1.2; font-size:32px; font-weight:500}
+h2															{line-height:1.2; font-size:27px; font-weight:500}
+h3															{font-size:21px; font-weight:500}
+h4															{font-size:17px; font-weight:500}
+h5															{font-size:15px; font-weight:400; color:#646464}
+h6															{font-size:13px; font-weight:400; color:#646464}
+
+h1, h2, h3, h4, h5, h6										{text-overflow:ellipsis; white-space:nowrap; overflow:hidden}
+h1 i, h2 i, h3 i, h4 i, h5 i, h6 i							{font-style:normal; color:#4c8cfc}
+
+dl															{display:table; width:100%; table-layout:fixed}
+dd, dt														{display:table-cell; vertical-align:middle}
+
+hr															{height:0px; border:none; border-bottom:1px solid #ccc}
+
+table														{width:100%; vertical-align:middle; text-align:center}
+textarea													{width:100%; resize:none}
+
+
+
+
+
+/* ******** UI.CSS - COMMON ******** */
+html														{height:100%}
+body														{position:relative; display:table; width:100%; height:100%}
+
+input, select												{display:inline-block; padding:0 10px; width:100%; max-width:200px; height:35px; line-height:35px; box-sizing:border-box}
+input, select, button, textarea								{border-radius:0; border:1px solid #ccc; outline:none; font-size:inherit; color:inherit; font-family:inherit}
+
+input.block													{width:100%; max-width:100%}
+
+input + input,
+select + select,
+label + label												{margin-left:10px}
+
+input:focus,
+select:focus,
+textarea:focus												{background-color:#e8f4fe; /*rgba(33,150,243,0.1)*/ border-color:#2196f3 !important}
+select option												{background-color:white}
+
+input[type=calendar]										{visibility:hidden}
+
+em															{position:relative; display:inline-block; vertical-align:middle; top:0; margin-right:0.5em; padding:0px 5px; background-color:#42485a; border-radius:1px; line-height:1.65; font-size:11px; font-weight:300; font-style:normal; color:white}
+em.white													{border:1px solid #ccc; font-weight:400}
+/*
+var, time													{font-family:"roboto"}
+*/
+
+@media(min-width:1920px) {
+html														{outline:1px solid #ddd}
+}
