@@ -23,70 +23,7 @@ include_once(G5_THEME_PATH.'/head.php');
 <script type="text/javascript" src="/static/js/common/jquery/jquery.dataTables.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="/static/css/jquery/jquery.dataTables.css">
 <!-- 버전 2.0 -->
-<style type="text/css">
 
-.branchDisplay 							{display:none !important}
-
-
-html									{position:relative; margin:0 auto !important; background-color:#f0f0f0; min-width:1280px; max-width:1920px}
-body									{height:auto; /*min-width:1600px*/}
-var, time								{font-style:normal}
-
-#using									{position:relative}
-#contents								{display:table; margin-top:0; padding-top:0; width:100%; height:calc(100% - 160px)}
-.page_top								{display:none !important}
-
-.bar_area								{position:sticky; position:-webkit-sticky; top:0; padding:5px 50px}
-.bar_area.fix_sc						{position:sticky; position:-webkit-sticky; z-index:4}
-.bar_area								{height:45px; line-height:34px}
-.bar_area .fl a							{vertical-align:initial}
-.bar_area .fr.nav ul					{margin-top:-6px}
-.bar_area .fr.nav ul li a				{height:46px; line-height:46px}
-.bar_area .fr.nav ul li a.active		{background-color:#004fec}
-
-.ui-popup								{font-size:13px; color:#333}
-.ui-popup em							{position:relative; display:inline-block; vertical-align:middle; top:0; margin-right:0.5em; padding:0px 5px; background-color:#42485a; border-radius:1px; line-height:1.65; font-size:11px; font-weight:300; font-style:normal; color:white}
-.ui-popup em.white						{border:1px solid #ccc; font-weight:400}
-
-.ui-popup > div							{line-height:1.5}
-.ui-popup > div > div > div				{opacity:1 !important; transform:none !important}
-
-.ui-popup input[type=text],
-.ui-popup input[type=number],
-.ui-popup select						{height:36px !important; border-color:#ccc}
-
-.ui-popup .tab							{flex:auto; bottom:auto}
-.ui-popup table tbody tr > th,
-.ui-popup table tbody tr > td			{height:auto; text-align:inherit; background-color:white; border:none !important}
-.ui-popup table tbody tr > td input		{width:100%; text-align:inherit}
-.ui-popup .thumbnail					{display:table-row; margin:0; padding:0; border:none; border-radius:0; transition:none}
-
-.ui-popup dl							{display:table; width:100%; margin-bottom:0}
-.ui-popup dl dt,
-.ui-popup dl dd							{display:table-cell; font-weight:normal}
-
-.ui-block.focus							{z-index:9999}
-
-.ui-popup img,
-.ui-input-radio *,
-.ui-input-search *,
-.ui-input-checkbox *					{box-sizing:initial}
-.ui-input-search input					{width:350px !important; max-width:350px !important}
-.ui-input-search button					{box-sizing:border-box}
-
-.ui-side + div							{margin-left:275px; height:100%; border-left:1px solid #ccc}
-.ui-side + div > div					{max-width:100%; margin:0 10px}
-
-.btn									{height:35px; line-height:33px; font-size:12.5px}
-.btn + .btn,
-select + .btn							{margin-left:5px}
-button.btn								{height:34px; line-height:32px}
-.btn.white								{background-color:white; border:1px solid #ccc; color:#333}
-
-@media(min-width:1920px) {
-html									{outline:1px solid #ddd}
-}
-</style>
 <style type="text/css">
 
 body												{display:block}
