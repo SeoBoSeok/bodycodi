@@ -4,6 +4,21 @@ main section + section								{margin-top:60px}
 main section .bottom.submit							{margin-top:35px; text-align:center}
 main section .bottom.submit button					{margin:0 5px; width:135px}
 
+body.app .ui-popup > div > div > div				{transform:none !important}
+
+body.iframe > nav, body.iframe > header				{display:none}
+body.iframe main									{top:0}
+body.iframe .ui-popup								{background-color:rgba(0,0,0,0.25)}
+body.iframe .ui-popup > div > div > div				{margin:10px 0}
+
+body.iframe > .contents								{height:100%}
+body.iframe .ui-quick								{display:none}
+body.iframe .ui-side								{top:0}
+body.iframe .ui-chatbot,
+body.iframe .displayIframe							{display:none !important}
+body.iframe .contents.tips main						{margin-right:0 !important; transition:none !important}
+body.iframe .contents.tips .ui-tips					{display:none !important; width:0 !important; visibility:hidden}
+
 body.ui-popup-hidden								{overflow-y:hidden}
 body > .contents									{position:relative; /*min-width:1280px;*/ height:calc(100% - 160px)}
 body > .contents.center								{margin:0 auto; max-width:1600px}
@@ -22,8 +37,13 @@ main .gray											{color:#bababa}
 main .gold											{color:#ad8a56}
 main .silver										{color:#b4b4b4}
 main .bronze										{color:#6a3805}
-main .skyblue										{color:#36a2eb}
+main .skyblue										{color:#4197c1}
+main .grayblue										{color:#2e7a9f}
+/*
+main .grayblue										{color:#839ba7}
+*/
 main .pink											{color:#ff6384}
+main .darkgray										{color:#999}
 
 .bg													{color:white !important}
 .bg.red												{background-color:#ff5722}
@@ -34,6 +54,11 @@ main .pink											{color:#ff6384}
 .bg.orange											{background-color:#f39800}
 .bg.gray											{background-color:#bababa}
 .bg.darkgray										{background-color:#555}
+.bg.skyblue											{background-color:#4197c1}
+.bg.grayblue										{background-color:#2e7a9f}
+/*
+.bg.grayblue										{background-color:#839ba7}
+*/
 .bg.white											{background-color:white; color:inherit !important}
 
 .bg.gold											{background-color:#ad8a56}
@@ -41,13 +66,23 @@ main .pink											{color:#ff6384}
 .bg.bronze											{background-color:#6a3805}
 
 .ui-popup .red										{color:#ff5722}
+.ui-popup .orange									{color:#f39800}
 .ui-popup .blue										{color:#004fec}
 .ui-popup .green									{color:#37b772}
+.ui-popup .purple									{color:#7a52cc}
 .ui-popup .black									{color:#333}
+.ui-popup .gray										{color:#bababa}
+.ui-popup .darkgray									{color:#999}
 
+/*
+#twc-chat-plugin #chat-icon							{background:#004fec url(/static/img/brand/symbol_blue.png) no-repeat center center / 90% !important}
+#twc-chat-plugin #chat-icon img						{display:none !important}
+#twc-chat-plugin #chat-icon:after					{content:""; position:absolute; left:0; top:0; width:100%; height:100%; background:url(/static/img/brand/symbol_blue.png) no-repeat center center / 90% !important}
+#twc-chat-plugin #chat-icon,
+#twc-chat-plugin #chat-frame-box					{left:25px !important; right:auto !important}
+*/
 
-
-
+.ui-chatbot											{position:fixed; bottom:25px; right:25px; width:60px; height:60px; background:#004fec url(/static/img/icon/icon_chatbot_blue.png) no-repeat center center / 95%; border-radius:100%; z-index:32}
 
 /* ******** PLACEHOLDER(ALL) AND SCROLLBAR(CHROME ONLY) ******** */
 
@@ -92,7 +127,7 @@ main .pink											{color:#ff6384}
 .ui-note.drop h4.tip:before							{content:"TIP"; display:inline-block; margin-right:5px; padding:0 5px; background-color:white; border:1px solid #777; line-height:1.5; font-size:10px; color:#555}
 
 .ui-note.drop input									{position:absolute; left:-9999px; width:0; height:0}
-.ui-note.drop p										{display:none; padding:0; line-height:1.5; font-size:13px; overflow:hidden}
+.ui-note.drop p										{display:none; padding:0; line-height:1.5; font-size:13.25px; overflow:hidden}
 .ui-note.drop input:checked + h4					{background-image:url(/static/img/icon/icon_arrow_down_black.png)}
 .ui-note.drop input:checked + h4 + p				{display:block; margin-top:10px; padding-top:10px; border-top:1px dashed #bbb}
 
@@ -117,21 +152,31 @@ main .pink											{color:#ff6384}
 
 .ui-header .notice									{position:relative; height:38px; padding:0 20px; background:#ff5722; line-height:38px; font-size:13.5px; color:white; display:none}
 .ui-header .notice.focus							{display:block}
-.ui-header .notice a								{margin:7px 0 7px 7px; padding:0 10px; border-radius:24px; border:1px solid white; line-height:24px; font-size:13px; color:white}
+.ui-header .notice a								{margin:7px 0 7px 7px; padding:0 10px; border-radius:24px; border:1px solid white; line-height:24px; font-size:13.25px; color:white}
 
 .ui-header .state									{padding:0 50px 0 20px; height:38px; background-color:#004fec; line-height:38px; text-align:right; color:rgba(255,255,255,0.5)}
 .ui-header .state .left								{position:absolute; left:20px}
-.ui-header .state .right							{position:absolute; right:20px; padding-left:10px; background-color:#004fec; z-index:2}
+.ui-header .state .right							{position:absolute; right:20px; padding-left:10px; background-color:#004fec}
 
 .ui-header .state a									{color:white}
-.ui-header .state li								{font-size:13.5px; font-weight:300}
-.ui-header .state li + li:before					{content:"|"; display:inline-block; vertical-align:top; margin:0 10px; font-size:10px; opacity:0.75}
+.ui-header .state li								{font-size:13.25px; font-weight:300}
+.ui-header .state li + li:before					{content:"|"; margin:0 10px; font-size:13.25px; opacity:0.75}
 .ui-header .state li span							{margin-left:4px; color:white}
 .ui-header .state li span.icon						{display:inline-block; vertical-align:middle; margin-left:5px; margin-bottom:2px; width:12px; height:12px; background-image:url(/static/img/icon/icons_header.png); background-position:-30px -130px; color:white; border-radius:100%; opacity:0.5}
-.ui-header .state li button							{position:relative; vertical-align:initial; top:-1px; margin-left:2px; padding:0 8px 0.5px 8px; background-color:transparent; border-radius:15px; border:1px solid rgba(255,255,255,0.75); line-height:15px; font-size:12px; color:rgba(255,255,255,0.9)}
+.ui-header .state li span.icon.center				{margin:0; margin-left:-4px; width:20px; height:20px; border-radius:0; opacity:1}
+.ui-header .state li span.icon.center.headquarter	{background-position:0 0}
+.ui-header .state li span.icon.center.branch		{background-position:-20px 0}
+.ui-header .state li span.icon.center.center		{background-position:-40px 0}
+.ui-header .state li span.icon.center + span		{margin-left:0}
+
+.ui-header .state li span.name						{display:inline-block; vertical-align:middle; padding:1px 7px 0 8px; max-width:200px; background-color:white; border-radius:4px; white-space:nowrap; text-overflow:ellipsis; line-height:20px; font-size:12.5px; font-weight:500; color:#004fec; overflow:hidden}
+
+.ui-header .state li button,
+.ui-header .state li .button						{position:relative; vertical-align:middle; margin-left:2px; padding:0 8px; background-color:transparent; border-radius:15px; border:1px solid rgba(255,255,255,0.75); line-height:16px; font-size:11.5px; color:rgba(255,255,255,0.9)}
+.ui-header .state li .button						{font-weight:400}
 .ui-header .state li label							{cursor:pointer}
-.ui-header .state li em								{position:relative; vertical-align:initial; padding:0 4px; font-size:12px}
-.ui-header .state li em:before						{content:""; position:absolute; left:-3px; top:50%; margin-top:-3px; width:6px; height:6px; background-color:#ff5722; transform:rotate(45deg)}
+.ui-header .state li em.warning						{position:relative; vertical-align:initial; padding:4px; line-height:12px; font-size:12px}
+.ui-header .state li em.warning:before				{content:""; position:absolute; left:-3px; top:50%; margin-top:-3px; width:6px; height:6px; background-color:#ff5722; transform:rotate(45deg)}
 .ui-header .state li.none							{margin-left:12px}
 .ui-header .state li.none:before					{display:none}
 
@@ -140,10 +185,9 @@ main .pink											{color:#ff6384}
 .ui-header .search									{}
 .ui-header .search *								{display:inline-block; vertical-align:middle}
 .ui-header .search img								{height:40px}
-
 .ui-header .search form								{transition:visibility 0.4s, opacity 0.4s}
 .ui-header .search label							{position:relative; margin-top:-2px; margin-left:22px; height:35px; border-radius:35px; border:1px solid #ccc; overflow:hidden}
-.ui-header .search input							{padding:0 35px 1px 12px; width:100%; height:100%; max-width:100%; border:none; font-size:13.5px; color:#333}
+.ui-header .search input							{padding:0 35px 1px 12px; width:235px; height:100%; max-width:100%; border:none; font-size:13.5px; color:#333; box-sizing:border-box}
 .ui-header .search button							{position:absolute; right:0; top:0; width:35px; height:35px; background-color:transparent; border:none}
 .ui-header .search button span						{width:15px; height:15px; background-image:url(/static/img/icon/icons_header.png); background-position:-10px -150px}
 
@@ -177,11 +221,15 @@ main .pink											{color:#ff6384}
 .ui-header .menu li.focus > a	 					{color:#004fec}
 .ui-header .menu li.denied > a						{color:#bbb}
 
-.ui-header .submenu									{position:absolute; left:-15%; margin-left:-5px; top:0; width:130%; visibility:hidden; opacity:0; overflow:visible; z-index:8; transition:visibility 0.2s, opacity 0.2s}
+.ui-header .menu li > a > .icon						{display:inline-block; vertical-align:middle; margin-left:4px; margin-top:-2px; width:20px; height:20px}
+.ui-header .menu li > a > .icon.update				{background:url(/static/img/icon/icon_update_green.png) no-repeat center center / 100%}
+.ui-header .menu .submenu li > a > .icon			{margin-left:3px; width:15px; height:15px; background-image:url(/static/img/icon/icon_update_green_small.png)}
+
+.ui-header .submenu									{position:absolute; left:50%; margin-left:-75px; top:0; width:140px; visibility:hidden; opacity:0; overflow:visible; z-index:8; transition:visibility 0.2s, opacity 0.2s}
 .ui-header li:hover .submenu						{visibility:visible; opacity:1}
 .ui-header .submenu	a								{display:block}
 
-.ui-header .submenu ul								{position:relative; margin-top:38px; padding:10px; background-color:white; border:1px solid #ccc; line-height:33px; text-align:center; font-size:13.5px; color:#42485a}
+.ui-header .submenu ul								{position:relative; margin-top:38px; padding:10px; background-color:white; box-shadow:3px 3px 1px 0px rgba(0,0,0,0.1); border:1px solid #ccc; line-height:33px; text-align:center; font-size:13.5px; color:#42485a}
 .ui-header .submenu ul li							{display:block}
 .ui-header .submenu ul li:hover						{background-color:#004fec}
 .ui-header .submenu ul li:hover a					{color:white}
@@ -193,22 +241,25 @@ main .pink											{color:#ff6384}
 
 
 .ui-header .partnerBranch							{position:relative}
-.ui-header .partnerBranch .select					{padding-right:25px; min-width:150px; max-width:300px; text-align:left; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; cursor:pointer}
-.ui-header .partnerBranch .select:before			{content:""; position:absolute; right:8px; top:50%; margin-top:-2px; width:10px; height:8px; background:url(/static/img/icon/icon_down_white.png) no-repeat center center / 10px; opacity:0.5}
+.ui-header .partnerBranch .select					{display:inline-block; vertical-align:top; min-width:150px; max-width:300px; text-align:left; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; cursor:pointer}
+.ui-header .partnerBranch .select .name				{position:relative; padding-right:25px}
+.ui-header .partnerBranch .select .name:before		{content:""; position:absolute; right:8px; top:50%; margin-top:-4px; width:10px; height:8px; background:url(/static/img/icon/icon_down_blue.png) no-repeat center center / 10px; opacity:1}
+/*
 .ui-header .partnerBranch + li:before				{margin-left:0 !important}
+*/
 
-.ui-header .partnerBranch .list						{position:absolute; left:0; top:100%; margin-top:1px; width:100%; background-color:white; border:1px solid #ccc; box-shadow:0px 0px 10px rgba(0,0,0,0.2); z-index:16; visibility:hidden; opacity:0; transition:visibility 0.2s, opacity 0.2s}
+.ui-header .partnerBranch .list						{position:absolute; left:10px; top:100%; margin-top:1px; width:100%; background-color:white; border:1px solid #ccc; box-shadow:0px 0px 10px rgba(0,0,0,0.2); z-index:32; visibility:hidden; opacity:0; transition:visibility 0.2s, opacity 0.2s}
 .ui-header .partnerBranch .list *					{vertical-align:top; box-sizing:border-box; color:#333}
 .ui-header .partnerBranch .list.focus				{visibility:visible; opacity:1}
 
 .ui-header .partnerBranch .list .top				{position:relative; padding:5px}
-.ui-header .partnerBranch .list .top input			{display:block; padding:0; height:32px; background-color:white; border:1px solid #ccc; line-height:32px; text-align:center; font-size:13px; font-weight:normal; color:#333}
+.ui-header .partnerBranch .list .top input			{display:block; padding:0; max-width:100%; height:32px; background-color:white; border:1px solid #ccc; line-height:32px; text-align:center; font-size:13.25px; font-weight:normal; color:#333}
 .ui-header .partnerBranch .list .top input:focus	{border-color:#004fec; box-shadow:0 0 0 3px rgba(33,150,243,0.3)}
 .ui-header .partnerBranch .list .middle				{max-height:500px; border-top:1px solid #ccc; border-bottom:1px solid #ccc; overflow-y:auto}
 .ui-header .partnerBranch .list .bottom				{position:relative; padding:8px 10px; line-height:1.3; text-align:left; text-overflow:ellipsis; white-space:nowrap; overflow:hidden}
 
 .ui-header .partnerBranch .list ul					{padding:5px 0; line-height:1.3; text-align:left}
-.ui-header .partnerBranch .list ul li				{display:block; font-size:13px; font-weight:normal; color:#333}
+.ui-header .partnerBranch .list ul li				{display:block; font-size:13.25px; font-weight:normal; color:#333}
 .ui-header .partnerBranch .list ul li.empty			{padding:5px 10px; color:#bbb}
 .ui-header .partnerBranch .list ul li.hidden		{display:none}
 .ui-header .partnerBranch .list ul li a				{position:relative; display:block; padding:5px 10px; text-overflow:ellipsis; white-space:nowrap; font-weight:400; color:#333; overflow:hidden}
@@ -217,11 +268,13 @@ main .pink											{color:#ff6384}
 .ui-header .partnerBranch .list ul li.focus a		{background-color:#004fec; color:white}
 
 
-/*
+
 @media(max-width:1440px) {
-.ui-header .search form								{visibility:hidden; opacity:0}
+/* .ui-header .search form							{visibility:hidden; opacity:0} */
+.ui-header .search input							{width:200px}
+.ui-header .menu > ul > li > a						{padding:0 10px; font-size:16.5px}
 }
-*/
+
 
 
 
@@ -304,9 +357,9 @@ main .pink											{color:#ff6384}
 
 /* ******** UI-QUICK ******** */
 
-.ui-quick											{position:fixed; right:35px; bottom:35px; width:42px; text-align:center; z-index:4}
+.ui-quick											{position:fixed; right:35px; bottom:92px; width:42px; text-align:center; z-index:4}
 .ui-quick.transparent								{opacity:0.66}
-.ui-quick a											{display:inline-block; width:42px; height:42px; border-radius:100%; background-color:#004fec; border:1px solid #004fec; line-height:42px; font-size:13px; color:white; visibility:hidden; opacity:0; transition:bottom 0.3s, visibility 0.3s, opacity 0.3s}
+.ui-quick a											{display:inline-block; width:42px; height:42px; border-radius:100%; background-color:#004fec; border:1px solid #004fec; line-height:42px; font-size:13.25px; color:white; visibility:hidden; opacity:0; transition:bottom 0.3s, visibility 0.3s, opacity 0.3s}
 .ui-quick a + a										{margin-top:8px}
 .ui-quick a.focus									{visibility:visible; opacity:1}
 .ui-quick a.hidden									{display:none}
@@ -338,12 +391,12 @@ main .pink											{color:#ff6384}
 
 .ui-tips .drop										{position:relative; overflow-x:hidden}
 .ui-tips .drop > span								{display:inline-block; margin-top:5px; padding:0 5px; border:1px solid #ccc; line-height:18px; font-size:11px; color:#646464}
-.ui-tips .drop > span:before						{content:"ìžì„¸ížˆ ë³´ê¸°"}
+.ui-tips .drop > span:before						{content:"자세히 보기"}
 /*
 .ui-tips .drop h4									{padding-right:2em; background:url(/static/img/icon/icon_arrow_up_black.png) no-repeat right 2px center / 10px}
 */
 .ui-tips .drop input								{position:absolute; left:-9999px; width:0; height:0}
-.ui-tips .drop p									{margin-top:8px; line-height:1.5; font-size:13px; overflow:hidden}
+.ui-tips .drop p									{margin-top:8px; line-height:1.5; font-size:13.25px; overflow:hidden}
 .ui-tips .drop p									{display:-webkit-box; -webkit-box-orient:vertical; max-height:3em; -webkit-line-clamp:2}
 .ui-tips .drop p .ui-note							{display:none; margin-top:8px; margin-bottom:5px}
 /*
@@ -351,7 +404,7 @@ main .pink											{color:#ff6384}
 */
 .ui-tips .drop input:checked + h4 + p				{display:block; max-height:inherit}
 .ui-tips .drop input:checked + h4 + p .ui-note		{display:block}
-.ui-tips .drop input:checked + h4 + p + span:before	{content:"ê°„ë‹¨ížˆ ë³´ê¸°"}
+.ui-tips .drop input:checked + h4 + p + span:before	{content:"간단히 보기"}
 
 .ui-tips ::-webkit-scrollbar						{right:10px; margin-right:10px; width:5px; height:5px; border-radius:10px; overflow:hidden}
 .ui-tips ::-webkit-scrollbar-track 					{background-color:#eee}
@@ -367,10 +420,10 @@ main .pink											{color:#ff6384}
 
 /* ******** UI-SIDE : LEFT ******** */
 
-.ui-side											{position:sticky; position:-webkit-sticky; float:left; padding:25px; top:40px; width:275px; box-sizing:border-box; z-index:2}
+.ui-side											{position:sticky; position:-webkit-sticky; float:left; padding:25px; top:40px; width:276px; border-right:1px solid #ccc; box-sizing:border-box; z-index:2}
 .ui-side.right										{float:right}
 
-.ui-side + main										{position:relative; margin-left:275px; min-height:calc(100% - 160px); border-left:1px solid #ccc}
+.ui-side + main										{position:relative; margin-left:275px; height:calc(100% - 160px); border-left:1px solid #ccc}
 .ui-side + .ui-side + main							{margin-right:275px; border-right:1px solid #ccc}
 
 .ui-side > div										{position:relative}
@@ -389,6 +442,7 @@ main .pink											{color:#ff6384}
 .ui-side .menu .submenu								{height:0; overflow:hidden}
 .ui-side .menu .submenu ul							{margin-bottom:20px; padding:7.5px 15px; background-color:#f2f2f2; line-height:30px; font-size:13.5px; font-weight:normal}
 .ui-side .menu li.focus > .submenu					{height:auto}
+.ui-side .menu .break								{padding:10px 0}
 
 
 
@@ -402,23 +456,26 @@ main .pink											{color:#ff6384}
 .ui-side .profile .about .thumbnail:hover:after		{background-color:white; color:#004fec}
 */
 .ui-side .profile .about span						{display:inline-block; vertical-align:middle; font-size:17px; font-weight:500}
+.ui-side .profile .about .safe-checkin				{ margin-top:-2px; width:14px; height:15px; background:url(/static/img/icon/icon_safe_check_small_blue.png) no-repeat center center / 100%}
 .ui-side .profile .about div						{color:#646464}
 .ui-side .profile .about em							{position:relative; margin-right:2px; top:1px}
 
 .ui-side .profile .summary							{margin:15px 0}
 .ui-side .profile .summary var						{vertical-align:top}
-.ui-side .profile .summary table					{border-top:3px solid #004fec; font-size:13px; table-layout:fixed}
+.ui-side .profile .summary table					{border-top:3px solid #004fec; font-size:13.25px; table-layout:fixed}
 .ui-side .profile .summary table tr > *				{padding:8px}
 .ui-side .profile .summary table th					{width:45%; background-color:#f2f2f2; font-weight:500}
 .ui-side .profile .summary table td[colspan]		{padding:0; height:7px !important}
-.ui-side .profile .summary table td button			{display:block; margin:2px auto 0 auto}
+.ui-side .profile .summary table button				{display:block; margin:3px auto 0 auto; line-height:16px}
 /*
 .ui-side .profile .summary table td .ui-tip			{display:block; text-overflow:ellipsis; white-space:nowrap; overflow:hidden}
 */
 .ui-side .profile .summary table td input.ui-tip	{padding:0; border:none; height:1.5em; background-color:white !important}
 .ui-side .profile .summary tr.multiple td			{padding:2px 0}
-.ui-side .profile .summary tr.multiple li			{padding:5px}
+.ui-side .profile .summary tr.multiple li			{padding:5px; text-overflow:ellipsis; overflow:hidden}
 .ui-side .profile .summary tr.multiple li + li		{border-top:1px dashed #ccc}
+.ui-side .profile .summary tr.select td				{padding:0}
+.ui-side .profile .summary tr.select .ui-select		{display:block; width:100%; height:100%; background-color:transparent !important; border:none; text-align-last:center}
 
 .ui-side .profile .alarm							{padding:10px; background-color:rgba(255,87,34,0.1); border-top:3px solid #ff5722; line-height:20px; font-size:13.5px}
 .ui-side .profile .alarm a							{display:block}
@@ -428,20 +485,22 @@ main .pink											{color:#ff6384}
 .ui-side .profile + .menu li.focus > a				{font-weight:inherit; color:inherit}
 
 .ui-side .memo										{margin-top:15px; font-size:0}
-.ui-side .memo a									{display:block; height:32px; line-height:32px; border:1px solid #ccc; border-bottom:none; text-align:center; font-size:13px}
-.ui-side .memo textarea								{padding:8px; min-height:170px; font-size:13px}
+.ui-side .memo table td								{border:1px solid #ccc; border-bottom:none}
+.ui-side .memo a									{display:block; height:32px; line-height:32px; text-align:center; font-size:13.25px}
+.ui-side .memo a:hover								{background-color:rgba(33,150,243,0.15)}
+.ui-side .memo textarea								{padding:8px; min-height:170px; font-size:13.25px}
 .ui-side .memo textarea.update						{border-color:#ffcd56 !important}
 .ui-side .memo textarea.success						{border-color:#37b772 !important}
 .ui-side .memo button								{margin-top:10px}
-.ui-side .memo p									{margin:2px 4px; font-size:13px; visibility:hidden; opacity:0; transition:visibility 0.4s, opacity 0.4s}
-.ui-side .memo p:before								{content:"â—"; position:relative; top:-1.5px; margin-right:5px; font-size:10px; color:#37b772}
+.ui-side .memo p									{margin:2px 4px; font-size:13.25px; visibility:hidden; opacity:0; transition:visibility 0.4s, opacity 0.4s}
+.ui-side .memo p:before								{content:"●"; position:relative; top:-1.5px; margin-right:5px; font-size:10px; color:#37b772}
 .ui-side .memo p.focus								{visibility:visible; opacity:1}
 
 .ui-side .quick										{}
 .ui-side .quick a.disabled							{background-color:white; color:rgba(0,0,0,0.33)}
 .ui-side .quick a.bg.disabled						{background-color:#ebebe4 !important; color:#333 !important}
 
-.ui-side .quick table								{line-height:32px; font-size:13px}
+.ui-side .quick table								{line-height:32px; font-size:13.25px}
 .ui-side .quick table td							{border:1px solid #ccc}
 .ui-side .quick table td a							{display:block}
 .ui-side .quick table td.focus						{background-color:#004fec; border-color:#004fec; color:white}
@@ -450,7 +509,7 @@ main .pink											{color:#ff6384}
 .ui-side .quick ul									{padding-bottom:10px; line-height:35px; font-size:0}
 .ui-side .quick ul + ul								{padding-top:10px; border-top:1px dashed #ccc}
 .ui-side .quick ul li								{display:block; vertical-align:top}
-.ui-side .quick ul li a								{display:block; text-align:center; font-size:13px}
+.ui-side .quick ul li a								{display:block; text-align:center; font-size:13.25px}
 
 .ui-side .quick ul.half								{display:block; margin-left:-5px; margin-right:-5px}
 .ui-side .quick ul.half li							{display:inline-block; width:50%}
@@ -508,22 +567,43 @@ main .ui-tab.block									{margin-bottom:35px}
 .ui-popup .popup										{height:auto; background-color:white; z-index:none}
 
 .ui-popup.focus											{visibility:visible; opacity:1}
+.ui-popup.focus > div > div > div						{/*transform:scale(1)*/}
+
 .ui-popup > div											{position:relative; display:table; width:100%; height:100%}
 .ui-popup > div > div									{display:table-cell; width:100%; height:100%; vertical-align:middle; text-align:center}
 
-.ui-popup > div > div > div								{position:relative; display:inline-block; vertical-align:middle; margin:50px 0; width:85%; background-color:white; text-align:left; font-size:13px; box-sizing:border-box; overflow:hidden}
+.ui-popup > div > div > div								{position:relative; display:inline-block; vertical-align:middle; margin:50px 0; width:85%; background-color:white; text-align:left; font-size:13.25px; box-sizing:border-box; overflow:hidden; /*transform:scale(0.9); transition:transform 0.3s*/}
 .ui-popup > div > div > div.medium						{max-width:960px}
 .ui-popup > div > div > div.small						{max-width:640px}
 .ui-popup > div > div > div.tiny						{max-width:480px}
 .ui-popup > div > div > div.micro						{max-width:420px}
 
-
-.ui-popup > div > div > div > .top						{height:44px; background-color:#42485a; line-height:44px}
-.ui-popup > div > div > div > .top h2					{padding:0 20px; line-height:inherit; font-size:15px; font-weight:400; color:rgba(255,255,255,0.95)}
-.ui-popup > div > div > div > .top h2 a 				{float:right; margin-right:-15px; width:44px; height:44px; background:url(/static/img/icon/icon_close_gray.png) no-repeat center center / 35%; opacity:0.25}
-.ui-popup > div > div > div > .top h2 a:hover			{opacity:0.5}
+.ui-popup > div > div > div > .top						{position:relative; height:40px; background-color:#42485a; line-height:40px}
+.ui-popup > div > div > div > .top h2					{padding:0 20px; line-height:inherit; font-size:14.5px; font-weight:300; color:rgba(255,255,255,0.95)}
+.ui-popup > div > div > div > .top h2 a					{float:right; margin-right:-20px; width:40px; height:40px; background:url(/static/img/icon/icon_close_gray.png) no-repeat center center / 35%; opacity:0.33}
+.ui-popup > div > div > div > .top h2 a:hover			{opacity:0.66}
+.ui-popup > div > div > div > .top em					{position:relative; margin:-1px 0 0 0; padding:2px 5px 3px 4px; line-height:1}
+.ui-popup > div > div > div > .top em.balloon:before	{content:""; position:absolute; right:-2.5px; top:50%; margin-top:-2.5px; width:5px; height:5px; background-color:#ff5722; transform:rotate(45deg)}
 
 .ui-popup > div > div > div > .middle					{padding:25px}
+
+.ui-popup.iframe										{background-color:rgba(0,0,0,0.4)}
+.ui-popup.iframe > div > div > div						{width:calc(100% - 75px); height:calc(100% - 85px); border:3px solid #42485a; border-top:none; /*box-shadow:5px 5px 0px rgba(0,0,0,0.1);*/ overflow:visible}
+.ui-popup.iframe > div > div > div > .top > dl	 		{position:absolute; left:0; top:0; width:auto; height:100%}
+.ui-popup.iframe > div > div > div > .top > dl > dt		{padding:0 10px}
+.ui-popup.iframe > div > div > div > .top > dl > dd		{line-height:1.3; font-size:10px; font-weight:200; color:white}
+.ui-popup.iframe > div > div > div > .top > dl > *		{vertical-align:middle}
+
+.ui-popup.iframe > div > div > div > .top > a			{position:absolute; right:0; top:0; width:40px; height:40px; background:url(/static/img/icon/icon_close_gray.png) no-repeat center center / 35%; opacity:0.33}
+.ui-popup.iframe > div > div > div > .top > a:hover		{opacity:0.66}
+.ui-popup.iframe > div > div > div > .top ul			{position:absolute; left:50%; top:4px; height:36px; text-align:center; font-size:13.25px; font-weight:200; color:white; transform:translateX(-50%)}
+.ui-popup.iframe > div > div > div > .top ul li			{display:inline-block; vertical-align:top; width:150px; height:100%; line-height:34px}
+.ui-popup.iframe > div > div > div > .top ul li a		{display:block; color:inherit}
+.ui-popup.iframe > div > div > div > .top ul li.focus	{background-color:white; line-height:35px; font-weight:500; color:#333}
+
+.ui-popup.iframe > div > div > div > .middle			{position:absolute; left:0; top:40px; right:0; bottom:0; padding:0; background-color:white; overflow:hidden}
+.ui-popup.iframe > div > div > div > .middle > iframe	{position:absolute; left:0; top:0; width:100%; height:100%; background-color:white; border:none}
+
 
 .ui-popup > div > div > div > .bottom					{padding:20px; border-top:1px solid #ccc; text-align:center; font-size:0}
 .ui-popup > div > div > div > .bottom button			{display:inline-block; width:135px; height:35px; border-radius:0}
@@ -546,8 +626,15 @@ main .ui-tab.block									{margin-bottom:35px}
 .ui-confirm button										{width:125px}
 .ui-confirm button + button								{margin-left:20px}
 
-.ui-toast												{position:fixed; padding:0 20px; left:50%; bottom:75px; min-width:100px; background-color:rgba(0,0,0,0.66); border-radius:35px; line-height:35px; text-align:center; font-weight:normal; color:white; transform:translateX(-50%); visibility:hidden; opacity:0; z-index:8; transition:visibility 0.4s, opacity 0.4s}
+.ui-toast												{position:fixed; padding:0 25px; left:50%; bottom:50px; background-color:rgba(0,0,0,0.85); border-radius:44px; line-height:44px; text-align:left; font-weight:normal; color:white; transform:translateX(-50%); visibility:hidden; opacity:0; z-index:16; transition:visibility 0.4s, opacity 0.4s}
+.ui-toast.close											{padding:0 50px 0 25px}
 .ui-toast.focus											{visibility:visible; opacity:1}
+.ui-toast.red											{background-color:rgba(255,87,34,0.85)}
+.ui-toast.blue											{background-color:rgba(33,150,243,0.85)}
+.ui-toast.green											{background-color:rgba(55,183,114,0.85)}
+.ui-toast a.link										{float:right; text-decoration:underline; font-size:12.5px; font-weight:400; opacity:0.75}
+.ui-toast a.close										{position:absolute; right:20px; top:50%; margin-top:-10px; width:20px; height:20px; background:url(/static/img/icon/icon_close_thin_white.png) no-repeat center center / 100%}
+.ui-toast p												{padding:5px 0; line-height:1.3}
 
 
 
@@ -592,7 +679,7 @@ input[type=range]:focus::-ms-thumb					{background-color:#004fec; border-color:#
 /* ******** UI-INPUT : CHECKBOX  ******** */
 
 .ui-input-checkbox									{position:relative; display:inline-block; padding-left:27px}
-.ui-input-checkbox input[type=checkbox]				{position:absolute; left:-9999px; top:0; width:0; height:0; display:block !important}
+.ui-input-checkbox input[type=checkbox]				{position:absolute; left:0; top:0; width:0; height:0; visibility:hidden; opacity:0}
 .ui-input-checkbox input[type=checkbox] + span		{position:absolute; left:0; top:0; bottom:0; margin:auto 0; width:18px; height:18px; background-color:white; border-radius:1px; border:1px solid #ccc}
 .ui-input-checkbox input:checked + span				{background:#37b772 url("/static/img/icon/icon_check_white.png") no-repeat center center / 60%; border:1px solid #37b772}
 .ui-input-checkbox input:disabled + span			{background-color:#ebebe4; border-color:#ccc}
@@ -606,7 +693,7 @@ input[type=range]:focus::-ms-thumb					{background-color:#004fec; border-color:#
 /* ******** UI-INPUT : RADIO  ******** */
 
 .ui-input-radio 									{position:relative; display:inline-block; padding-left:27px}
-.ui-input-radio input[type=radio]					{position:absolute; left:-9999px; top:0; width:0; height:0; display:block !important}
+.ui-input-radio input[type=radio]					{position:absolute; left:0; top:0; width:0; height:0; visibility:hidden; opacity:0}
 .ui-input-radio input[type=radio] + span			{position:absolute; left:0; top:0; bottom:0; margin:auto 0; width:19px; height:19px; background-color:white; border-radius:100%; border:1px solid #ccc; box-sizing:initial}
 .ui-input-radio input:checked + span				{background:#37b772 url("/static/img/icon/icon_check_white.png") no-repeat center center / 60%; border:1px solid #37b772}
 .ui-input-radio input:disabled + span				{background-color:#ebebe4; border-color:#ccc}
@@ -656,7 +743,7 @@ input[type=range]:focus::-ms-thumb					{background-color:#004fec; border-color:#
 /* ******** UI-INPUT : SWITCH  ******** */
 
 .ui-input-switch 									{position:relative; display:inline-block; padding-left:48px}
-.ui-input-switch input								{position:absolute; left:-9999px; top:0; width:0; height:0; display:block !important}
+.ui-input-switch input								{position:absolute; left:0; top:0; width:0; height:0; visibility:hidden; opacity:0}
 .ui-input-switch input + span						{position:absolute; left:0; top:0; bottom:0; margin:auto 0; width:40px; height:21px; border-radius:21px; border:1px solid #ccc; display:block}
 .ui-input-switch input + span:after					{content:""; position:absolute; left:2px; top:2px; width:17px; height:17px; background-color:#bababa; border-radius:100%; transition:left 0.2s}
 .ui-input-switch input:checked + span				{border-color:#37b772}
@@ -674,7 +761,7 @@ input[type=range]:focus::-ms-thumb					{background-color:#004fec; border-color:#
 /* ******** UI-INPUT : TOGGLE ******** */
 
 .ui-input-toggle												{position:relative; display:inline-block; line-height:32px}
-.ui-input-toggle input											{position:absolute; left:-9999px; top:0; width:0; height:0; display:block !important}
+.ui-input-toggle input											{position:absolute; left:0; top:0; width:0; height:0; visibility:hidden; opacity:0}
 .ui-input-toggle input + div									{position:relative; width:75px; /*border-radius:5px;*/ border:1px solid #ccc; color:#aaa; overflow:hidden}
 .ui-input-toggle div div										{margin-left:-55px; height:100%; white-space:nowrap; text-align:center; transition:margin-left 0.3s}
 .ui-input-toggle div span										{display:inline-block; vertical-align:top; width:55px; height:100%; box-sizing:border-box}
@@ -724,17 +811,22 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-input-calendar input:disabled					{background-color:#ebebe4}
 .ui-input-calendar + .ui-input-calendar				{margin-left:10px}
 
+.ui-mobile-calendar									{position:fixed; margin:0 !important; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); visibility:hidden; opacity:0; z-index:16; transition:visibility 0.3s, opacity 0.3s}
+.ui-mobile-calendar.focus							{visibility:visible; opacity:1}
+.ui-mobile-calendar .ui-calendar					{position:fixed; left:50% !important; top:50% !important; margin:0; visibility:visible; opacity:1; transform:translate(-50%, -50%)}
+
 .ui-calendar										{position:absolute; margin-top:1px; padding:12px; left:0; top:100%; width:250px; background-color:white; border:1px solid #ccc; font-size:13.5px; color:#333; overflow:hidden; visibility:hidden; opacity:0; z-index:16; transition:visibility 0.3s, opacity 0.3s}
 .ui-calendar.focus									{visibility:visible; opacity:1}
+
 .ui-calendar h4										{position:relative; margin-bottom:10px; height:25px; line-height:25px; text-align:center; font-size:13.5px}
 .ui-calendar h4 select								{height:25px; line-height:25px; border:none}
 .ui-calendar h4 select[name='year']					{width:85px}
 .ui-calendar h4 select[name='month']				{margin-left:0; width:65px}
 .ui-calendar h4 button								{position:absolute; top:0; width:25px; height:25px; background:none; border:none; font-size:75%; color:#646464}
 .ui-calendar h4 button.prev							{left:-5px}
-.ui-calendar h4 button.prev:before					{content:"â—€"}
+.ui-calendar h4 button.prev:before					{content:"◀"}
 .ui-calendar h4 button.next							{right:-5px}
-.ui-calendar h4 button.next:before					{content:"â–¶"}
+.ui-calendar h4 button.next:before					{content:"▶"}
 
 .ui-calendar table									{background-color:white !important; text-align:center !important; line-height:1}
 .ui-calendar table tr + tr							{border-top:1px solid #ccc}
@@ -822,13 +914,13 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-select ul li:hover + li label					{border-color:transparent}
 
 .ui-select,
-.ui-select div										{padding:0 28px 0 10px; background:url(/static/img/icon/icon_down_black.png) no-repeat right 10px top 50%}
+.ui-select div										{padding:0 28px 0 10px; background:white url(/static/img/icon/icon_down_black.png) no-repeat right 10px top 50%}
 .ui-select div										{position:absolute; left:0; top:0; width:100%; height:100%; /*border-radius:5px;*/ box-sizing:border-box}
 .ui-select div,
 .ui-select label									{white-space:nowrap; text-overflow:ellipsis; overflow:hidden}
 .ui-select div.blank								{color:#aaa}
 .ui-select:disabled,
-.ui-select select:disabled + div					{background-color:#ebebe4 !important}
+.ui-select select:disabled + div					{background-color:#ebebe4 !important; opacity:1}
 .ui-select,
 .ui-select option									{color:#333 !important}
 .ui-select:required:invalid,
@@ -858,7 +950,7 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 
 .ui-button.block									{display:block; width:100%}
 
-.ui-button.medium									{padding:0 5px 1px 5px; line-height:19px; font-size:12px}
+.ui-button.medium									{padding:0 5px; line-height:19px; font-size:12px}
 .ui-button.medium + .ui-button.medium				{margin-left:4px}
 
 .ui-button.small									{padding:0 5px; line-height:18px; font-size:12px}
@@ -872,6 +964,7 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-button:disabled,
 .ui-button.gray										{background-color:#bababa !important}
 .ui-button.white									{background-color:white !important; border:1px solid #ccc !important; color:#333 !important}
+.ui-button.white.green								{border-color:#37b772 !important; color:#37b772 !important}
 
 .ui-button:focus									{box-shadow:0 0 0 3px rgba(66,72,90,0.3)}
 .ui-button.red:focus								{box-shadow:0 0 0 3px rgba(255,87,34,0.3)}
@@ -979,7 +1072,7 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-table.drop > tbody > tr:nth-child(even).focus			{display:table-row}
 
 .ui-table.drop tr.wait td									{background-color:white}
-.ui-table.drop tr.wait td:before							{content:"ë°ì´í„°ë¥¼ ë¡œë“œ ì¤‘ ìž…ë‹ˆë‹¤. ìž ì‹œë§Œ ê¸°ë‹¤ë ¤ ì£¼ì„¸ìš”."; display:block; padding:10px; text-align:center; font-style:italic; color:#999}
+.ui-table.drop tr.wait td:before							{content:"데이터를 로드 중 입니다. 잠시만 기다려 주세요."; display:block; padding:10px; text-align:center; font-style:italic; color:#999}
 
 .ui-table.hover > tbody > tr:not(.none)						{cursor:pointer}
 .ui-table.hover > tbody > tr:not(.none):hover				{background-color:rgba(33,150,243,0.15)}
@@ -991,6 +1084,8 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-table.border > tbody > tr:hover > td:before				{content:""; position:absolute; left:-1px; top:-1px; right:-1px; bottom:-1px; border-top:1px solid #004fec; border-bottom:1px solid #004fec}
 .ui-table.border > tbody > tr.focus > td:first-child:before,
 .ui-table.border > tbody > tr:hover > td:first-child:before	{border-left:1px solid #004fec}
+.ui-table.border > tbody > tr:hover > td:first-child.none + td:before,
+.ui-table.border > tbody > tr:hover > td:first-child.none + td:before {border-left:1px solid #004fec !important}
 .ui-table.border > tbody > tr.focus > td:last-child:before,
 .ui-table.border > tbody > tr:hover > td:last-child:before	{border-right:1px solid #004fec}
 .ui-table.border > tbody > tr.focus							{background-color:rgba(33,150,243,0.15)}
@@ -1005,7 +1100,7 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 
 .ui-table tbody .memo.tip							{position:relative; min-width:auto; text-align:center !important; overflow:visible}
 .ui-table tbody .memo.tip div						{position:absolute; right:calc(100% - 5px); top:50%; width:175px; text-align:right; visibility:hidden; opacity:0; transform:translateY(-50%); transition:visibility 0.1s, opacity 0.1s}
-.ui-table tbody .memo.tip span						{position:relative; display:inline-block; padding:4px 8px; max-width:100%; background-color:rgba(255,250,230,1); border:1px solid #ffcd56; white-space:normal; line-height:1.5; font-size:13px; overflow:visible}
+.ui-table tbody .memo.tip span						{position:relative; display:inline-block; padding:4px 8px; max-width:100%; background-color:rgba(255,250,230,1); border:1px solid #ffcd56; white-space:normal; line-height:1.5; font-size:13.25px; overflow:visible}
 .ui-table tbody .memo.tip span:before				{content:""; position:absolute; right:-7px; top:50%; margin-top:-6px; width:12px; height:12px; background-color:rgba(255,250,230,1); border-right:1px solid #ffcd56; border-top:1px solid #ffcd56; transform:rotate(45deg)}
 .ui-table tbody .memo.tip a:hover div				{visibility:visible; opacity:1}
 
@@ -1018,9 +1113,9 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-table .box h5									{margin-bottom:10px; font-size:15px; font-weight:500; color:#333}
 .ui-table .box:after								{content:""; display:table; clear:both}
 
-.ui-table .box table								{font-size:13px}
+.ui-table .box table								{font-size:13.25px}
 .ui-table .box .bottom								{margin-top:25px; text-align:center; font-size:0}
-.ui-table .box .bottom button						{margin:0 5px; width:135px; font-size:13px}
+.ui-table .box .bottom button						{margin:0 5px; width:135px; font-size:13.25px}
 .ui-table .box > a									{display:none; position:absolute; right:25px; top:0px; width:80px; height:24px; background-color:#686d7b; line-height:24px; text-align:center; font-size:12px; color:white}
 
 .ui-table td.empty									{padding:10px 8px; text-align:center; cursor:default}
@@ -1040,6 +1135,10 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-table.hidden,
 .ui-data-table										{display:none}
 
+.ui-table td.currency.won:after						{content:"원"}
+.ui-table td.currency.point:after					{content:"P"}
+
+
 
 
 
@@ -1058,7 +1157,7 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-search input.calendar							{width:125px !important}
 .ui-search button									{width:135px}
 .ui-search input + button							{margin-left:10px}
-.ui-search span										{margin:0 10px 0 4px; font-size:13px}
+.ui-search span										{margin:0 10px 0 4px; font-size:13.25px}
 
 .ui-search .quick									{display:inline-block; vertical-align:top; font-size:0}
 .ui-search .quick ul								{display:inline-block; margin-right:10px; background-color:white; line-height:33px; text-align:center; overflow:hidden}
@@ -1066,7 +1165,7 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-search .quick li a								{display:block; font-size:13.5px}
 .ui-search .quick li.focus							{border-color:#004fec; z-index:2}
 .ui-search .quick li.focus a						{background-color:#004fec ; color:white}
-.ui-search .quick li + li							{margin-left:-1px}
+.ui-search .quick li + li							{margin-left:-1.25px}
 
 .ui-search .left									{float:left; text-align:left}
 .ui-search .right									{text-align:right}
@@ -1123,7 +1222,7 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-list.switch li > a								{padding-left:75px}
 .ui-list.button li > a								{padding-right:135px}
 
-.ui-list li > .ui-input-switch 						{position:absolute; left:18px; top:50%; margin-top:-13px; height:26px}
+.ui-list li > .ui-input-switch 						{position:absolute; left:18px; top:50%; margin-top:-13.25px; height:26px}
 .ui-list li > .ui-input-switch span					{background-color:white}
 
 .ui-list li > button,
@@ -1184,7 +1283,7 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-list-result .list li h4 button					{float:right; margin-left:7px}
 .ui-list-result .list li h4 var button				{float:none; margin-left:10px}
 .ui-list-result .list li hr							{margin:20px 0; border-bottom:1px dashed #ccc}
-.ui-list-result .list li > div						{position:absolute; left:1px; top:1px; bottom:1px; width:5px}
+.ui-list-result .list li > div						{position:absolute; left:-1px; top:-1px; bottom:-1px; width:5px}
 .ui-list-result .list li > div.package:after		{content:""; position:absolute; left:0; top:0; width:100%; height:50%; background-color:#37b772}
 
 .ui-list-result .list li table						{margin-top:12px}
@@ -1231,13 +1330,13 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-summary + .ui-note								{margin-top:15px}
 
 .ui-summary.small									{margin-top:0; padding:10px; border:1px solid #ccc; line-height:20px; text-align:left; font-size:0}
-.ui-summary.small span								{display:inline-block; vertical-align:middle; margin-right:5px; font-size:13px}
+.ui-summary.small span								{display:inline-block; vertical-align:middle; margin-right:5px; font-size:13.25px}
 .ui-summary.small h2								{display:inline-block; vertical-align:middle; margin-top:0; font-size:15px}
 .ui-summary.small ul li								{padding:5px; text-align:right}
 .ui-summary.small .icon								{margin:0; margin-bottom:-2px; padding:0; width:21px; height:21px; background:#f0f0f0; text-align:center; font-weight:bold; font-size:12px; color:#111}
-.ui-summary.small .icon.plus:before					{content:"ï¼‹"}
-.ui-summary.small .icon.minus:before				{content:"ï¼"}
-.ui-summary.small .icon.equal:before				{content:"ï¼"}
+.ui-summary.small .icon.plus:before					{content:"＋"}
+.ui-summary.small .icon.minus:before				{content:"－"}
+.ui-summary.small .icon.equal:before				{content:"＝"}
 .ui-summary.center									{margin:20px 0; text-align:center}
 
 
@@ -1260,9 +1359,9 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 
 .ui-state h2										{font-size:20px; font-weight:500; color:#333}
 .ui-state h2:after									{content:""; display:block; margin:10px auto; width:40px; height:3px; background-color:#004fec}
-.ui-state h2 span									{display:block; margin-top:5px; font-size:13px; font-weight:normal; color:#444}
+.ui-state h2 span									{display:block; margin-top:5px; font-size:13.25px; font-weight:normal; color:#444}
 .ui-state h3										{font-size:14px; font-weight:500; color:#444}
-.ui-state h4										{font-size:13px; font-weight:normal; color:#444}
+.ui-state h4										{font-size:13.25px; font-weight:normal; color:#444}
 .ui-state h3 + h4									{color:#626262}
 
 
@@ -1272,20 +1371,20 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 /* ******** UI-TOOLTIP ******** */
 
 .ui-tip 											{position:relative; margin-left:4px; cursor:pointer}
-.ui-tip:before										{content:"â“˜"; color:transparent}
+.ui-tip:before										{content:"ⓘ"; color:transparent}
 .ui-tip:after										{content:""; position:absolute; left:0; top:50%; margin-top:-0.45em; width:0.95em; height:0.95em; background:white url(/static/img/icon/icon_help_black.png) no-repeat center center / 100%; border-radius:100%; border:1px solid #bbb}
 .ui-tip.none										{margin:0}
 .ui-tip.none:before,
 .ui-tip.none:after									{display:none}
 
-.ui-tip-popup										{position:absolute; left:0; top:0; width:250px; background-color:rgba(255,250,230,1); border:1px solid #ffcd56; box-shadow:2px 2px 0px rgba(0,0,0,0.1); line-height:1.5; text-align:justify; font-size:13px; opacity:0; z-index:8; transition:visibility 0.1s, opacity 0.1s}
+.ui-tip-popup										{position:absolute; left:0; top:0; width:250px; background-color:rgba(255,250,230,1); border:1px solid #ffcd56; box-shadow:2px 2px 0px rgba(0,0,0,0.1); line-height:1.5; text-align:justify; font-size:13.25px; opacity:0; z-index:8; transition:visibility 0.1s, opacity 0.1s}
 .ui-tip-popup.focus									{visibility:visible; opacity:1}
-.ui-tip-popup.left:before							{content:""; position:absolute; left:-7px; top:50%; margin-top:-6px; width:12px; height:12px; background-color:rgba(255,250,230,1); border-left:1px solid #ffcd56; border-bottom:1px solid #ffcd56; transform:rotate(45deg)}
-.ui-tip-popup.left.reverse:before					{left:auto; right:-7px; border:none; border-right:1px solid #ffcd56; border-top:1px solid #ffcd56}
+.ui-tip-popup.right:before							{content:""; position:absolute; left:-7px; top:50%; margin-top:-6px; width:12px; height:12px; background-color:rgba(255,250,230,1); border-left:1px solid #ffcd56; border-bottom:1px solid #ffcd56; transform:rotate(45deg)}
+.ui-tip-popup.right.reverse:before					{left:auto; right:-7px; border:none; border-right:1px solid #ffcd56; border-top:1px solid #ffcd56}
 .ui-tip-popup.center:before							{content:""; position:absolute; left:50%; bottom:-7px; margin-left:-6px; width:12px; height:12px; background-color:rgba(255,250,230,1); border-right:1px solid #ffcd56; border-bottom:1px solid #ffcd56; transform:rotate(45deg); box-shadow:2px 0px 0px rgba(0,0,0,0.1)}
 
 .ui-tip-popup p										{position:relative; display:inline-block; padding:5px 7px 5px 6px; color:rgb(92,60,0); line-height:1.3}
-.ui-tip-popup p h5									{font-size:13.5px; font-weight:bold; color:#333}
+.ui-tip-popup p h5									{font-size:13.25px; font-weight:bold; color:#333}
 .ui-tip-popup.center p								{text-align:center}
 
 .ui-tip-popup.text-left	p							{text-align:left}
@@ -1296,6 +1395,11 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-tip-popup.gray:before,
 .ui-tip-popup.gray.reverse:before					{background-color:#f8f8f8; border-color:#ccc}
 .ui-tip-popup.gray p								{color:#333}
+
+.ui-tip-popup.black									{background-color:#111; border-color:#111}
+.ui-tip-popup.black:before,
+.ui-tip-popup.black.reverse:before					{background-color:#111; border-color:#111}
+.ui-tip-popup.black p								{color:rgba(255,255,255,0.8)}
 
 .ui-tip-popup.red									{background-color:rgba(255,238,232,1); border-color:#ff5722}
 .ui-tip-popup.red:before,
@@ -1354,7 +1458,27 @@ input.ui-input-search								{padding-right:29px; background:white url(/static/i
 .ui-popup .ui-form table							{line-height:35px; text-align:left}
 .ui-popup .ui-form table tr > *						{padding:5px 0}
 .ui-popup .ui-form table tr > th					{vertical-align:top; width:125px}
-.ui-popup .ui-form .ui-select						{font-size:13px}
+.ui-popup .ui-form .ui-select						{font-size:13.25px}
+
+
+
+
+/* ******** UI-STCIKY-BOX ******** */
+
+.ui-sticky-box										{height:300px; background-color:#999; border:1px solid #ccc; overflow:auto}
+.ui-sticky-box .ui-table							{background-color:white}
+.ui-sticky-box .ui-table tr							{border:none}
+.ui-sticky-box .ui-table tr > *						{border:none; white-space:nowrap !important; text-overflow:ellipsis; overflow:hidden}
+.ui-sticky-box .ui-table thead tr					{position:sticky; position:-webkit-sticky; top:0px; background-color:inherit; outline:1px solid #ccc; z-index:2}
+/*
+.ui-sticky-box .ui-table tbody tr > *				{position:relative; padding:8px; white-space:normal}
+*/
+.ui-sticky-box .ui-table tr > * + *					{border-left:1px solid #ccc}
+.ui-sticky-box .ui-table tbody tr + tr				{border-top:1px solid #ccc}
+.ui-sticky-box .ui-table .empty,
+.ui-sticky-box .ui-table .empty td					{text-align:center !important}
+.ui-sticky-box .ui-table.sharp						{border-top:0}
+.ui-sticky-box .ui-table.sharp thead tr > *			{background-color:#f0f0f0; color:#333}
 
 
 
@@ -1399,7 +1523,7 @@ section.ui-break									{border-top:1px dashed #ccc}
 .ui-image-box input[type=file]						{position:absolute; margin:0; padding:0; left:0; top:0; width:100%; max-width:100%; height:100%; border:none}
 .ui-image-box:hover a								{visibility:visible; opacity:1}
 .ui-image-box img									{position:absolute; left:0; top:0; width:100%; height:100%; background-color:white; object-fit:cover}
-.ui-image-box:before								{content:"ì´ë¯¸ì§€ ì—…ë¡œë“œ"; display:none; position:absolute; left:50%; top:50%; white-space:pre; text-align:center; font-size:13.5px; color:#999; transform:translate(-50%, -50%)}
+.ui-image-box:before								{content:"이미지 업로드"; display:none; position:absolute; left:50%; top:50%; white-space:pre; text-align:center; font-size:13.5px; color:#999; transform:translate(-50%, -50%)}
 .ui-image-box.empty a,
 .ui-image-box.empty img								{display:none}
 .ui-image-box.empty:before							{display:block}
@@ -1422,4 +1546,22 @@ section.ui-break									{border-top:1px dashed #ccc}
 .ui-thumbnail label									{margin-left:0 !important}
 .ui-thumbnail label + button						{display:none}
 .ui-thumbnail label + button.focus					{display:inline-block}
+
+
+
+
+/* ******** UI-CONTEXT-MENU ******** */
+
+.ui-context-menu									{position:fixed; left:0; top:0; visibility:hidden; opacity:0; z-index:16; transition:visibility 0.3s, opacity 0.3s}
+.ui-context-menu.focus								{visibility:visible; opacity:1}
+.ui-context-menu > div								{min-width:150px; max-width:150px; background-color:white; border:1px solid rgba(0,0,0,0.2); border-radius:8px; box-shadow:3px 3px 0px rgba(0,0,0,0.1); line-height:33px; text-align:center; font-size:13.25px; color:#444; overflow:hidden}
+.ui-context-menu h4									{padding:0 10px; background-color:#42485a; /*outline:1px solid #42485a;*/ font-size:13.25px; color:white}
+.ui-context-menu li									{padding:0 10px; cursor:pointer}
+.ui-context-menu li.disabled						{color:#ccc}
+.ui-context-menu li + li							{border-top:1px solid #ccc}
+.ui-context-menu li:hover							{background-color:#eee; /*#004fec color:white; background-color:rgba(135,206,250,0.5)*/}
+
+
+
+.ui-icon.safe-checkin								{display:inline-block; vertical-align:text-top; margin-right:2px; width:14px; height:15px; background:url(/static/img/icon/icon_safe_check_small_blue.png) no-repeat center center / 100%}
 

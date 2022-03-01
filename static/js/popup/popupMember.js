@@ -231,11 +231,11 @@ const popupRegisterMember = {
 			const isEmpty = (value) ? false : true;
 			switch(item) {
 				case "name"			: if(isEmpty) error = "이름을 입력해 주세요."; break;
-				case "mobile"		: if(isEmpty || !this.isMobile) error = "휴대폰 번호를 확인해 주세요."; break;
-				case "membershipNo"	: if(isEmpty || !this.isMemberNo) error = "회원 번호를 입력해 주세요."; break;
+				// case "mobile"		: if(isEmpty || !this.isMobile) error = "휴대폰 번호를 확인해 주세요."; break;
+				// case "membershipNo"	: if(isEmpty || !this.isMemberNo) error = "회원 번호를 입력해 주세요."; break;
 				case "entranceBarcode" :
-				case "barcode" 		: if(!isEmpty && !this.isBarcode) error = "바코드 번호를 확인해 주세요."; break;
-				case "memberId"		: if(!isEmpty && !isMail(value)) error = "올바르지 않은 이메일 주소입니다."; break;
+				// case "barcode" 		: if(!isEmpty && !this.isBarcode) error = "바코드 번호를 확인해 주세요."; break;
+				// case "memberId"		: if(!isEmpty && !isMail(value)) error = "올바르지 않은 이메일 주소입니다."; break;
 			}
 			if(error) {
 				alert(error);
@@ -259,29 +259,32 @@ const popupRegisterMember = {
 			if(error)
 				uiError(error)
 			else {
-				const seqMember = data.data.member.seqMember;
-				const seqMemberProspective = this.preset.seqMemberProspective;
-				const completeStep = () => {
-					if(this.callback) this.callback();
-					if(isSale) {
-						window.location.href = "/member/" + seqMember + "/sell/pass";
-						return;
-					}
-					popupRegisterMember.close();
-					if(this.isRefresh)
-						window.location.reload(true);
-				};
-				if(seqMemberProspective) {
-					memberController.updateMemberProspective(seqMember, seqMemberProspective).then(data => {
-						alert("등록되었습니다.");
-						completeStep();
-					});
-				} else {
-					memberController.insertMemberProspective(seqMember).then(data => {
-						alert("등록되었습니다.");
-						completeStep();
-					});
-				}
+				// const seqMember = data.data.member.seqMember;
+				// const seqMemberProspective = this.preset.seqMemberProspective;
+				alert("등록되었습니다.");
+				window.location.reload();
+				// completeStep();
+				// const completeStep = () => {
+				// 	if(this.callback) this.callback();
+				// 	if(isSale) {
+				// 		window.location.href = "/member/" + seqMember + "/sell/pass";
+				// 		return;
+				// 	}
+				// 	popupRegisterMember.close();
+				// 	if(this.isRefresh)
+				// 		window.location.reload(true);
+				// };
+				// if(seqMemberProspective) {
+				// 	memberController.updateMemberProspective(seqMember, seqMemberProspective).then(data => {
+				// 		alert("등록되었습니다.");
+				// 		completeStep();
+				// 	});
+				// } else {
+				// 	memberController.insertMemberProspective(seqMember).then(data => {
+				// 		alert("등록되었습니다.");
+				// 		completeStep();
+				// 	});
+				// }
 			}
 		}).catch(error => {
 			uiError(error)

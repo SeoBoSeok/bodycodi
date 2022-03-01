@@ -220,40 +220,41 @@ const MemberController = {
 	
 	
 	checkUsableMobile : function(data, cbFunc) {
-		$.ajax({
-			type : 'POST',
-			url : '/member/ajax/is-usable-mobile',
-			data : JSON.stringify(data),
-			dataType : 'json',
-			contentType : 'application/json;charset=UTF-8',
-			beforeSend : function(xhr) {
-				$.blockUI({
-					message : '<h5 style="padding-top: 15px">로딩중입니다...</h5>',
-					css : {
-						'height' : '50px',
-						'z-index' : 2010
-					}
-				});
-			},
-			success : function(returnData) {
-				if (returnData.result !== 'SUCCESS' || returnData.resultCode === '100') {
-					alert('작업 중 에러가 발생하였습니다.');
-					return;
-				}
+		return {result: "SUCCESS", resultCode: "1102"};
+		// $.ajax({
+		// 	type : 'POST',
+		// 	url : '/member/ajax/is-usable-mobile',
+		// 	data : JSON.stringify(data),
+		// 	dataType : 'json',
+		// 	contentType : 'application/json;charset=UTF-8',
+		// 	beforeSend : function(xhr) {
+		// 		$.blockUI({
+		// 			message : '<h5 style="padding-top: 15px">로딩중입니다...</h5>',
+		// 			css : {
+		// 				'height' : '50px',
+		// 				'z-index' : 2010
+		// 			}
+		// 		});
+		// 	},
+		// 	success : function(returnData) {
+		// 		if (returnData.result !== 'SUCCESS' || returnData.resultCode === '100') {
+		// 			alert('작업 중 에러가 발생하였습니다.');
+		// 			return;
+		// 		}
 				
 				
-				if (typeof cbFunc === 'function') {
-					cbFunc(returnData);
-				}
-			},
-			error : function(data) {
-				alert('작업 중 에러가 발생하였습니다.');
-				console.error(data);
-			},
-			complete : function(xhr, textStatus) {
-				$.unblockUI();
-			}
-		});
+		// 		if (typeof cbFunc === 'function') {
+		// 			cbFunc(returnData);
+		// 		}
+		// 	},
+		// 	error : function(data) {
+		// 		alert('작업 중 에러가 발생하였습니다.');
+		// 		console.error(data);
+		// 	},
+		// 	complete : function(xhr, textStatus) {
+		// 		$.unblockUI();
+		// 	}
+		// });
 	},
 	checkUsableEntranceBarcode : function(data, cbFunc){
 		$.ajax({
@@ -293,48 +294,49 @@ const MemberController = {
 	},
 	
 	generateMembershipNo : function(lastMobileNo, cbFunc) {
-		$.ajax({
-			type : 'POST',
-			contentType : "application/json; charset=UTF-8",
-			url : '/member/ajax/generate-membershipNo',
-			data : JSON.stringify({
-				member : {
-					membershipNo : lastMobileNo
-				}
-			}),
-			dataType : 'json',
-			beforeSend : function(xhr) {
-				$.blockUI({
-					message : '<h5 style="padding-top: 15px">로딩중입니다...</h5>',
-					css : {
-						'height' : '50px',
-						'z-index' : 2010
-					}
-				});
-			},
-			success : function(returnData) {
-				if (returnData.result !== 'SUCCESS') {
-					alert('작업 중 에러가 발생하였습니다.');
-					return;
-				}
+		cbFunc({"member":{"age":0,"membershipNo":"11","memberInfoEditYn":"N","height":0,"weight":0,"rhr":0,"vo2max":0}});
+		// $.ajax({
+		// 	type : 'POST',
+		// 	contentType : "application/json; charset=UTF-8",
+		// 	url : '/member/ajax/generate-membershipNo',
+		// 	data : JSON.stringify({
+		// 		member : {
+		// 			membershipNo : lastMobileNo
+		// 		}
+		// 	}),
+		// 	dataType : 'json',
+		// 	beforeSend : function(xhr) {
+		// 		$.blockUI({
+		// 			message : '<h5 style="padding-top: 15px">로딩중입니다...</h5>',
+		// 			css : {
+		// 				'height' : '50px',
+		// 				'z-index' : 2010
+		// 			}
+		// 		});
+		// 	},
+		// 	success : function(returnData) {
+		// 		if (returnData.result !== 'SUCCESS') {
+		// 			alert('작업 중 에러가 발생하였습니다.');
+		// 			return;
+		// 		}
 				
-				if (returnData.resultCode !== '000') {
-					alert('작업 중 에러가 발생하였습니다.');
-					return;
-				}
+		// 		if (returnData.resultCode !== '000') {
+		// 			alert('작업 중 에러가 발생하였습니다.');
+		// 			return;
+		// 		}
 				
-				if (typeof cbFunc === 'function') {
-					cbFunc(returnData.data);
-				}
-			},
-			error : function(data) {
-				alert('작업 중 에러가 발생하였습니다.');
-				console.trace(data);
-			},
-			complete : function(xhr, textStatus) {
-				$.unblockUI();
-			}
-		});
+		// 		if (typeof cbFunc === 'function') {
+		// 			cbFunc(returnData.data);
+		// 		}
+		// 	},
+		// 	error : function(data) {
+		// 		alert('작업 중 에러가 발생하였습니다.');
+		// 		console.trace(data);
+		// 	},
+		// 	complete : function(xhr, textStatus) {
+		// 		$.unblockUI();
+		// 	}
+		// });
 	},
 	
 	
@@ -381,7 +383,7 @@ const MemberController = {
 			type : 'POST',
 			contentType : 'application/json;charset=UTF-8',
 			dataType : 'json',
-			url : '/member/ajax/regist/advance',
+			url : '/member/ajax/regist/advance.php',
 			data : JSON.stringify(data),
 			beforeSend : function(xhr) {
 				$.blockUI({

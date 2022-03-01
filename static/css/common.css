@@ -273,14 +273,14 @@ table>thead>tr:nth-child(2n) th {
 table tbody tr,table tfoot tr {
   /* &.active,&:hover{background-color:$grayL;td{.modify{display:inline-block;}}}&.active{td{.ctr_btn{display:block;}}}*/
 }
-table tbody tr>th,table tbody tr>td,table tfoot tr>th,table tfoot tr>td {
+/* table tbody tr>th,table tbody tr>td,table tfoot tr>th,table tfoot tr>td {
   padding:5px;
   height:40px;
   text-align:center;
   vertical-align:middle;
   background-color:#f0f0f2;
   border:1px solid #9fa0aa !important;
-}
+} */
 table tbody tr>td *,table tfoot tr>td * {
   vertical-align:middle;
 }

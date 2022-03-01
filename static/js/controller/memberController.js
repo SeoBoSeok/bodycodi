@@ -2,14 +2,14 @@ const memberController = {
 	create : function(data) {
 		return new Promise(function(resolve, reject) {
 			$.ajax({
-				url			: "/member/ajax/regist/advance",
+				url			: "/member/ajax/regist/advance.php",
 				type		: "post",
 				contentType : "application/json;charset=utf-8",
 				dataType	: "json",
 				data 		: JSON.stringify(data),
 				success 	: function(data) {
 					if(data.result == "SUCCESS" || data.resultCode == "000")
-    	                resolve(data);
+						resolve(data);
 					else
 						reject(data);
 				},
@@ -272,43 +272,45 @@ const memberController = {
 
 	checkMobile : function(data) {
 		return new Promise(function(resolve, reject) {
-			$.ajax({
-				url			: "/member/ajax/is-usable-mobile",
-				type		: "post",
-				contentType : "application/json;charset=utf-8",
-				dataType	: "json",
-				data 		: JSON.stringify(data),
-				success 	: function(data) {
-					if(data.result == "SUCCESS" || data.resultCode == "100")
-    	                resolve(data);
-					else
-						reject(data);
-				},
-				error		: function(data) {
-					reject(data);
-				}
-			});
+			resolve({result: "SUCCESS", resultCode: "1100"});
+			// $.ajax({
+			// 	url			: "/member/ajax/is-usable-mobile",
+			// 	type		: "post",
+			// 	contentType : "application/json;charset=utf-8",
+			// 	dataType	: "json",
+			// 	data 		: JSON.stringify(data),
+			// 	success 	: function(data) {
+			// 		if(data.result == "SUCCESS" || data.resultCode == "100")
+    	//                 resolve(data);
+			// 		else
+			// 			reject(data);
+			// 	},
+			// 	error		: function(data) {
+			// 		reject(data);
+			// 	}
+			// });
 		});
 	},
 
 	checkBarcode : function(data) {
 		return new Promise(function(resolve, reject) {
-			$.ajax({
-				url			: "/member/ajax/is-usable-entrance-barcode",
-				type		: "post",
-				contentType : "application/json;charset=utf-8",
-				dataType	: "json",
-				data 		: JSON.stringify(data),
-				success 	: function(data) {
-					if(data.result == "SUCCESS" || data.resultCode == "100")
-    	                resolve(data);
-					else
-						reject(data);
-				},
-				error		: function(data) {
-					reject(data);
-				}
-			});
+			// $.ajax({
+			// 	url			: "/member/ajax/is-usable-entrance-barcode",
+			// 	type		: "post",
+			// 	contentType : "application/json;charset=utf-8",
+			// 	dataType	: "json",
+			// 	data 		: JSON.stringify(data),
+			// 	success 	: function(data) {
+			// 		if(data.result == "SUCCESS" || data.resultCode == "100")
+    	//                 resolve(data);
+			// 		else
+			// 			reject(data);
+			// 	},
+			// 	error		: function(data) {
+			// 		reject(data);
+			// 	}
+			// });
+			resolve(true);
 		});
 	},
 
@@ -335,22 +337,23 @@ const memberController = {
 
 	generateMemberNo : function(data) {
 		return new Promise(function(resolve, reject) {
-			$.ajax({
-				url			: "/member/ajax/generate-membershipNo",
-				type		: "post",
-				contentType : "application/json;charset=utf-8",
-				dataType	: "json",
-				data 		: JSON.stringify(data),
-				success 	: function(data) {
-					if(data.result == "SUCCESS" || data.resultCode == "000")
-    	                resolve(data.data);
-					else
-						reject(data);
-				},
-				error		: function(data) {
-					reject(data);
-				}
-			});
+			resolve({"data":{"member":{"age":0,"membershipNo":"11","memberInfoEditYn":"N","height":0,"weight":0,"rhr":0,"vo2max":0}},"result":"SUCCESS","resultCode":"000"});
+			// $.ajax({
+			// 	url			: "/member/ajax/generate-membershipNo",
+			// 	type		: "post",
+			// 	contentType : "application/json;charset=utf-8",
+			// 	dataType	: "json",
+			// 	data 		: JSON.stringify(data),
+			// 	success 	: function(data) {
+			// 		if(data.result == "SUCCESS" || data.resultCode == "000")
+    	//                 resolve(data.data);
+			// 		else
+			// 			reject(data);
+			// 	},
+			// 	error		: function(data) {
+			// 		reject(data);
+			// 	}
+			// });
 		});
 	},
 

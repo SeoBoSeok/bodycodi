@@ -1306,7 +1306,7 @@ var schedulePopup = {
 		$.ajax({
 			type : 'POST',
 			contentType : 'application/x-www-form-urlencoded; charset=UTF-8',
-			url : '/reservationsetting/json/selectSettingOfVoucherMinusYn',
+			url : '/reservationsetting/json/selectSettingOfVoucherMinusYn/index.php',
 			data : {
 				settingRoute : 'coach',
 				seqPartnerCoach : scheduleInfo.seqCoach
