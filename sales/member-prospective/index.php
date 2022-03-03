@@ -1397,7 +1397,7 @@ const doPage = {
 				const memberInfo = this.self.data.memberInfo;
 				popupRegisterMember.open(0, {
 					seqMemberProspective : memberInfo.seqMemberProspective,
-					name : form.getValue("name"),
+					name : form.getValue("mb_name"),
 					sex : form.getValue("sex") || "M",
 					mobile : this.getMobile(),
 					seqPartnerCoach : form.getValue("seqManager"),

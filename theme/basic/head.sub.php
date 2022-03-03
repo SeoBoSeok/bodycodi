@@ -4,8 +4,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 $link = $_SERVER['REQUEST_URI'];
 $link_array = explode('/',$link);
 $pagel = end($link_array);
-if (!$member['mb_id'] && ($pagel !== "login.php"))
-	header('Location: /bbs/login.php');
+// if (!$member['mb_id'] && ($pagel !== "login.php"))
+// 	header('Location: /bbs/login.php');
 
 // print_r($_SERVER);
 

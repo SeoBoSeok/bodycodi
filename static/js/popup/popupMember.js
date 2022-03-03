@@ -188,7 +188,7 @@ const popupRegisterMember = {
 		const data = {
 			member : {
 				// 필수사항
-				name			: byName("name"),
+				mb_name			: byName("mb_name"),
 				sex				: this.popup.querySelector("[name='sex']:checked").value,
 				mobile			: byName("mobile"),
 				smsAgreeYn		: (this.popup.querySelector("[name='sms']:checked")) ? "Y" : "N",
@@ -225,7 +225,7 @@ const popupRegisterMember = {
 //		console.log(data);
 
 		let error = "";
-		const checkList = ["name", "mobile", "membershipNo", "barcode", "entranceBarcode", "memberId"];
+		const checkList = ["mb_name", "mobile", "membershipNo", "barcode", "entranceBarcode", "memberId"];
 		for(let item of checkList) {
 			const value = data[item];
 			const isEmpty = (value) ? false : true;
@@ -257,8 +257,10 @@ const popupRegisterMember = {
 				case "1104" : error = "바코드 번호가 중복되어 사용할 수 없습니다."; break;
 			}
 			if(error)
+				console.log(`uiError(error)`),
 				uiError(error)
 			else {
+				console.log(`회원 등록`);
 				// const seqMember = data.data.member.seqMember;
 				// const seqMemberProspective = this.preset.seqMemberProspective;
 				alert("등록되었습니다.");
@@ -743,7 +745,7 @@ const popupRegisterMember = {
 								<tr class="name">
 									<th>이름</th>
 									<td>
-										<input name="name" type="text" placeholder="이름" maxlength="30" tabIndex>
+										<input name="mb_name" type="text" placeholder="이름" maxlength="30" tabIndex>
 										<label class="ui-input-radio">
 											<input name="sex" type="radio" value="M" data-event="sex" checked>
 											<span></span>

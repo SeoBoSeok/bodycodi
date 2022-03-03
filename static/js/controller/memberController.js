@@ -8,6 +8,7 @@ const memberController = {
 				dataType	: "json",
 				data 		: JSON.stringify(data),
 				success 	: function(data) {
+					console.log(`const memberController success`);
 					if(data.result == "SUCCESS" || data.resultCode == "000")
 						resolve(data);
 					else

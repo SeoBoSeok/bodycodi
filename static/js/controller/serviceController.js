@@ -22,7 +22,7 @@ const serviceController = {
 			} else {
 				return new Promise(function(resolve, reject) {
 					$.ajax({
-						url			: "/services/normal/list",
+						url			: "/services/normal/list.php",
 						type		: "get",
 						data		: data,
 						contentType : "application/json;charset=utf-8",

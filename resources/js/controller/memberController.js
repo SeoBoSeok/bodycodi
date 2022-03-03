@@ -395,6 +395,7 @@ const MemberController = {
 				});
 			},
 			success : function(returnData) {
+				console.log(`regist : function(data, cbFunc)`, returnData);
 				if (returnData.result !== 'SUCCESS' || returnData.resultCode !== '000') {
 					alert('작업 중 에러가 발생하였습니다.');
 					return;

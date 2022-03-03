@@ -1825,7 +1825,7 @@ checkLicence();
             processing: true,
 			serverSide: true,
 			ajax: {
-                url: '/member/search?' + $formData,
+                url: '/member/search.php?' + $formData,
 				type: 'GET',
 				dataSrc: function(json) {
                     let tableData = [];
