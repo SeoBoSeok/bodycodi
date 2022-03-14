@@ -140,7 +140,7 @@ const memberController = {
 	statistics : function(seqMember) {
 		return new Promise(function(resolve, reject) {
 			$.ajax({
-				url			: "/member/" + seqMember + "/statistics",
+				url			: "/member/statistics.php?seqMember=" + seqMember,
 				type		: "get",
 				contentType : "application/json;charset=utf-8",
 				dataType	: "json",

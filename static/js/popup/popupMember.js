@@ -251,11 +251,11 @@ const popupRegisterMember = {
 
 		let error = "";
 		memberController.create(data).then(data => {
-			switch(data.resultCode) {
-				case "1101" : error = "회원번호가 다른 회원과 중복되어 수정할 수 없습니다.\n지점 통합 시스템을 이용하는 경우, 전지점 기준 동일한 회원번호는 1개만 배정 가능합니다."; break;
-				case "1102" : error = "휴대폰 번호가 중복되어 사용할 수 없습니다."; break;
-				case "1104" : error = "바코드 번호가 중복되어 사용할 수 없습니다."; break;
-			}
+			// switch(data.resultCode) {
+			// 	case "1101" : error = "회원번호가 다른 회원과 중복되어 수정할 수 없습니다.\n지점 통합 시스템을 이용하는 경우, 전지점 기준 동일한 회원번호는 1개만 배정 가능합니다."; break;
+			// 	case "1102" : error = "휴대폰 번호가 중복되어 사용할 수 없습니다."; break;
+			// 	case "1104" : error = "바코드 번호가 중복되어 사용할 수 없습니다."; break;
+			// }
 			if(error)
 				console.log(`uiError(error)`),
 				uiError(error)
@@ -719,7 +719,7 @@ const popupRegisterMember = {
 
 						<div class="ui-tab-1 focus">
 							<table>
-								<tr class="thumbnail">
+							<!--<tr class="thumbnail">
 									<th>
 										<div>
 											<img id="profileImage" src="/static/img/login/male.jpg" />
@@ -741,7 +741,7 @@ const popupRegisterMember = {
 											<p class="note">정면, 상반신 사진을 등록해 주세요.</p>
 										</form>
 									</td>
-								</tr>
+								</tr>-->
 								<tr class="name">
 									<th>이름</th>
 									<td>

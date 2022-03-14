@@ -13,8 +13,9 @@ $_result = array(
 
 // get member info
 $_member_info = "";
+$_member_id = $_GET['data'];
 
-$sql_member = " SELECT * FROM g5_member ";
+$sql_member = " SELECT * FROM g5_member WHERE mb_no = '$_member_id' ";
 
 $result_member = sql_query($sql_member);
 
@@ -35,13 +36,13 @@ for($i=0; $m_data=sql_fetch_array($result_member); $i++) {
   // print_r(json_encode($_member_info));
   // print_r($result_service)
   $_member_info["seqMember"] = $m_data["mb_no"];
-  $_member_info["name"] = $m_data["mb_name"];
+  $_member_info["memberName"] = $m_data["mb_name"];
   $_member_info["sex"] = "M";
-  $_member_info["birthday"] = "2021-09-11T01:00:00+09:00";
+  $_member_info["birthday"] = $m_data["mb_birth"];
   $_member_info["age"] = 1;
-  $_member_info["mobile"] = $result["mb_hp"];
+  $_member_info["mobile"] = $m_data["mb_hp"];
   $_member_info["point"] = 44560;
-  $_member_info["membershipNo"] = "9804";
+  $_member_info["membershipNo"] = $m_data["membershipNo"];
   $_member_info["firstPaymentDate"] = "2021-09-11T00:00:00+09:00";
   $_member_info["latestPaymentDate"] = "2022-03-03T00:00:00+09:00";
   $_member_info["endDate"] = "2024-11-19T00:00:00+09:00";
@@ -55,12 +56,20 @@ for($i=0; $m_data=sql_fetch_array($result_member); $i++) {
   $_member_info["branchName"] = null;
   $_member_info["safeCheckinFlag"] = null;
   $_member_info["lockerList"] = [];  
+  $_member_info["address"] = "경기도 가평군 가평읍 광장로22번길 27-9 (골드빌A)";  
   
   array_push($_result["data"], $_member_info);
 
 }
 
 
-echo (json_encode($_result));
+echo (json_encode($_member_info));
 
 // echo json_encode(json_decode(file_get_contents("search.json"), true));
+
+// https://crm.bodycodi.com/member/1584986/summary (좌측 개인 Profile)
+// https://crm.bodycodi.com/member/1584986/booking/reservation?count=10 (최근 예약 수업 내역)
+// https://crm.bodycodi.com/member/1584986/pass/list (유효 이용권 목록)
+// https://crm.bodycodi.com/member/1584986/booking/entrance?count=10 (최근 출석/결설 내역)
+// https://crm.bodycodi.com/member/1584986/paymentInfo/list (최근 결제 내역)
+?>

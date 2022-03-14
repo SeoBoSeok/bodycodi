@@ -12,7 +12,7 @@ include_once('../../../common.php');
 $data = json_decode(file_get_contents('php://input'), true);
 // var_dump($data);
 $_POST = $data["member"];
-print_r($_POST);
+// print_r($_POST);
 // address: ""
 // addressDetail: ""
 // birthday: "2022-03-02"
@@ -34,10 +34,15 @@ print_r($_POST);
 // smsAgreeYn: "Y"
 // zipCode: ""
 
-if($w == 'u')
-    $mb_id = isset($_SESSION['ss_mb_id']) ? trim($_SESSION['ss_mb_id']) : '';
-else if($w == '')
-    $mb_id = isset($_POST['mb_id']) ? trim($_POST['mb_id']) : '';
+// if($w == 'u')
+//     $mb_id = isset($_SESSION['ss_mb_id']) ? trim($_SESSION['ss_mb_id']) : '';
+// else if($w == '')
+//     $mb_id = isset($_POST['mb_id']) ? trim($_POST['mb_id']) : '';
+
+
+$mb_id = $_POST['mb_name'];
+
+
 
 $mb_password    = isset($_POST['mb_password']) ? trim($_POST['mb_password']) : '';
 $mb_password_re = isset($_POST['mb_password_re']) ? trim($_POST['mb_password_re']) : '';

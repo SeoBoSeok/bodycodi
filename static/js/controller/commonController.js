@@ -106,7 +106,7 @@ const commonController = {
 	memberInfo : function(seqMember, isSummary) {
 		return new Promise(function(resolve, reject) {
 			$.ajax({
-				url			: "/member/" + seqMember + ((isSummary) ? "/summary" : ""),
+				url			: `/member/summary.php?data=${seqMember}`,
 				type		: "get",
 				contentType : "application/json;charset=utf-8",
 				dataType	: "json",

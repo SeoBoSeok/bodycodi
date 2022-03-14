@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -2336,7 +2330,7 @@ checkLicence();
             let data = $(this).parent().children().first().find('input').val();
             memberTable.state.save();
             // location.href = "/manager/member/memberInfo/" + data;
-			location.href = "/member/" + data + "/home";
+			location.href = "/member/home.php?data=" + data;
         });
 
         $('#memberSelectAll').on('click', function() {

@@ -383,7 +383,7 @@ const MemberController = {
 			type : 'POST',
 			contentType : 'application/json;charset=UTF-8',
 			dataType : 'json',
-			url : '/member/ajax/regist/advance.php',
+			url : '/member/ajax/regist/advance.php?register=1',
 			data : JSON.stringify(data),
 			beforeSend : function(xhr) {
 				$.blockUI({
@@ -398,7 +398,7 @@ const MemberController = {
 				console.log(`regist : function(data, cbFunc)`, returnData);
 				if (returnData.result !== 'SUCCESS' || returnData.resultCode !== '000') {
 					alert('작업 중 에러가 발생하였습니다.');
-					return;
+					return; 
 				}
 				
 				
