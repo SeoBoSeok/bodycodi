@@ -1,0 +1,135 @@
+	{
+    "orderType": "PASS",
+    "orderClassification": "INUSE",
+    "seqPartnerCoach": 9807,
+    "orderDate": "2022-03-26",
+    "orderDatetime": "2022-03-26T22:29:00",
+    "memo": "1",
+    "rewardPoint": 0,
+    "pricing": [
+      {
+        "price": 450000,
+        "normalPrice": 450000,
+        "pricingName": "헬스 + 그룹레슨 (3개월)",
+        "seqPartner": 774,
+        "seqService": 11624,
+        "seqPricing": 50688,
+        "serviceCategory": "PACKAGE",
+        "taxFreeYn": "N",
+        "customYn": "N",
+        "passes": [
+          {
+            "seqPassInfo": "",
+            "seqPackage": 11624,
+            "seqService": 8,
+            "seqPricing": 50688,
+            "seqPricingDetail": 56649,
+            "serviceKind": "P",
+            "serviceType": "PLACE",
+            "serviceName": "헬스 회원권",
+            "price": 90000,
+            "useStartDate": "2022-03-26",
+            "useEndDate": "2022-06-25",
+            "usePeriod": 3,
+            "usePeriodType": "M",
+            "useNumber": -1,
+            "seqPartnerCoach": 0,
+            "seqPartnerSpace": 0,
+            "passCoaches": [],
+            "cancelNumber": 0,
+            "forceCancelNumber": 0,
+            "pauseNumber": -1,
+            "pausePeriod": -1,
+            "maxBookingNumber": 0,
+            "seqSalesClassification": 0,
+            "receivables": 0,
+            "discount": {
+              "seqDiscountCoupon": 0,
+              "discountUpgrade": 0,
+              "discountCross": 0,
+              "discountMerge": 0,
+              "discountAmount": 0,
+              "discountRate": 0,
+              "usePoint": 0
+            }
+          },
+          {
+            "seqPassInfo": "",
+            "seqPackage": 11624,
+            "seqService": 19813,
+            "seqPricing": 50688,
+            "seqPricingDetail": 56650,
+            "serviceKind": "P",
+            "serviceType": "CLASS",
+            "serviceName": "그룹수업",
+            "price": 360000,
+            "useStartDate": "2022-03-26",
+            "useEndDate": "2022-06-25",
+            "usePeriod": 3,
+            "usePeriodType": "M",
+            "useNumber": -1,
+            "seqPartnerCoach": 0,
+            "seqPartnerSpace": 0,
+            "passCoaches": [],
+            "cancelNumber": -1,
+            "forceCancelNumber": 0,
+            "pauseNumber": -1,
+            "pausePeriod": -1,
+            "maxBookingNumber": -1,
+            "seqSalesClassification": 0,
+            "receivables": 0,
+            "discount": {
+              "seqDiscountCoupon": 0,
+              "discountUpgrade": 0,
+              "discountCross": 0,
+              "discountMerge": 0,
+              "discountAmount": 0,
+              "discountRate": 0,
+              "usePoint": 0
+            }
+          }
+        ]
+      }
+    ],
+    "payments": [
+      {
+        "seqOrderPayment": null,
+        "paymentAmount": 250000,
+        "approvalNumber": "2222",
+        "installmentPeriod": 1,
+        "cardCode": "11",
+        "cardNumber": "1111",
+        "paymentType": "CARD"
+      },
+      {
+        "seqOrderPayment": null,
+        "paymentAmount": 100000,
+        "approvalNumber": "4444",
+        "installmentPeriod": 1,
+        "cardCode": "12",
+        "cardNumber": "3333",
+        "paymentType": "CARD"
+      },
+      {
+        "seqOrderPayment": null,
+        "paymentAmount": 50000,
+        "approvalNumber": "5555",
+        "cashReceiptYn": "Y",
+        "cashReceiptType": "MOBILE",
+        "cashReceiptNumber": "010-3279-0440",
+        "paymentType": "CASH"
+      },
+      {
+        "seqOrderPayment": null,
+        "paymentAmount": 50000,
+        "approvalNumber": "",
+        "cashReceiptYn": "N",
+        "cashReceiptType": "",
+        "cashReceiptNumber": "",
+        "seqBankAccount": "42",
+        "depositorName": "테수트",
+        "paymentType": "TRANSFER"
+      }
+    ],
+    "seqOrderInfo": 2014004
+  }

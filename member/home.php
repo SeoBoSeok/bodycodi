@@ -460,10 +460,13 @@ const doPage = {
 		data : {},
 		open : function() {
 			this.container = document.querySelector("[data-event='reservationList']");
+			// console.log('open', seqMember);
 			memberHistoryController.booking.reservation(seqMember, 10).then(data => {
+				// console.log('this.data = data', data);
 				this.data = data;
 				this.render();
 			}).catch(error => {
+				console.error(error);
 				doPage.setError(error, this.container);
 			});
 		},
@@ -479,6 +482,7 @@ const doPage = {
 					}else return (item.passInfo) ? item.passInfo[name] : "";
 				}
 			};
+			this.data = JSON.parse(this.data);
 			const tr = this.data.map(item => {
 				const reserveDate = uiDate(item.regDt, "time");
 				const lessonDate = uiDate(item.startDate, "time");

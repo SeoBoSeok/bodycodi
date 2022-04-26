@@ -1,6 +1,19 @@
 <?php
 include_once("../common.php");
 
+// 요청이 들어음
+// 누가 요청했는지
+// id => DB에 검색
+// 정보를 확인
+// 로그인 페이지로 보내고
+
+// 마이페이지로 보내달
+
+/// 메인페이지
+// 메뉴
+// 컨텐츠
+// footer
+
 // init
 $_result = array(
   "draw" => 1,
@@ -72,4 +85,6 @@ echo (json_encode($_member_info));
 // https://crm.bodycodi.com/member/1584986/pass/list (유효 이용권 목록)
 // https://crm.bodycodi.com/member/1584986/booking/entrance?count=10 (최근 출석/결설 내역)
 // https://crm.bodycodi.com/member/1584986/paymentInfo/list (최근 결제 내역)
+
+// echo json_encode(json_decode(file_get_contents("summary.json", true)));
 ?>

@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "sumSalePrice": 0,
+    "sumPaymentAmount": 0,
+    "sumRefundPaymentAmount": 0,
+    "sumReceivables": 0,
+    "sumRefundAmount": 0,
+    "count": {
+      "NEW": {
+        "sumAmount": 10,
+        "memberCount": 1,
+        "orderCount": 1
+      },
+      "PAYMENT": {
+        "sumAmount": 100,
+        "memberCount": 0,
+        "orderCount": 0
+      },
+      "INUSE": {
+        "sumAmount": 1000,
+        "memberCount": 0,
+        "orderCount": 0
+      },
+      "TRANSFER": {
+        "sumAmount": 10000,
+        "memberCount": 0,
+        "orderCount": 0
+      },
+      "REFUND": {
+        "sumAmount": 1,
+        "memberCount": 0,
+        "orderCount": 0
+      }
+    }
+  },
+  "coachList": []
+}

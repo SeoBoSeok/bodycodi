@@ -14,6 +14,7 @@ h1,h2,h3,h4,h5,h6,p {
 label {
   margin:0;
   max-width:none;
+  font-size: inherit;
 }
 li label span select {
 	width: fit-content !important;
@@ -1296,16 +1297,16 @@ fieldset form>p+*,fieldset form>div+*,fieldset>p+*,fieldset>div+* {
 .tab {
   flex:1 100%;
   position:relative;
-  bottom:-30px;
+  /* bottom:-30px;  services/create/?serviceType=appointment 충돌 */
 }
 .tab ul {
   font-size:0;
 }
 .tab ul li {
-  display:inline-block;
+  /* display:inline-block; services/create/?serviceType=appointment 충돌 */
 }
 .tab ul li+li {
-  border-left:1px solid #ccc;
+  /* border-left:1px solid #ccc; services/create/?serviceType=appointment 충돌 */
 }
 .tab ul li a {
   display:block;

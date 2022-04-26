@@ -1,0 +1,352 @@
+/* ******** LAYOUT ******** */
+
+.ui-side + main												{background-color:#eceef2}
+.ui-side .menu li span										{margin-left:5px; font-size:13px; color:#999}
+
+main > section												{max-width:1024px}
+main > section > .top > h2									{margin-bottom:10px; font-size:32px; font-weight:bold}
+main > section > .top .title								{height:40px; line-height:40px; font-size:0}
+main > section > .top .title h2								{font-size:32px; font-weight:bold}
+main > section > .top .title .left							{float:left}
+main > section > .top .title .right							{float:right}
+main > section > .top .title .right .ui-button				{width:160px; font-size:13.5px}
+
+main > section > .bottom									{margin-top:40px; text-align:center}
+main > section > .bottom button								{width:135px}
+main > section > .bottom * + *								{margin-left:8px}
+
+main .ui-button												{border:1px solid #bababa !important; box-sizing:border-box}
+main .ui-button.red											{border:1px solid #ff5722 !important}
+main .ui-button.blue										{border:1px solid #004fec !important}
+main .ui-button.green										{border:1px solid #37b772 !important}
+main .ui-button.outline										{background-color:white !important}
+main .ui-button.outline.blue								{color:#004fec !important}
+main .ui-button.outline.green								{color:#37b772 !important}
+main .ui-button[disabled],
+main .ui-button.disabled									{border-color:#bababa !important}
+main .ui-button.outline.disabled							{color:#bababa !important}
+
+main .ui-button.outline.create								{font-weight:500}
+main .ui-button.outline.create:before						{content:"＋"; margin-right:2px; font-weight:500; color:#004fec}
+
+
+
+
+
+/* ******** UI-TAB - CUSTOM ******** */
+
+.ui-search-tab												{display:block; margin-top:25px; height:45px; border-bottom:1px solid #d9dde5; line-height:45px; font-size:15px; font-weight:500; color:#999}
+.ui-search-tab li											{position:relative; display:inline-block; vertical-align:top; width:160px; height:45px; text-align:center}
+.ui-search-tab li label										{position:relative; display:block}
+.ui-search-tab li label input								{position:absolute; left:0; top:0; width:0; height:0; visibility:hidden; opacity:0}
+.ui-search-tab li label input:checked + span				{color:#333}
+.ui-search-tab li label input:checked + span:before			{content:""; position:absolute; left:0; top:0; width:100%; bottom:-1px; border-bottom:2px solid #004fec}
+
+.ui-tab.custom li label input + div							{padding:8px 8px 12px 8px; line-height:1.3}
+.ui-tab.custom li label input + div h4						{margin:0; font-size:15px; font-weight:500; color:#111}
+.ui-tab.custom li label input + div p						{margin-top:2px; text-align:center; font-size:12px; font-weight:normal; color:#646464}
+
+
+
+
+
+/* ******** UI-DROP-BUTTON ******** */
+
+.ui-drop-button 											{position:relative; display:inline-block; margin-left:10px}
+.ui-drop-button .menu										{position:absolute; left:0; top:100%; width:100%; background-color:white; border:1px solid #ccc; box-sizing:border-box; visibility:hidden; opacity:0; transform:scaleY(0); transform-origin:left top; transition:all 0.2s ease-in; z-index:2}
+.ui-drop-button:hover .menu									{visibility:visible; opacity:1; transform:scaleY(1)}
+.ui-drop-button .menu ul									{display:block; line-height:35px; font-size:13.5px; color:#646464}
+.ui-drop-button .menu ul li a								{position:relative; display:block; padding:0 10px; background:url(/static/img/icon/icon_add_gray.png) no-repeat right 5px center / 20px}
+.ui-drop-button .menu ul li:hover							{background-color:#eee}
+
+
+
+
+/* ******** UI-DESCRIPTION ******** */
+
+.ui-description h3											{position:relative; margin:5px 0 10px; height:20px; line-height:20px; font-size:13.5px; font-weight:600; text-align:center}
+.ui-description h3:before									{content:""; position:absolute; left:0; top:50%; width:100%; border-top:1px solid #ccc}
+.ui-description h3 span										{position:relative; padding:0 10px; background-color:#eceef2}
+.ui-description h4											{margin-bottom:5px; font-size:13.5px; font-weight:500; color:#444}
+.ui-description p											{color:#646464}
+.ui-description li + li										{margin-top:25px}
+.ui-description li li + li									{margin-top:25px}
+
+
+
+
+
+/* ******** UI-SEARCH-BOX ******** */
+
+.ui-search-box input										{padding:0 15px !important; text-align:left}
+.ui-search-box select										{padding-left:15px}
+.ui-search-box input,
+.ui-search-box button,
+.ui-search-box select										{vertical-align:top; height:37px; line-height:35px; color:#333; box-sizing:border-box}
+
+.ui-search-box												{margin-bottom:15px; padding:25px 50px; background-color:white; line-height:35px; color:#757575}
+.ui-search-box form > div + div								{margin-top:15px}
+.ui-search-box form > div > dl > dt							{width:100px}
+
+.ui-search-box .date										{line-height:35px}
+.ui-search-box .period										{width:425px; padding-right:20px}
+.ui-search-box .period ul li								{float:left; width:200px}
+.ui-search-box .period li:first-child + li					{width:25px; text-align:center}
+.ui-search-box .period ul li div input						{width:100%; max-width:100%}
+
+.ui-search-box .quick ul									{display:table; width:100%; border:1px solid #ccc; text-align:center; table-layout:fixed; box-sizing:border-box}
+.ui-search-box .quick ul li									{display:table-cell}
+.ui-search-box .quick ul li + li							{border-left:1px solid #ccc}
+.ui-search-box .quick ul li a								{display:block}
+.ui-search-box .quick ul li.focus a							{outline:1px solid #004fec; color:#004fec}
+
+.ui-search-box .condition > dl > dt:first-child + dd		{width:225px}
+.ui-search-box .condition dl dl dt input					{width:100%; max-width:100%}
+.ui-search-box .condition dl dl dd							{padding-left:20px; width:135px}
+.ui-search-box .condition dl dl dd button					{width:100%}
+
+
+
+
+
+/* ******** UI-FORM ******** */
+
+.ui-form											{line-height:35px}
+.ui-form h4											{margin-bottom:10px; line-height:1.3; white-space:normal; font-size:14.5px; font-weight:500; color:#333}
+.ui-form h4.required:after,
+.ui-form h4 .required:after							{content:""; display:inline-block; vertical-align:middle; margin:-15px 0 0 5px; width:4px; height:4px; background-color:#004fec; border-radius:100%}
+.ui-form h5											{margin-bottom:10px; line-height:1.3; white-space:normal; font-size:inherit; font-weight:400; color:#444}
+.ui-form .readonly h4.required:after				{display:none}
+
+.ui-form li + li									{margin-top:30px}
+.ui-form > ul > li > div + div						{margin-top:5px}
+.ui-form .ui-select li								{margin:0; line-height:27px}
+.ui-form .ui-select li label						{padding-left:24px; border-top:none}
+.ui-form .ui-select li input + span					{width:15px; height:15px}
+
+.ui-form dl dt										{padding-right:8px}
+.ui-form dl dd										{padding-left:8px}
+.ui-form dl.option > dd								{padding-left:10px; width:30%}
+.ui-form dl.button > dd								{width:125px}
+.ui-form dl.button > dd button						{vertical-align:top; width:100%; line-height:33px}
+
+.ui-form dl.date dd									{padding:0}
+.ui-form dl.date dd > *								{display:block; margin:0}
+.ui-form dl.date dd:first-child + dd				{width:25px; text-align:center}
+.ui-form dl.date dd input							{/*background-color:white;*/ text-align:left}
+.ui-form dl.date dd input:disabled					{background-color:#ebebe4}
+
+.ui-form input,
+.ui-form .ui-select,
+.ui-form .ui-textarea								{width:100%; max-width:100%; text-align:left; font-size: 1rem;}
+.ui-form .ui-textarea								{height:120px}
+.ui-form button.wide								{width:100%}
+
+.ui-form [readonly]									{background:#f2f2f2; border:none}
+.ui-form [readonly]:focus							{border-color:#ccc !important}
+
+.ui-form .readonly									{position:relative; user-select:none}
+.ui-form .readonly input,
+.ui-form .readonly select,
+.ui-form .readonly textarea							{background-color:#f2f2f2; border:none}
+.ui-form .readonly .ui-input-radio input + span,
+.ui-form .readonly .ui-input-checkbox input + span	{background-color:#eee !important; border-color:#eee !important}
+.ui-form .readonly input:disabled					{background-color:#f2f2f2 !important}
+.ui-form .readonly:after,
+.ui-form .readonly.editor .ui-editor .head:after	{content:""; position:absolute; left:0; top:0; width:100%; height:100%; z-index:2}
+.ui-form .readonly.editor:after						{display:none}
+.ui-form .readonly .ui-input-search input[readonly]	{background-color:#eee !important; border-color:#eee !important}
+.ui-form .readonly .ui-input-search button			{background-color:#ccc !important; border-color:#ccc !important}
+.ui-form .readonly .ui-select,
+.ui-form .readonly .ui-select div					{background-color:#eee !important; border-color:#eee !important}
+
+
+
+
+.ui-form .unit										{position:relative}
+.ui-form .unit input								{padding-right:35px}
+.ui-form .unit span									{position:absolute; right:10px; top:0; line-height:35px}
+
+.ui-form .bottom									{margin-top:25px}
+.ui-form .bottom button								{width:135px}
+
+.ui-form .ui-input-search							{display:block}
+.ui-form .ui-input-search input						{padding-right:135px}
+.ui-form .ui-input-search input[readonly]			{background-color:white; border:1px solid #ccc}
+.ui-form .ui-input-search button					{margin-right:0; width:125px; height:auto; border:none !important; line-height:35px}
+.ui-form .ui-input-search input[type=file]			{position:absolute; left:0; top:0; margin:0 !important; width:100% !important; min-width:100% !important; height:100%; opacity:0; cursor:pointer}
+.ui-form .ui-input-search button.outline.blue		{border:1px solid #004fec !important; line-height:33px}
+
+.ui-form .ui-input-file								{display:block}
+.ui-form .ui-input-file span						{width:100%; padding-right:135px}
+.ui-form .ui-input-file input[readonly]				{background-color:white; border:1px solid #ccc}
+.ui-form .ui-input-file button						{width:125px; border:none !important}
+
+.ui-form .ui-filter-box								{margin-bottom:5px}
+.ui-form .ui-filter-box label + label				{margin-left:25px}
+
+.ui-form .ui-cutoff									{margin:30px 0}
+.ui-form .ui-cutoff div								{margin:30px -19px}
+.ui-form .ui-cutoff div:before,
+.ui-form .ui-cutoff div:after						{background-color:#eceef2; border-color:#ddd}
+
+.ui-form .limit										{margin-top:10px}
+.ui-form .limit li + li								{margin-top:10px}
+.ui-form .limit input								{margin:0 8px 0 10px; width:75px; max-width:75px; text-align:center}
+.ui-form .limit label + label						{margin-left:12px}
+
+.ui-form .hidden									{display:none !important}
+.ui-form .hidden-left dl dt,
+.ui-form .hidden-right dl dd						{display:none}
+.ui-form .hidden-left dl dd							{display:table-cell; padding-left:0}
+.ui-form .hidden-right dl dt						{display:table-cell; padding-right:0}
+
+.ui-form select optgroup							{display:none; background-color:white; color:#333}
+.ui-form select optgroup.focus						{display:block}
+.ui-form select optgroup.green						{color:#37b772}
+.ui-form select optgroup.blue						{color:#004fec}
+.ui-form select optgroup.red						{color:#ff5722}
+
+.ui-form select optgroup.package					{color:#37b772}
+.ui-form select optgroup.appointment				{color:#7a52cc}
+.ui-form select optgroup.class						{color:#f39800}
+.ui-form select optgroup.place						{color:#004fec}
+.ui-form select optgroup.option						{color:#4197c1}
+
+.ui-form select optgroup option.gray				{color:#aaa !important}
+
+.ui-form select.package .package,
+.ui-form select.appointment .appointment,
+.ui-form select.class .class,
+.ui-form select.place .place,
+.ui-form select.option .option						{display:block}
+
+.ui-form .inline-box								{font-size:0}
+.ui-form .inline-box > div > *						{display:inline-block; vertical-align:middle; margin:0 5px; font-size:13px}
+.ui-form .inline-box > div > *:first-child			{margin-left:0}
+.ui-form .inline-box > div > *:last-child			{margin-right:0}
+.ui-form .inline-box > div + div					{margin-top:8px}
+.ui-form .inline-box input							{width:135px}
+.ui-form .inline-box select							{width:85px}
+
+.ui-form .tipInfo									{margin-top:5px; padding-right:5px; line-height:1.5; text-align:right; font-size:12px; opacity:0.9}
+.ui-form .tipInfo.left								{text-align:left}
+.ui-form .tipInfo b									{font-weight:500}
+.ui-form .readonly .tipInfo 						{display:none}
+
+
+
+
+/* ******** FILTER ******** */
+
+.ui-filter											{position:relative; padding:25px 0; line-height:35px; white-space:nowrap; font-size:13.5px}
+
+.ui-filter h4										{display:inline-block; vertical-align:top; margin-right:25px; font-size:inherit; font-weight:500; color:#777}
+.ui-filter ul										{display:inline-block; vertical-align:top; white-space:nowrap}
+.ui-filter ul li									{display:inline-block}
+.ui-filter ul li + li 								{position:relative; margin-left:15px; padding-left:20px}
+.ui-filter ul li + li:before						{content:""; position:absolute; left:0; top:50%; margin-top:-9px; height:18px; border-left:1px solid #ccc}
+.ui-filter ul li label + label						{margin-left:15px !important}
+.ui-filter .ui-select								{width:100%; background-color:white}
+
+.ui-filter .sort									{}
+.ui-filter .sort label		 						{position:relative}
+.ui-filter .sort label span							{display:inline-block; vertical-align:middle}
+.ui-filter .sort label input						{position:absolute; left:0; top:0; width:0; height:0; visibility:hidden; opacity:0}
+.ui-filter .sort label input + span					{display:none}
+.ui-filter .sort label input:checked + span			{display:inline-block; vertical-align:middle; margin-right:5px; width:12px; height:12px; background:url(/static/img/icon/icon_check_blue.png) no-repeat center center / 12px}
+.ui-filter .sort label input:checked + span + span	{font-weight:500; color:#004fec}
+
+.ui-filter-search									{position:relative; padding:0 40px 0 10px; background:white url(/static/img/icon/icon_zoom_gray.png) no-repeat right 10px center / 20px}
+.ui-filter-search input								{padding:0; border:none; max-width:100%}
+.ui-filter-search input:focus						{background-color:white !important}
+.ui-filter-search button							{position:absolute; right:5px; top:5px; width:35px; height:35px; background:url(/static/img/icon/icon_zoom_blue.png) no-repeat center center / 20px; border:none}
+.ui-filter-search a									{display:none; position:absolute; right:5px; top:5px; width:35px; height:35px; background:url(/static/img/icon/icon_close_black.png) no-repeat center center / 10px; opacity:0.33}
+.ui-filter-search a:hover							{opacity:1}
+.ui-filter-search.focus								{background:white !important}
+.ui-filter-search.focus a							{display:block}
+
+
+
+
+/* ******** UI-EDITOR ******** */
+
+.ui-editor											{background-color:white; background-color:#f2f2f2; border:1px solid #ccc}
+.ui-editor .head									{position:relative; padding:5px; height:34px; line-height:34px; font-size:0}
+.ui-editor .head > div								{position:relative; display:inline-block; vertical-align:top}
+.ui-editor .head > div + div						{padding-left:7px}
+.ui-editor .head > div + div:before					{content:""; position:absolute; left:3px; top:10px; bottom:10px; border-left:1px solid #ccc}
+
+.ui-editor .head li									{display:inline-block; vertical-align:top; margin:0 !important; padding:2px; height:34px; font-size:0px; box-sizing:border-box}
+.ui-editor .head li button							{vertical-align:top; padding:0 10px; height:100%; background-color:inherit; border:none}
+.ui-editor .head li button:hover span				{opacity:1}
+
+.ui-editor .head li .icon							{padding:0 5px 1px 5px}
+.ui-editor .head li .icon span						{content:""; display:inline-block; vertical-align:middle; padding:0; width:20px; height:20px; background-image:url(/static/img/icon/icons_editor.png); opacity:0.6}
+.ui-editor .head li .icon .remove					{background-position:0 -20px}
+.ui-editor .head li .icon .bold						{background-position:-20px -20px}
+.ui-editor .head li .icon .italic					{background-position:-40px -20px}
+.ui-editor .head li .icon .underline				{background-position:-60px -20px}
+.ui-editor .head li .icon .image					{background-position:-80px -20px}
+.ui-editor .head li .icon .video					{background-position:-100px -20px}
+
+.ui-editor .body									{position:relative; padding:0 8px 8px 8px; height:300px; overflow:auto}
+.ui-editor .body > div								{position:relative; padding:15px; min-height:300px; max-width:420px; background-color:white; line-height:1.7; font-size:15px; box-sizing:border-box}
+.ui-editor .body > div:focus						{border:none; outline:none}
+.ui-editor .body > div img							{display:block; margin:5px -15px; width:calc(100% + 30px)}
+.ui-editor .body > div .iframe						{position:relative; display:inline-block; margin:5px 0; padding-bottom:50%; width:100%}
+.ui-editor .body > div .iframe iframe				{position:absolute; left:0; top:0; width:100%; height:100%; border:none}
+.ui-editor .body > div .iframe:after				{content:""; position:absolute; left:0; top:0; width:100%; height:100%}
+.ui-editor .body > div > *:first-child				{margin-top:0}
+
+
+.ui-table-box > div,
+.ui-table-box > div > div > div						{display:block; padding:0; width:auto}
+.ui-table-box .filter								{margin-bottom:15px; font-size:0}
+.ui-table-box .filter dd							{text-align:right}
+.ui-table-box .filter input,
+.ui-table-box .filter select						{padding:0 15px; height:40px; line-height:40px; background-color:white; border:none; font-size:14px}
+.ui-table-box .filter select						{width:150px; max-width:150px}
+.ui-table-box .filter select.narrow					{width:100px; max-width:100px}
+.ui-table-box .filter select						{padding-right:35px; background:white url(/static/img/icon/icon_arrow_down_black.png) no-repeat right 12px center / 12px}
+.ui-table-box .filter .search						{position:relative; display:inline-block; height:40px}
+.ui-table-box .filter .search input					{padding-right:40px}
+.ui-table-box .filter .search button				{position:absolute; right:0; top:0; width:40px; height:40px; background:url(/static/img/icon/icon_zoom_blue.png) no-repeat center center; border:none}
+
+.ui-table-box .filter dl > * > * + *				{margin-left:10px}
+
+
+.ui-table-box .ui-table								{background-color:white; border:none !important}
+.ui-table-box .ui-table tr > *						{padding:15px 10px; border:none}
+.ui-table-box .ui-table tr > td:first-child			{padding-left:20px}
+.ui-table-box .ui-table tr > td:last-child			{padding-right:15px}
+.ui-table-box .ui-table thead						{background-color:white; color:#999}
+.ui-table-box .ui-table tr							{border-bottom:1px solid #d9dde5}
+.ui-table-box .ui-table tbody tr:last-child			{border-bottom:none}
+
+.ui-table-box .ui-table b							{font-weight:500}
+.ui-table-box .ui-table h4							{font-size:15px}
+.ui-table-box .ui-table h5							{margin-bottom:0px; font-size:14px; font-weight:500; color:#333}
+.ui-table-box .ui-table .tag						{margin-top:7px; line-height:22px; font-size:0}
+.ui-table-box .ui-table .tag li						{display:inline-block; padding:0 5px; background-color:#e2e4e9; font-size:12.5px; color:#777}
+.ui-table-box .ui-table .tag li + li				{margin-left:5px}
+
+.ui-table-box .ui-table p							{color:#999}
+.ui-table-box .ui-table .ui-input-switch			{vertical-align:middle; padding:0; width:42px; height:25px}
+.ui-table-box .ui-table button.update				{position:relative; padding:5px 25px 5px 5px; background-color:white; border:none; color:#999}
+.ui-table-box .ui-table button.update:before		{content:""; position:absolute; right:0; top:2px; width:20px; bottom:0; background:url(/static/img/icon/icon_next_black.png) no-repeat center center / 8px; opacity:0.5}
+
+.ui-table-box .ui-table tr.none						{opacity:0.4}
+.ui-table-box .ui-table tr.empty td					{text-align:center !important}
+.ui-table-box .ui-table tr.none button				{filter:grayscale(100%)}
+
+.ui-table-box nav									{margin-top:35px; text-align:center}
+.ui-table-box nav.hidden							{display:none}
+.ui-table-box nav a									{position:relative; display:inline-block; vertical-align:middle; margin:0 5px; width:32px; height:30px; line-height:30px; font-size:14px; font-weight:500; color:#c3c6d2}
+.ui-table-box nav a.icon:before						{content:""; position:absolute; left:0; top:0; right:0; bottom:0; background:url(/static/img/icon/icon_next_bold_gray.png) no-repeat center center / 7px; opacity:0.33}
+.ui-table-box nav a.icon.prev:before				{transform:rotate(-180deg)}
+.ui-table-box nav a:hover							{background-color:#e3e4e5}
+.ui-table-box nav a.focus							{background-color:#004fec; color:white}
+
+.ui-table-box em.state								{width:55px; height:25px; background-color:#abbada; line-height:25px; font-size:12px}
+.ui-table-box em.bg.green							{background-color:#37b772}

@@ -42,7 +42,7 @@ const serviceController = {
 		detail : function(seqService) {
 			return new Promise(function(resolve, reject) {
 				$.ajax({
-					url			: "/services/normal/" + seqService + "/detail",
+					url			: `/services/normal/detail.php?seqService=${seqService}`,
 					type		: "get",
 					contentType : "application/json;charset=utf-8",
 					dataType	: "json",
@@ -60,10 +60,12 @@ const serviceController = {
 		create : function(data) {
 			return new Promise(function(resolve, reject) {
 				$.ajax({
-					url			: "/services/normal/create",
+					url			: "/services/normal/create.php",
 					type		: "post",
 					contentType : "application/json;charset=utf-8",
 					data		: JSON.stringify(data),
+					async: true,
+					dataType: "json",
 					success 	: function(data) {
 						resolve(data);
 					},
@@ -115,7 +117,7 @@ const serviceController = {
 		list : function(data) {
 			return new Promise(function(resolve, reject) {
 				$.ajax({
-					url			: "/services/package/list",
+					url			: "/services/package/list.php",
 					type		: "get",
 					data		: data,
 					contentType : "application/json;charset=utf-8",
@@ -369,7 +371,7 @@ const pricingController = {
 	list : function(data) {
 		return new Promise(function(resolve, reject) {
 			$.ajax({
-				url			: "/services/pricing/list",
+				url			: "/services/pricing/list.php",
 				type		: "get",
 				contentType : "application/json;charset=utf-8",
 				data		: data,
@@ -406,7 +408,7 @@ const pricingController = {
 	create : function(data) {
 		return new Promise(function(resolve, reject) {
 			$.ajax({
-				url			: "/services/pricing/create",
+				url			: "/services/pricing/create.php",
 				type		: "post",
 				contentType : "application/json;charset=utf-8",
 				data		: JSON.stringify(data),
@@ -1013,7 +1015,7 @@ const orderController = {
 		info : function(seqMember, seqOrderInfo) {
 			return new Promise(function(resolve, reject) {
 				$.ajax({
-					url			: "/member/" + seqMember + "/orderInfo/" + seqOrderInfo + "/info",
+					url			: "/member/orderInfo/info/?" + `seqMember=${seqMember}&seqOrderInfo=${seqOrderInfo}`,
 					type		: "get",
 					contentType : "application/json;charset=utf-8",
 					success 	: function(data) {
@@ -1049,7 +1051,7 @@ const orderController = {
 	paymentInfoList : function(seqMember) {
 		return new Promise(function(resolve, reject) {
 			$.ajax({
-				url			: "/member/" + seqMember + "/paymentInfo/list",
+				url			: "/member/paymentInfo/list" + `?seqMember=${seqMember}`,
 				type		: "get",
 				contentType : "application/json;charset=utf-8",
 				success 	: function(data) {
@@ -1107,7 +1109,7 @@ const orderController = {
 			create : function(seqMember, data) {
 				return new Promise(function(resolve, reject) {
 					$.ajax({
-						url			: "/member/" + seqMember + "/sell/payment",
+						url			: "/member/sell/payment/insert.php"+`?seqMember=${seqMember}`,
 						type		: "post",
 						contentType : "application/json;charset=utf-8",
 						data		: JSON.stringify(data),

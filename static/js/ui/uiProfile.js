@@ -103,7 +103,7 @@ const uiProfile = {
 			}
 			const value = object.getAttribute("data-value");
 			if(value == "new") {
-				window.location.href = `/member/${this.self.seqMember}/sell/pass`;
+				window.location.href = `/member/sell/pass/?id=${this.self.seqMember}`;
 			} else {
 				window.location.href = `/member/${this.self.seqMember}/order`;
 			}

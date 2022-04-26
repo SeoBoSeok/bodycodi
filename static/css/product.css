@@ -1,0 +1,406 @@
+/* ******** UI-DROP-LIST ******** */
+
+.ui-drop-list												{}
+.ui-drop-list > ul > li										{border-bottom:1px solid #ccc}
+.ui-drop-list > ul > li > a									{position:relative; display:block; padding:30px 0}
+.ui-drop-list > ul > li > a h3								{margin-bottom:2px; font-size:24px; font-weight:bold}
+.ui-drop-list > ul > li > a h3 em							{margin:0 5px 5px 0; padding:0 8px; height:25px; line-height:25px; font-size:13px}
+.ui-drop-list > ul > li > a p								{font-size:15px; color:#646464}
+.ui-drop-list > ul > li > a:before							{content:""; position:absolute; right:0; top:50%; margin-top:-18px; width:36px; height:36px; background:#004fec url(/static/img/icon/icon_arrow_down_medium_white.png) no-repeat center center / 15px; border-radius:100%}
+.ui-drop-list > ul > li.focus > a:before					{background-image:url(/static/img/icon/icon_arrow_up_medium_white.png)}
+.ui-drop-list > ul > li.focus.none > a:before				{display:none}
+.ui-drop-list > ul > li.hidden								{display:none}
+
+.ui-drop-list h3 .ui-input-switch							{/*position:absolute; right:100px; top:50%; margin-top:-11px;*/ margin-left:15px; height:22px; line-height:22px; font-size:20px; font-weight:500}
+.ui-drop-list h3 .ui-input-switch input + span				{background-color:white; margin-top:0}
+.ui-drop-list h3 .ui-input-switch input + span + span		{color:#999}
+
+
+.ui-drop-list > ul > li > .detail							{position:relative; width:100%; max-height:0; overflow:hidden; transition:max-height 0.5s ease-in-out}
+.ui-drop-list > ul > li.focus > .detail						{padding-bottom:40px; max-height:2500px}
+.ui-drop-list > ul > li.focus.none > .detail				{max-height:inherit}
+
+.ui-drop-list > ul > li > .detail > div						{position:relative; box-sizing:border-box}
+.ui-drop-list > ul > li > .detail > .left					{float:left; width:600px; padding:30px; background-color:white}
+.ui-drop-list > ul > li > .detail > .right					{float:right; width:calc(100% - 600px); padding-left:30px}
+
+
+.ui-drop-list .detail .right h3								{position:relative; margin:5px 0 10px; height:20px; line-height:20px; font-size:13.5px; font-weight:600; text-align:center}
+.ui-drop-list .detail .right h3:before						{content:""; position:absolute; left:0; top:50%; width:100%; border-top:1px solid #ccc}
+.ui-drop-list .detail .right h3 span						{position:relative; padding:0 10px; background-color:#eceef2}
+
+.ui-drop-list .detail .right h4								{margin-bottom:5px; font-size:13.5px; font-weight:500; color:#444}
+.ui-drop-list .detail .right p								{color:#646464}
+.ui-drop-list .detail .right li + li						{margin-top:25px}
+.ui-drop-list .detail .right li li + li						{margin-top:25px}
+
+.ui-drop-list .detail .refuseInfo							{border:4px solid #ff5722}
+.ui-drop-list .detail .refuseInfo h4						{margin:0; padding:2px 10px 8px 10px; background-color:#ff5722; color:white}
+.ui-drop-list .detail .refuseInfo p							{padding:12px; line-height:1.5}
+
+.ui-drop-list .detail .tagInfo p							{display:block}
+.ui-drop-list .detail .tagInfo div							{margin:0 -8px}
+.ui-drop-list .detail .tagInfo dl dd						{padding:0 8px}
+
+
+
+
+/* ******** PRODUCT-LIST ******** */
+
+.productList .middle								{display:table; width:100%}
+.productList .middle > div							{display:table-cell; vertical-align:top}
+.productList .middle:after							{content:""; display:table; clear:both}
+.productList .middle > div > div					{vertical-align:top; background-color:white; box-sizing:border-box}
+
+.productList .middle .left							{padding-right:15px; width:250px; max-width:250px; font-size:13.5px}
+.productList .middle .left .ui-filter-search		{position:relative; margin-bottom:17px; padding:5px 40px 5px 15px; background:white url(/static/img/icon/icon_zoom_gray.png) no-repeat right 10px center / 20px}
+
+
+
+
+
+/* ******** PRODUCT-LIST : SERVICE-LIST ******** */
+
+.productList .serviceList							{padding:15px; line-height:35px}
+.productList .serviceList a							{position:relative; display:block; padding:0 15px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden}
+.productList .serviceList > ul > li > a				{font-size:15px; font-weight:500}
+.productList .serviceList > ul > li > a:before		{content:""; position:absolute; right:10px; top:50%; margin-top:-10px; width:20px; height:20px; background:url(/static/img/icon/icon_arrow_down_black.png) no-repeat center center / 12px}
+.productList .serviceList> ul > li.close > a:before	{transform:rotate(-180deg)}
+
+.productList .serviceList > ul > li + li			{margin-top:15px}
+.productList .serviceList em.icon					{margin:0 0 2px 0; padding:0; width:16px; height:16px; line-height:16px; text-align:center; font-size:12px; font-weight:500}
+
+
+.productList .serviceList div						{padding-left:8px; overflow:hidden; transition:height 0.1s ease-in}
+.productList .serviceList div a.focus,
+.productList .serviceList div a:hover				{background-color:#eee}
+.productList .serviceList div a i					{font-style:normal}
+
+.productList .serviceList li.close div				{height:0 !important}
+.productList .serviceList li.empty					{text-align:center; color:#999}
+
+
+
+
+
+/* ******** PRODUCT-LIST : PRICING-LIST ******** */
+
+.productList .pricingList > ul > li					{padding:0 15px}
+.productList .pricingList > ul > li + li			{border-top:1px solid #ddd}
+
+.productList .pricingList dl > *					{vertical-align:middle}
+.productList .pricingList dl dd						{padding-left:10px; text-align:right}
+.productList .pricingList h3						{margin-bottom:2px; font-size:17px}
+.productList .pricingList h4						{margin-bottom:2px; font-size:15px; font-weight:400; color:#333}
+.productList .pricingList h5						{font-size:13px; color:#333; opacity:0.85}
+.productList .pricingList h5.date					{margin-bottom:4px; font-size:13.5px; font-weight:500; opacity:0.9}
+.productList .pricingList h5.date em				{margin-left:4px; vertical-align:text-top; line-height:16px}
+.productList .pricingList h5.date span				{font-weight:normal; color:#646464}
+
+.productList .pricingList .price					{width:150px; font-size:13.5px}
+.productList .pricingList .price s					{display:block; font-size:13.5px; font-weight:500; color:#999}
+.productList .pricingList .price em					{vertical-align:bottom; margin-right:8px; background:linear-gradient(125deg, #ff3c53 50%, #ff3ce0 50%); line-height:20px}
+.productList .pricingList .price var				{display:block; margin:1px 0; font-size:15px; font-weight:500}
+.productList .pricingList .modify					{width:50px}
+.productList .pricingList .modify button			{padding:0 15px 0 10px; height:25px; background:url(/static/img/icon/icon_next_black.png) no-repeat right 3px center / 7px; border:none; line-height:22px; color:#999}
+
+.productList .pricingList .empty					{padding:15px; line-height:35px; text-align:center; color:#999}
+
+.productList .pricingList a							{display:block; padding:12px 15px}
+.productList .pricingList a:hover					{background-color:#eee}
+
+.productList .pricingList .service					{padding:10px 0}
+.productList .pricingList .service em.icon			{padding:0; width:14px; height:14px; line-height:14px; text-align:center; font-size:10px}
+
+.productList .pricingList .pricing					{position:relative; padding:12px 0}
+.productList .pricingList .pricing:before			{content:""; position:absolute; left:15px; right:15px; top:0; border-top:1px solid #e0e0e0}
+.productList .pricingList .pricing li				{position:relative; margin:-1px 15px 0 15px}
+.productList .pricingList .pricing li a				{margin:0 -15px; padding:10px 15px}
+
+
+
+
+
+/* ******** PRODUCT-INFO ******** */
+
+.productInfo										{max-width:1200px}
+.productInfo > .middle form .block					{position:relative}
+.productInfo > .middle form .block:after			{content:""; position:absolute; left:0; top:0; width:100%; height:100%; background-color:rgba(255,255,255,0.66)}
+.productInfo > .middle li.note						{margin-top:25px; line-height:1.3}
+
+.productInfo .hotdeal .ui-note						{padding:15px}
+.productInfo .hotdeal li + li						{margin-top:15px}
+.productInfo .hotdeal input							{background-color:white !important}
+
+.productInfo .policy .ui-note						{max-height:100px; overflow-y:auto}
+
+.productInfo .thumbnail .ui-image-box:before		{content:"상품 대표 이미지"; padding-top:24px; background:url(/static/img/icon/icon_photo_gray.png) no-repeat center top / 24px; color:#c2c9ce}
+
+
+
+
+
+/* ******** SETTING ******** */
+
+.setting-holiday .ui-input-calendar							{display:block; padding:10px 0; border:1px solid #ccc}
+.setting-holiday .ui-input-calendar h4						{margin:0 12px 10px 12px; font-size:15px}
+.setting-holiday .ui-input-calendar table					{font-size:13px}
+.setting-holiday .ui-input-calendar table tr				{padding:0}
+.setting-holiday .ui-input-calendar table td a				{width:50px; height:35px; border-radius:0}
+.setting-holiday .ui-input-calendar table td.selected a		{background-color:#e5eeff; border-color:transparent}
+
+.setting-holiday .info .empty								{background-color:#f0f0f0; text-align:center}
+.setting-holiday .info ul									{margin:-4px; text-align:left; font-size:0}
+.setting-holiday .info ul li								{position:relative; display:inline-block; vertical-align:top; width:33.33%; text-align:center}
+.setting-holiday .info ul li + li							{margin-top:0}
+.setting-holiday .info ul li div							{position:relative; margin:4px; padding:0 25px 0 10px; background-color:#e5eeff; font-size:13px}
+.setting-holiday .info ul li a								{position:absolute; right:0; top:0; width:25px; height:35px; background:url(/static/img/icon/icon_close_black.png) no-repeat center center / 10px; opacity:0.25}
+.setting-holiday .info ul li a:hover						{opacity:0.5}
+
+
+
+.setting-schedule											{}
+.setting-schedule .top .week ul								{height:35px; line-height:35px; text-align:center}
+.setting-schedule .top .week ul li							{position:relative; float:left; width:calc(100% / 7); overflow:hidden}
+.setting-schedule .top .week ul li + li						{margin-top:0}
+.setting-schedule .top .week ul li input					{position:absolute; left:-9999px; top:0}
+.setting-schedule .top .week ul li input + span				{display:block; background-color:#f0f0f0; outline:1px solid #ccc}
+.setting-schedule .top .week ul li input:checked + span		{display:block; background-color:#004fec; color:white}
+
+.setting-schedule .top .time input							{width:100%; text-align:center}
+.setting-schedule .top .time input + input					{margin-left:0}
+.setting-schedule .top .time dl								{text-align:center}
+.setting-schedule .top .time dl dd							{padding:0}
+.setting-schedule .top .time dl dd:nth-child(even)			{width:20px}
+.setting-schedule .top .time dl dd select					{width:100%; text-align-last:center}
+
+.setting-schedule .top button								{display:block; margin:0 auto; width:135px}
+
+.setting-schedule .middle									{margin-top:35px}
+.setting-schedule .middle table								{text-align:center; line-height:1.5; table-layout:fixed}
+.setting-schedule .middle table tr > *						{padding:0; border:1px solid #ccc}
+.setting-schedule .middle table thead tr					{background-color:#f0f0f0; line-height:35px}
+.setting-schedule .middle table tbody td					{position:relative; vertical-align:top; height:250px !important}
+.setting-schedule .middle table tbody td:before				{content:""; position:absolute; left:15px; top:0; width:2px; height:100%; background-color:#ddd}
+
+.setting-schedule .middle table div							{position:relative; padding:10px 10px 10px 32px; text-align:left; transition:background-color 0.2s; cursor:pointer}
+.setting-schedule .middle table div a						{position:absolute; left:16px; top:32px; width:0px; height:0px; background:#ff5722 url(/static/img/icon/icon_minus_white.png) no-repeat center center / 90%; border-radius:100%; transition:left 0.2s, top 0.2s, width 0.2s, height 0.2s; z-index:2}
+.setting-schedule .middle table div:hover a					{left:6px; top:20px; width:20px; height:20px}
+.setting-schedule .middle table div span					{display:block}
+.setting-schedule .middle table div:before					{content:""; position:absolute; left:15px; top:0; width:2px; height:100%; background-color:#ddd}
+.setting-schedule .middle table div:after					{content:""; position:absolute; left:8px; top:50%; margin-top:-6px; width:12px; height:12px; border-radius:100%; background-color:white; border:2px solid #ddd}
+.setting-schedule .middle table div:hover					{background-color:#f2f2f2}
+
+.setting-schedule .middle table td.active:before,
+.setting-schedule .middle table td.active div:before		{background-color:#004fec}
+.setting-schedule .middle table td.active div:after			{border-color:#004fec}
+.setting-schedule .middle table td.active div:hover			{background-color:rgba(33,150,243,0.1)}
+
+
+
+.setting-reservation h5											{color:#ff5722}
+.setting-reservation .time span + span,
+.setting-reservation .time input:checked + span + span			{display:none}
+.setting-reservation .time input + span + span,
+.setting-reservation .time input:checked + span + span + span	{display:inline-block}
+.setting-reservation .time input,
+.setting-reservation .time select								{margin:0 5px; width:75px; text-align:center; text-align-last:center}
+
+
+
+
+
+/* ******** PACKAGE-INFO ******** */
+
+.packageInfo .pricingList > ul > li + li						{margin-top:10px}
+
+.packageInfo .pricingList p.empty								{padding:0 10px; background-color:#f2f2f2; color:#999}
+
+.packageInfo .pricingList .box .top								{position:relative; padding:12px 15px}
+.packageInfo .pricingList .box .top h3							{margin-bottom:5px; line-height:1.1; font-size:17px; font-weight:400; color:white}
+.packageInfo .pricingList .box .top h5							{margin:0; font-size:13px; font-weight:400; color:rgba(255,255,255,0.75)}
+.packageInfo .pricingList .box .top .drop						{position:absolute; left:0; top:0; width:100%; height:100%; background:url(/static/img/icon/icon_arrow_down_medium_white.png) no-repeat right 15px center / 15px}
+.packageInfo .pricingList .box .top .close						{position:absolute; right:15px; top:50%; margin-top:-10px; width:20px; height:20px; background:url(/static/img/icon/icon_close_white.png) no-repeat center center / 12px; border:none; opacity:0.9}
+.packageInfo .pricingList .box.focus .top .drop					{background-image:url(/static/img/icon/icon_arrow_up_medium_white.png)}
+
+.packageInfo .pricingList .box li.hidden + li					{margin-top:15px}
+
+.packageInfo .pricingList .box .bottom							{margin:0; text-align:left}
+.packageInfo .pricingList .box .bottom > a						{position:relative; display:block; padding:0 35px 0 15px; background:url(/static/img/icon/icon_arrow_down_black.png) no-repeat right 15px center / 12px; line-height:50px; font-size:14px; font-weight:500}
+.packageInfo .pricingList .box .bottom > a em					{padding:0 5px; line-height:20px; background-color:#b6c4e0}
+.packageInfo .pricingList .box .bottom > a button				{position:absolute; right:30px; top:50%; margin-top:-10px; width:62px; min-width:62px; height:20px; padding:0 5px 0 15px; background:white url(/static/img/icon/icon_reset_gray.png) no-repeat left 2px center / 15px; border:none; line-height:18px; font-size:13px; color:#999}
+.packageInfo .pricingList .box.focus .bottom > a				{background-image:url(/static/img/icon/icon_arrow_up_black.png)}
+
+.packageInfo .pricingList .box .detail							{display:none; padding:0 15px 15px 15px; font-size:13px}
+.packageInfo .pricingList .box.focus .detail					{display:block}
+
+.packageInfo .pricingList .box.appointment						{border:1px solid #7a52cc}
+.packageInfo .pricingList .box.class							{border:1px solid #f39800}
+.packageInfo .pricingList .box.place							{border:1px solid #004fec}
+.packageInfo .pricingList .box.option							{border:1px solid #2e7a9f}
+/*
+.packageInfo .pricingList .box.option							{border:1px solid #839ba7}
+*/
+
+
+
+
+/* ******** COUPON-LIST ******** */
+
+.couponList .top												{margin-bottom:5px}
+.couponList .top .ui-filter										{padding:20px 0}
+.couponList .top .ui-filter dl dd								{width:200px}
+.couponList .top .ui-filter-search								{padding-left:15px; line-height:40px}
+
+.couponList .top .ui-filter-search a							{top:50%; margin-top:-17.5px}
+
+/*
+.couponList .top .tab											{display:block; margin-top:25px; height:45px; border-bottom:1px solid #d9dde5; line-height:45px; font-size:15px; font-weight:500; color:#999}
+.couponList .top .tab li										{position:relative; display:inline-block; vertical-align:top; width:160px; height:45px; text-align:center}
+.couponList .top .tab li label									{position:relative; display:block}
+.couponList .top .tab li label input							{position:absolute; left:0; top:0; width:0; height:0; visibility:hidden; opacity:0}
+.couponList .top .tab li label input:checked + span				{color:#333}
+.couponList .top .tab li label input:checked + span:before		{content:""; position:absolute; left:0; top:0; width:100%; bottom:-1px; border-bottom:2px solid #004fec}
+*/
+
+
+
+
+/* ******** COUPON-INFO ******** */
+
+.couponInfo .middle												{margin-top:45px}
+.couponInfo .middle:after										{content:""; display:table; clear:both}
+
+.couponInfo .middle > div										{position:relative; box-sizing:border-box}
+.couponInfo .middle > .left										{float:left; width:580px; padding:30px; background-color:white}
+.couponInfo .middle > .right									{float:right; width:calc(100% - 580px); padding-left:30px}
+
+.couponInfo .middle .right h3									{position:relative; margin:5px 0 10px; height:20px; line-height:20px; font-size:13.5px; font-weight:600; text-align:center}
+.couponInfo .middle .right h3:before							{content:""; position:absolute; left:0; top:50%; width:100%; border-top:1px solid #ccc}
+.couponInfo .middle .right h3 span								{position:relative; padding:0 10px; background-color:#eceef2}
+
+.couponInfo .middle .right h4									{margin-bottom:5px; font-size:13.5px; font-weight:500; color:#444}
+.couponInfo .middle .right p									{color:#646464}
+.couponInfo .middle .right li + li								{margin-top:25px}
+.couponInfo .middle .right li li + li							{margin-top:25px}
+
+.couponInfo .middle .discount input								{width:135px}
+.couponInfo .middle .discount select							{width:85px}
+
+.couponInfo .middle input.day 									{margin:0 5px; width:85px}
+.couponInfo .middle .period										{padding-right:0}
+.couponInfo .middle .period dd									{padding:0}
+.couponInfo .middle .period dd div								{display:block}
+.couponInfo .middle .period dd input							{display:block; margin:0; width:100%}
+.couponInfo .middle .period dd:nth-child(even)					{width:40px; text-align:center}
+
+.couponInfo .middle .condition .box								{padding:10px; background-color:#f0f0f0}
+.couponInfo .middle .condition .box div span					{margin-right:15px}
+.couponInfo .middle .condition .box p							{margin:5px 0 10px 0; background-color:#37b772; text-align:center; color:white}
+.couponInfo .middle .condition .box .option > div				{display:none; margin:0}
+.couponInfo .middle .condition .new .new,
+.couponInfo .middle .condition .revisit .revisit,
+.couponInfo .middle .condition .visit .visit,
+.couponInfo .middle .condition .back .back						{display:block !important}
+
+.couponInfo .middle .unit										{display:inline-block; margin:0 5px}
+.couponInfo .middle .unit input									{margin:0}
+
+.couponInfo .middle .ui-filter-box								{height:35px; text-align:justify; overflow:hidden}
+.couponInfo .middle .ui-filter-box label + label				{margin-left:15px}
+.couponInfo .middle .ui-filter-box:after						{content:""; display:inline-block; width:100%; height:0}
+
+.couponInfo .pricingList										{line-height:1.5}
+.couponInfo .pricingList li + li								{margin-top:10px}
+.couponInfo .pricingList p.empty								{padding:0 10px; background-color:#f2f2f2; line-height:35px; color:#999}
+
+.couponInfo .pricingList .box									{position:relative; padding:10px 15px}
+.couponInfo .pricingList .box a									{display:none}
+.couponInfo .pricingList.remove .box							{padding-right:40px}
+.couponInfo .pricingList.remove .box a							{position:absolute; right:12px; top:50%; margin-top:-10px; width:20px; height:20px; background:url(/static/img/icon/icon_close_black_thin.png) no-repeat center center / 17px; border:none}
+.couponInfo .pricingList .box b									{font-size:15px; font-weight:500; color:#333}
+.couponInfo .pricingList .box h4								{margin-bottom:5px; font-size:15px; font-weight:500}
+.couponInfo .pricingList .box h5								{margin:0; font-size:13px; font-weight:400; color:#646464}
+.couponInfo .pricingList .box dt + dd							{width:120px; text-align:right; color:#646464}
+
+.couponInfo .pricingList .box.package							{background-color:#ecfcf3}
+.couponInfo .pricingList .box.appointment						{background-color:#f5f1ff}
+.couponInfo .pricingList .box.class								{background-color:#fff4e2}
+.couponInfo .pricingList .box.place								{background-color:#eaf1ff}
+.couponInfo .pricingList .box.option							{background-color:#e9f7ff}
+
+
+
+
+
+/* ******** WELCOME-INFO ******** */
+
+.welcomeInfo													{font-size:0}
+.welcomeInfo a													{display:inline !important; margin:0 !important; padding:0 !important}
+.welcomeInfo figure												{position:relative}
+.welcomeInfo figure img											{width:100%}
+.welcomeInfo figure button										{position:absolute; left:5.85%; bottom:11.5%; width:22.35%; height:14.5%; background-color:transparent; border:none}
+.welcomeInfo dl													{width:100%; height:300px}
+.welcomeInfo dl dd												{padding:0; vertical-align:middle; text-align:center !important}
+.welcomeInfo h3													{margin-bottom:12px !important; font-size:20px !important; font-weight:bold}
+.welcomeInfo p													{text-align:center; font-size:15px; font-weight:400; color:#646464}
+.welcomeInfo button												{margin-top:25px; min-width:185px; height:37px; line-height:35px; font-size:15px}
+
+
+
+
+
+/* ******** WELCOME-INFO-POPUP ******** */
+
+.popupApplication												{position:relative; max-width:1150px; height:85%; max-height:640px; background-color:white; overflow:hidden}
+.popupApplication .box											{}
+.popupApplication .box a.close									{position:absolute; right:25px; top:25px; width:30px; height:30px; background:url(/static/img/icon/icon_close_black_thin.png) no-repeat center center / 30px; opacity:0.75}
+.popupApplication .box .left									{position:absolute; left:0; top:0; width:415px; bottom:0; font-size:0; overflow:hidden}
+.popupApplication .box .right									{position:absolute; padding:30px; left:415px; right:0; top:0; bottom:0; box-sizing:border-box}
+.popupApplication .box .right h2								{margin-bottom:8px; font-size:24px; font-weight:bold}
+.popupApplication .box .right h4								{margin-bottom:10px; font-size:15px; font-weight:500; color:#454545}
+.popupApplication .box .right h5								{font-size:15px; font-weight:normal; color:#646464}
+.popupApplication .box .right li + li							{margin-top:18px}
+.popupApplication .box .right label								{line-height:21px; font-size:15px; font-weight:500}
+.popupApplication .box .right label input + span				{margni-top:-1px}
+.popupApplication .box .right label em							{margin:-4px 0 -2px 5px !important; padding:0 10px; height:24px; line-height:24px; font-size:12px}
+
+.popupApplication .box .right .agreeInfo						{padding:12px 15px; border:1px solid #ccc}
+.popupApplication .box .right .agreeInfo a						{float:right; text-decoration:underline; color:#757575}
+
+.popupApplication .box .right iframe							{position:relative; margin-top:12px; width:100%; height:100px; border:1px solid #ccc; overflow:hidden}
+.popupApplication .box .right .limitInfo						{display:flex; flex-wrap:wrap}
+.popupApplication .box .right .limitInfo h4						{margin:0}
+.popupApplication .box .right .limitInfo > div					{position:relative; flex:1; margin:12px 12px 0 0; padding-bottom:35px; border:1px solid #ccc}
+.popupApplication .box .right .limitInfo > div:last-child		{margin-right:0}
+.popupApplication .box .right .limitInfo > div:first-child		{flex:100%; margin:0; padding-bottom:0}
+
+.popupApplication .box .right .limitInfo .top					{padding:12px 15px; font-weight:bold}
+.popupApplication .box .right .limitInfo .middle				{padding:12px 15px; border-top:1px solid #ccc}
+.popupApplication .box .right .limitInfo .middle h4				{margin-bottom:2px}
+.popupApplication .box .right .limitInfo .middle dl dt			{width:35%; padding-right:15px}
+.popupApplication .box .right .limitInfo .bottom				{position:absolute; left:-1px; bottom:-1px; right:-1px; height:35px; line-height:35px; text-align:center; font-size:12.5px}
+.popupApplication .box .right .limitInfo .bg.yellow				{background-color:#e9ad14}
+.popupApplication .box .right .limitInfo .bg.skyblue			{background-color:#00a5ec}
+
+.popupApplication .box .right .noteInfo							{color:#757575}
+.popupApplication .box .right li:last-child						{margin-top:22px; text-align:center}
+.popupApplication .box .right li:last-child button				{width:135px; height:37px}
+
+
+
+.popupApplicationComplete										{}
+.popupApplicationComplete h3									{text-align:center; font-size:20px; font-weight:bold}
+.popupApplicationComplete .box									{margin-top:20px; padding:20px; background-color:#f0f0f0; text-align:center}
+.popupApplicationComplete .box h4								{font-size:15px; font-weight:500}
+.popupApplicationComplete .box p								{margin:12px 0; text-align:center; font-size:13.5px; color:#646464}
+.popupApplicationComplete .box .button							{display:inline-block; padding:0 15px; height:40px; line-height:40px; font-size:14px}
+.popupApplicationComplete .box .button img						{vertical-align:middle}
+.popupApplicationComplete .box .skyblue							{background-color:#00a5ec}
+.popupApplicationComplete .box .yellow							{background-color:#fee500; font-weight:500; color:#333 !important}
+
+
+
+.popupApplicationAgree											{}
+.popupApplicationAgree .middle									{position:relative; height:500px; border:1px solid #ccc}
+.popupApplicationAgree .middle iframe							{position:absolute; left:0; top:0; width:100%; height:100%; background-color:white; border:none; overflow:auto}

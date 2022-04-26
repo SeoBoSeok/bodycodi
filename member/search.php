@@ -24,7 +24,8 @@ for($i=0; $m_data=sql_fetch_array($result_member); $i++) {
   // service list
   $_service_list = array();
   
-  $sql_service = " SELECT * FROM service_list ";
+  $sql_service = " SELECT * FROM service_list WHERE seqMember = '{$member['mb_id']}' ";
+  // echo $sql_service;
   
   $result_service = sql_query($sql_service);
   for($i=0; $row=sql_fetch_array($result_service); $i++) {

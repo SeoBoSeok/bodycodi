@@ -407,7 +407,7 @@ const memberController = {
 	},
 
 	passList : function(seqMember, query) {
-		let url = "/member/" + seqMember + "/pass/list";
+		let url = "/member/pass/list";
 		const getQueryString = () => {
 			if(!query) return "";
 			const queryList = [];
@@ -417,18 +417,19 @@ const memberController = {
 		};
 		return new Promise(function(resolve, reject) {
 			$.ajax({
-				url			: "/member/" + seqMember + "/pass/list" + getQueryString(),
+				url			: "/member/pass/list" + `?id=${seqMember}` + getQueryString(),
 				type		: "get",
 				contentType : "application/json;charset=utf-8",
 				success 	: function(data) {
-					for(let name in data) {
-						data[name] = data[name].sort(function(a, b) {
+					jdata = JSON.parse(data);
+					for(let name in jdata) {
+						jdata[name] = jdata[name].sort(function(a, b) {
 							const dateA = new Date(a.regDt).getTime();
 							const dateB = new Date(b.regDt).getTime();
 							return (dateA == dateB) ? 0 : (dateA < dateB) ? 1 : -1;
 						});
 					}
-					resolve(data);
+					resolve(JSON.parse(data));
 				},
 				error		: function(data) {
 					reject(data);

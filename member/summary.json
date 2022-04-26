@@ -1,0 +1,78 @@
+{
+  "seqMember": 1484302,
+  "memberName": "장우준",
+  "mobile": "010-3279-0440",
+  "membershipNo": "0440",
+  "birthday": "2022-02-04",
+  "sex": "M",
+  "zipCode": null,
+  "address": null,
+  "addressDetail": null,
+  "email": null,
+  "memo": "바디코디 회원앱",
+  "smsAgreeYn": "N",
+  "point": 9500,
+  "mobileMemberEmail": "woojoon@bodycodi.com",
+  "recommendSeqMember": null,
+  "recommendMemberName": null,
+  "inboundPathAttr": null,
+  "inboundPathName": null,
+  "imgUrl": "https://d27pagl1acwik5.cloudfront.net/member/774/2022/02/28/20220228153031member.png",
+  "regDt": "2021-09-15",
+  "cumulativeUseCount": 2,
+  "firstPaymentDate": "2021-09-15",
+  "latestPaymentDate": "2022-04-01",
+  "finalExpirationDate": "2023-02-24",
+  "latestVisitDate": "2022-03-23",
+  "seqPartnerCoach": 21160,
+  "coachName": "윤지영",
+  "seqPartner": 774,
+  "partnerName": "바디코디",
+  "seqPartnerBranch": null,
+  "branchName": null,
+  "seqPartnerBranches": null,
+  "branchNames": null,
+  "entranceBarcode": "0440",
+  "safeCheckinFlag": null,
+  "memberGroupList": [
+    {
+      "seqGroup": 703,
+      "groupName": "최진호 그룹 확인"
+    }
+  ],
+  "lockerList": [
+    {
+      "seqPartnerLockerList": 730502,
+      "seqPartnerLocker": 2617,
+      "lockerNo": 1,
+      "lockerName": "우준기간테스트",
+      "startDt": "2022-03-23",
+      "endDt": "2022-03-23"
+    }
+  ],
+  "expirationDateList": [
+    {
+      "serviceType": "APPOINTMENT",
+      "startDate": "2021-09-15",
+      "endDate": "2022-09-28"
+    },
+    {
+      "serviceType": "CLASS",
+      "startDate": "2021-10-07",
+      "endDate": "2023-02-24"
+    },
+    {
+      "serviceType": "PLACE",
+      "startDate": "2022-02-04",
+      "endDate": "2022-08-03"
+    }
+  ],
+  "passInfoPauseList": [],
+  "appointmentCoachNames": [
+    "강동원",
+    "장우준",
+    "윤지영",
+    "골프 프로"
+  ],
+  "memberPartnerBranchMemoList": null
+}

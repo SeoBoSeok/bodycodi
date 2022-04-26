@@ -23,7 +23,7 @@ const commonController = {
 	placeList : function() {
 		return new Promise(function(resolve, reject) {
 			$.ajax({
-				url			: "/place/list",
+				url			: "/place/list.php",
 				type		: "get",
 				contentType : "application/json;charset=utf-8",
 				dataType	: "json",
@@ -43,7 +43,7 @@ const commonController = {
 	salesClassificationList : function() {
 		return new Promise(function(resolve, reject) {
 			$.ajax({
-				url			: "/sales-classification/list",
+				url			: "/sales-classification/list.php",
 				type		: "get",
 				contentType : "application/json;charset=utf-8",
 				dataType	: "json",
@@ -468,7 +468,7 @@ const commonController = {
 			list : function() {
 				return new Promise(function(resolve, reject) {
 					$.ajax({
-						url			: "/partner/branch/type/list",
+						url			: "/partner/branch/type/list.php",
 						type		: "get",
 						contentType : "application/json;charset=utf-8",
 						dataType	: "json",

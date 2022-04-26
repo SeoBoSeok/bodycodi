@@ -26,33 +26,6 @@ array_push($data, array(
   "comment" => "",
   "isCompleted" => true
 ));
-array_push($data, array(
-  "seqTodo" => 1444,
-  "seqPartnerCoach" => 9807,
-  "startAt" => "2021-02-01T09:00:00+09:00",
-  "endAt" => "2021-12-31T09:00:00+09:00",
-  "message" => "출근 (바디코디 프로그램 로그인)",
-  "comment" => "",
-  "isCompleted" => true
-));
-array_push($data, array(
-  "seqTodo" => 1444,
-  "seqPartnerCoach" => 9807,
-  "startAt" => "2021-02-01T09:00:00+09:00",
-  "endAt" => "2021-12-31T09:00:00+09:00",
-  "message" => "출근 (바디코디 프로그램 로그인)",
-  "comment" => "",
-  "isCompleted" => true
-));
-array_push($data, array(
-  "seqTodo" => 1444,
-  "seqPartnerCoach" => 9807,
-  "startAt" => "2021-02-01T09:00:00+09:00",
-  "endAt" => "2021-12-31T09:00:00+09:00",
-  "message" => "출근 (바디코디 프로그램 로그인)",
-  "comment" => "",
-  "isCompleted" => true
-));
 
 $return = array();
 

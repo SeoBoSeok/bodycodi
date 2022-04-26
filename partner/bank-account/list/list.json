@@ -1,0 +1,41 @@
+[
+  {
+    "seqBankAccount": 42,
+    "seqPartner": 774,
+    "bankCode": "011",
+    "bankName": "NH농협",
+    "accountNumber": "1111111111",
+    "accountHolder": "김반석",
+    "useYn": "Y",
+    "regDt": "2020-09-25T14:26:50",
+    "regId": 9807,
+    "updateDt": "2022-03-23T11:25:07",
+    "updateId": 9806
+  },
+  {
+    "seqBankAccount": 125,
+    "seqPartner": 774,
+    "bankCode": "004",
+    "bankName": "국민은행",
+    "accountNumber": "111111111",
+    "accountHolder": "1111",
+    "useYn": "Y",
+    "regDt": "2021-01-28T17:04:05",
+    "regId": 9807,
+    "updateDt": "2022-03-23T11:25:07",
+    "updateId": 9806
+  },
+  {
+    "seqBankAccount": 218,
+    "seqPartner": 774,
+    "bankCode": "020",
+    "bankName": "우리은행",
+    "accountNumber": "10022222524586943",
+    "accountHolder": "ㅇㅇㅇ",
+    "useYn": "Y",
+    "regDt": "2021-09-01T19:25:05",
+    "regId": 9807,
+    "updateDt": "2022-03-23T11:25:07",
+    "updateId": 9806
+  }
+]

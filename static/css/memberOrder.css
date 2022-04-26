@@ -1,0 +1,439 @@
+/* ******** 기본 레이아웃 ******** */
+
+section .bottom									{margin-top:35px; text-align:center; font-size:0}
+section .bottom .hidden							{display:none}
+section .bottom button							{margin:0 5px; width:150px}
+section .bottom button + button					{margin-left:5px !important}
+
+section.submit									{margin:60px 0 25px; text-align:center; font-size:0}
+section.submit button							{margin:0 5px; width:150px}
+section.submit button + button					{margin-left:5px !important}
+
+section.hidden									{display:none}
+
+section.ui-cutoff + section						{margin-top:55px}
+
+main .ui-tab									{margin-bottom:25px}
+main .ui-title									{margin-bottom:25px}
+main .ui-title.search							{padding-bottom:8px; line-height:35px}
+main .ui-title.search span						{position:relative; float:right; font-size:13px}
+main .ui-title.search span a					{display:none; position:absolute; right:0; top:0; width:30px; height:35px; background:url(/static/img/icon/icon_close_black.png) no-repeat center center / 10px; opacity:0.33}
+main .ui-title.search span a:hover				{opacity:1}
+main .ui-title.search span input				{width:225px; max-width:225px; text-align:center; box-sizing:border-box}
+main .ui-title.search span.focus a				{display:block}
+main .ui-title.search span.focus input			{padding-right:35px}
+
+main .ui-tab.block								{margin-bottom:35px}
+main table + hr									{margin:40px 0; border-bottom:1px dashed #ccc}
+main > .hidden,
+main td.hidden,
+main tr.hidden									{display:none}
+/*
+main .ui-table tr.history						{background-color:rgba(255,87,34,0.125)}
+main .ui-table tr.history td					{position:relative}
+main .ui-table tr.history td:after				{content:""; position:absolute;	left:0;	top:50%; width:100%; height:0; border-top:1px solid #bbb}
+*/
+main .ui-sub-title								{position:relative; margin-bottom:10px}
+main table + .ui-sub-title						{margin-top:35px}
+main .statement > ul > li + li					{margin-top:35px}
+
+.ui-list-result > div + div						{margin-top:35px}
+
+main table tr.remove							{background-color:rgba(255,87,34,0.1)}
+main table tr.update							{background-color:rgba(55,183,114,0.15)}
+main table td h6								{font-size:11px}
+
+
+
+	/* ******* 통합 판매 로직 ******** */
+.orderPayment .ui-note.error									{display:none}
+.orderPayment .ui-note.error.focus								{display:block}
+.orderPayment .ui-summary.hidden								{display:none}
+
+.orderPayment table button										{line-height:34px}
+.orderPayment table button.medium								{width:auto; min-width:auto; height:auto; line-height:20px; font-size:12px}
+
+.orderPayment .orderInfo										{}
+.orderPayment .orderInfo > div + div							{margin-top:35px}
+
+.orderPayment .passInfo input,
+.orderPayment .passInfo select,
+.orderPayment .passInfo button									{height:33px; line-height:32px; font-size:13px}
+.orderPayment .passInfo input									{width:125px}
+.orderPayment .passInfo select									{width:100%; min-width:125px; max-width:150px}
+.orderPayment .passInfo button.pencil							{padding-right:28px; min-width:125px; background:url(/static/img/icon/icon_pencil_gray.png) no-repeat right 5px center / 15px}
+.orderPayment .passInfo .hidden									{display:none}
+.orderPayment .passInfo td.wide									{min-width:280px}
+.orderPayment .passInfo td .ui-select							{max-width:135px}
+.orderPayment .passInfo td .ui-select + .ui-select				{margin-left:5px}
+
+.orderPayment .paymentInfo .middle .ui-note						{margin-bottom:10px; line-height:1.6; color:#222}
+.orderPayment .paymentInfo .middle .ui-note b					{color:#111}
+.orderPayment .paymentInfo .middle .ui-note li.bold				{font-weight:500}
+.orderPayment .paymentInfo .middle .ui-note li.gray				{color:#888}
+.orderPayment .paymentInfo .middle .ui-note .desc li			{position:relative; padding-left:0.75em}
+.orderPayment .paymentInfo .middle .ui-note .desc li:before		{content:"•"; position:absolute; left:0}
+.orderPayment .paymentInfo .middle .ui-note em,
+.orderPayment .paymentInfo .middle .ui-note button				{margin-top:-2px}
+.orderPayment .paymentInfo .middle .ui-note label + label		{margin-left:10px !important}
+.orderPayment .paymentInfo .middle .ui-note .right				{float:right; color:#333}
+.orderPayment .paymentInfo .middle .ui-note + .ui-note			{margin:15px 0 10px 0}
+.orderPayment .paymentInfo .middle table input					{margin-right:5px; width:calc(100% - 2em); max-width:135px; height:33px; line-height:33px; text-align:right; font-size:13px}
+.orderPayment .paymentInfo .middle table td:nth-child(3)		{display:none}
+.orderPayment .paymentInfo .middle table.focus td:nth-child(3)	{display:table-cell}
+.orderPayment .paymentInfo .middle td.coupon span				{display:none}
+.orderPayment .paymentInfo .middle td.coupon.create span.create,
+.orderPayment .paymentInfo .middle td.coupon.update span.update	{display:block}
+.orderPayment .paymentInfo .middle td.hidden					{display:none}
+
+.orderPayment .paymentList var									{margin-right:1px}
+.orderPayment .paymentList dl > *								{vertical-align:top}
+
+@media(max-width:1550px) {
+.orderPayment.update .paymentList table td:nth-child(5)			{display:none}
+}
+
+.orderPayment .paymentSummaryInfo								{width:300px; padding-left:25px}
+.orderPayment .paymentSummaryInfo .box							{position:relative; padding:10px; background-color:white; border:1px solid #ccc}
+.orderPayment .paymentSummaryInfo table + table					{margin-top:10px}
+.orderPayment .paymentSummaryInfo table tr > *					{position:relative; padding:8px !important; line-height:1.3}
+.orderPayment .paymentSummaryInfo table tr > th					{vertical-align:middle; width:auto; background-color:#f0f0f0; text-align:center; overflow:visible !important}
+.orderPayment .paymentSummaryInfo table tr td					{text-align:right}
+.orderPayment .paymentSummaryInfo table tr.hidden				{display:none}
+
+
+
+
+
+
+/* ******** 할인 및 마일리지 ******** */
+
+main.discount .statement td.remain					{max-width:100px}
+main.discount .statement td.remain input			{margin-right:5px; max-width:135px; text-align:center}
+main.discount .statement td:last-child				{padding:0 8px}
+main.discount .statement td button					{position:relative}
+main.discount .statement td button + button			{display:none; margin-left:3px !important}
+main.discount .statement td.focus button + button	{display:inline-block}
+main.discount .statement .ui-note span				{float:right; font-weight:500}
+main.discount .statement .ui-note span button		{vertical-align:baseline; margin-top:-1px; margin-right:-1px; margin-left:2px}
+main.discount .ui-title.tip							{position:relative; overflow:visible}
+main.discount .ui-title.tip:before					{content:"🠛"; position:absolute; right:10px; bottom:-78px; font-size:100px; color:#ff5722; opacity:0; transform:rotate(45deg); animation:tip-change 1s 200}
+
+@keyframes tip-change {
+	0%		{opacity:0}
+	50%		{opacity:1}
+	100%	{opacity:0}
+}
+
+
+
+/* ******** 결제내역 사이드바 ******** */
+
+.ui-receipt + main								{margin-right:340px !important; border-right:none !important}
+main.receipt									{margin-right:380px; border-right:1px solid #ccc}
+main .ui-receipt								{margin-top:60px; margin-right:-375px; top:140px}
+
+.ui-receipt										{float:right; top:145px; margin-right:40px; margin-top:100px; padding:15px; width:300px; background-color:white; border:2px solid #333}
+.ui-receipt .ui-sub-title						{margin-bottom:10px}
+.ui-receipt .red								{color:#ff5722}
+.ui-receipt .green								{color:#37b772}
+
+.ui-receipt table								{line-height:1.3}
+.ui-receipt h4 + table							{border-top:2px solid #333}
+.ui-receipt table + table						{margin-top:15px}
+
+.ui-receipt table tr							{border-bottom:1px solid #ccc}
+.ui-receipt table tr:first-child				{border-top:1px solid #ccc}
+.ui-receipt table th							{width:45%; background-color:#f2f2f2; text-align:center; font-weight:500}
+.ui-receipt table td							{text-align:right}
+.ui-receipt table td.empty						{text-align:center}
+.ui-receipt table tr > *						{padding:8px}
+
+.ui-receipt b									{display:block; font-size:17px; font-weight:500}
+.ui-receipt > div + div							{margin-top:25px}
+
+.ui-receipt .summary span						{font-size:11px; color:#999}
+
+.ui-receipt .submit								{margin-top:25px}
+.ui-receipt .submit button						{width:100%}
+.ui-receipt .submit button + button				{margin:0; margin-top:7px}
+.ui-receipt .submit dt							{width:35%}
+.ui-receipt .submit dd							{padding-left:10px}
+
+.ui-receipt .detail a							{}
+.ui-receipt .detail button						{margin-left:5px; padding:0 4px; border:1px solid #ccc; font-size:11px}
+
+.ui-receipt .line								{position:relative; margin:20px 0; border-top:1px dashed #ccc}
+
+.ui-receipt .return								{position:absolute; top:-35px; right:10px; line-height:35px; text-align:right}
+.ui-receipt .return a							{padding-left:20px; background:url(/static/img/icon/icon_return_gray.png) no-repeat left center / 15px}
+
+
+
+
+
+/* ******** 결제내역 사이드바 내 팝업 ******** */
+
+.ui-receipt-popup											{}
+.ui-receipt-popup .middle									{padding:18px 25px}
+.ui-receipt-popup .section + .section						{margin-top:25px}
+.ui-receipt-popup hr										{margin:15px 0; border-bottom:1px dashed #ccc}
+.ui-receipt-popup input										{max-width:150px; text-align:center}
+.ui-receipt-popup select									{text-align-last:center}
+.ui-receipt-popup table										{text-align:left; line-height:35px}
+.ui-receipt-popup .info table								{line-height:25px}
+.ui-receipt-popup table th									{width:120px; font-weight:500}
+.ui-receipt-popup table th.top								{vertical-align:top}
+.ui-receipt-popup table tr > *								{padding:5px 0}
+.ui-receipt-popup table input[name="confirm"]				{max-width:200px}
+.ui-receipt-popup td .wrap									{margin-left:-5px; margin-right:-5px}
+.ui-receipt-popup td > ul > li + li							{margin-top:10px}
+.ui-receipt-popup .ui-input-date							{display:inline-block}
+.ui-receipt-popup .ui-input-date div input					{width:115px !important; margin-right:10px}
+.ui-receipt-popup .account input:first-child				{max-width:200px}
+.ui-receipt-popup .account input + input					{margin-left:7px; max-width:100px}
+
+.ui-receipt-popup select[name="hour"],
+.ui-receipt-popup select[name="minute"]						{margin:0 5px; width:70px}
+
+.ui-receipt-popup dd 										{padding:0 5px}
+.ui-receipt-popup dd input									{width:100% !important}
+
+.ui-receipt-popup input + .ui-input-checkbox,
+.ui-receipt-popup select + .ui-input-checkbox				{margin-left:10px}
+.ui-receipt-popup .receipt-detail							{display:none; margin-top:5px}
+.ui-receipt-popup .receipt-detail.focus						{display:block}
+.ui-receipt-popup .receipt-detail ul						{line-height:33px}
+.ui-receipt-popup .receipt-detail dl						{margin-top:10px}
+.ui-receipt-popup .receipt-detail dl dt						{width:100px}
+.ui-receipt-popup .receipt-detail dl dd						{padding:0}
+.ui-receipt-popup .receipt-detail dl dt + dd				{padding-left:10px}
+.ui-receipt-popup .receipt-detail dl select,
+.ui-receipt-popup .receipt-detail dl input					{width:100%; max-width:100%}
+.ui-receipt-popup .receipt-detail dl dt + dd input			{display:none; margin:0}
+.ui-receipt-popup .receipt-detail dl dt + dd input.focus	{display:block}
+.ui-receipt-popup .receipt-detail .tab						{display:none}
+.ui-receipt-popup .receipt-detail .tab.focus				{display:block}
+
+.ui-receipt-popup .ui-select.date							{width:65px; margin:0 5px}
+
+
+
+
+
+/* ******** 사용자 이용권 목록 ******** */
+/*
+.ui-empty-box				{position:relative; padding:247px 0; background-color:white}
+.ui-empty-box:before		{content:""; position:absolute; left:50%; margin-left:-100px; top:50%; margin-top:-100px; width:200px; height:200px; background:url(/static/img/brand/symbol_gray.png) no-repeat center center / 75%}
+.ui-empty-box:after			{content:"구매하신 이용권이 없습니다."}
+*/
+.ui-ticket-list > ul										{display:block; margin-left:-10px; margin-right:-10px; text-align:left; letter-spacing:0; font-size:0}
+.ui-ticket-list > ul > li									{position:relative; display:inline-block; vertical-align:top; padding:10px; width:33.33%; box-sizing:border-box}
+.ui-ticket-list > ul > li.empty								{width:100% !important; text-align:center; font-size:13.5px}
+.ui-ticket-list > ul > li.empty.box							{padding:200px 0; font-size:21px; color:#c0c0c0}
+/*
+.ui-ticket-list > ul > li.empty.box:after					{content:"사이드 메뉴에서 이용권 판매 버튼을 클릭하시면 \A 이용권을 판매하실 수 있습니다."; display:block; margin-top:5px; line-height:1.5; white-space:pre; font-size:14px; color:#bbb}
+*/
+.ui-ticket-list .ticket										{position:relative; padding:0 15px; border:1px solid #ccc; font-size:13px}
+.ui-ticket-list .ticket > div								{padding:15px 0}
+.ui-ticket-list .ticket > div + div							{border-top:1px dashed #ccc}
+
+.ui-ticket-list .ticket .top								{}
+.ui-ticket-list .ticket .top > em							{margin:0; margin-bottom:5px; padding-top:2px; width:52px; height:20px; border-radius:20px; line-height:20px; text-align:center; letter-spacing:-0.1px}
+.ui-ticket-list .ticket .top > em + em						{margin-left:5px}
+.ui-ticket-list .ticket .top h4								{position:relative; font-size:15px}
+.ui-ticket-list .ticket .top h4 em							{margin-right:2px; margin-bottom:4px}
+.ui-ticket-list .ticket .top var							{position:absolute; right:15px; top:15px; font-size:13px; color:#c0c0c0}
+.ui-ticket-list .ticket .top button							{position:absolute; right:15px; top:50px; padding:1px 8px 0 8px}
+
+.ui-ticket-list .ticket .top > span							{display:block; font-size:13.5px; color:rgb(100,100,100); white-space:nowrap; text-overflow:ellipsis; overflow:hidden}
+.ui-ticket-list .ticket .top .time							{margin-top:10px; height:45px; background-color:#f2f2f2; text-align:center; font-size:13.5px; font-weight:500; box-sizing:border-box}
+.ui-ticket-list .ticket .top .time dd						{padding:0 10px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden}
+.ui-ticket-list .ticket .top .time div + div				{font-size:12.5px; font-weight:normal; color:#999}
+.ui-ticket-list .ticket .top .time b						{font-weight:500}
+.ui-ticket-list .ticket .top > em.other						{height:18px; background-color:white !important; border:1px solid #37b772; line-height:18px; font-weight:500; color:#37b772 !important}
+.ui-ticket-list .ticket .top > em.bpay						{background:url(/static/img/bpay/icon_badge.svg) no-repeat center center; border-radius:0}
+.ui-ticket-list .expired .ticket .top > em.other			{border-color:#42485a; color:#42485a !important}
+
+.ui-ticket-list .ticket .top div.bg							{position:absolute; left:0; top:0; width:100%; height:4px}
+
+.ui-ticket-list .ticket .middle table						{line-height:1.5}
+.ui-ticket-list .ticket .middle table tr					{border-bottom:1px solid #ccc}
+.ui-ticket-list .ticket .middle table tr:first-child		{border-top:1px solid #ccc}
+.ui-ticket-list .ticket .middle table tr > *				{padding:5px; /*border:1px solid #ccc*/ text-overflow:ellipsis; white-space:nowrap; overflow:hidden}
+
+.ui-ticket-list .ticket .middle table tr th					{width:35%; background-color:#f2f2f2; font-weight:500}
+.ui-ticket-list .ticket .middle table + table				{margin-top:10px}
+
+.ui-ticket-list .ticket .bottom table td					{position:relative; /*padding:2px*/ border:1px solid #ccc}
+.ui-ticket-list .ticket .bottom table td button				{width:100%; height:33px; background-color:white; /*border:1px solid #ccc*/ border:none}
+.ui-ticket-list .ticket .bottom table td button:hover		{background-color:rgba(33,150,243,0.15)}
+.ui-ticket-list .ticket .bottom table td button.disabled	{color:rgba(255,87,34,0.85)}
+.ui-ticket-list .ticket .bottom table td button[disabled]	{background-color:white !important; opacity:0.33; cursor:default}
+.ui-ticket-list .ticket .bottom table td button + div		{position:absolute; left:0; top:0; width:100%; height:100%}
+
+.ui-ticket-list .break										{position:relative}
+.ui-ticket-list .break:before								{content:""; position:absolute; left:-16px; top:-9px; width:7px; height:14px; background-color:white; border-top-right-radius:14px; border-bottom-right-radius:14px; border:1px solid #ccc; border-left:none}
+.ui-ticket-list .break:after								{content:""; position:absolute; right:-16px; top:-9px; width:7px; height:14px; background-color:white; border-top-left-radius:14px; border-bottom-left-radius:14px; border:1px solid #ccc; border-right:none}
+
+.ui-ticket-list												{margin-top:-10px}
+.ui-tab + .ui-ticket-list									{margin-top:0}
+.ui-ticket-list .ui-input-radio,
+.ui-ticket-list .ui-input-checkbox							{position:static; padding:0}
+.ui-ticket-list .ui-input-radio input + span,
+.ui-ticket-list .ui-input-checkbox input + span				{left:auto; bottom:auto; top:25px; right:22px; width:19px; height:19px; border-radius:0}
+.ui-ticket-list input:checked + span + div,
+.ui-ticket-list input:checked + span + div .break:before,
+.ui-ticket-list input:checked + span + div .break:after		{border-color:#37b772 !important}
+
+
+.contents.tips.hidden .ui-ticket-list:after					{content:""; display:table; clear:both}
+.contents.tips.hidden .ui-ticket-list > ul > li				{float:left; width:25%}
+
+@media(max-width:1700px) {
+.ui-ticket-list > ul > li									{width:50%}
+.contents.tips.hidden .ui-ticket-list > ul > li				{width:33.33%}
+}
+
+@media(max-width:1280px) {
+.ui-ticket-list > ul > li									{width:100%}
+.contents.tips.hidden .ui-ticket-list > ul > li				{width:50%}
+}
+
+
+
+
+
+/* ******** 이용권 기본 정보 ******** */
+
+.ui-ticket-overview table									{text-align:left}
+.ui-ticket-overview table th								{width:20%; background-color:#f2f2f2}
+.ui-ticket-overview table td								{position:relative; width:30%; white-space:normal}
+.ui-ticket-overview table td a								{text-decoration:underline}
+.ui-ticket-overview table td a,
+.ui-ticket-overview table td button							{float:right; font-size:12px !important}
+.ui-ticket-overview table td button							{position:absolute; right:8px; top:0; bottom:0; height:25px; margin:auto 0}
+
+
+
+
+
+/* ******** 구매 가격정책 팝업 ******** */
+
+.popupPurchase												{}
+
+.popupPurchase .tab											{display:none}
+.popupPurchase .tab.focus									{display:block}
+.popupPurchase li + li										{margin-top:35px}
+.popupPurchase li li + li									{margin-top:25px}
+.popupPurchase table										{line-height:35px; text-align:left; table-layout:fixed}
+.popupPurchase table th										{vertical-align:top; width:20%; font-weight:500}
+
+.popupPurchase .ui-tab										{margin:20px 0}
+.popupPurchase .ui-tab li + li								{margin-top:0}
+.popupPurchase .ui-tab div									{padding:0 10px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden}
+
+.popupPurchase .info table									{line-height:inherit; text-align:center}
+.popupPurchase .info table th								{width:20%; background-color:#f2f2f2}
+
+.popupPurchase .form										{padding:20px 25px; background-color:#f2f2f2}
+.popupPurchase .form table tr > *							{padding:5px 0}
+.popupPurchase .form table tr.hidden						{display:none}
+.popupPurchase .form table th								{width:180px}
+.popupPurchase .form p										{margin-top:10px; line-height:1.45}
+.popupPurchase .form hr										{margin:20px 0; border-bottom:1px dashed #bbb}
+.popupPurchase .form input									{margin-right:5px; width:150px !important; background-color:white; text-align:center}
+
+.popupPurchase .form input:focus,
+.popupPurchase .form select:focus							{background-color:#e8f4fe}
+.popupPurchase .form input[disabled]						{background-color:#ebebe4}
+
+.popupPurchase .form select									{background-color:white; width:150px; text-align-last:center}
+.popupPurchase .form input + select							{width:90px}
+.popupPurchase .form .ui-input-checkbox						{margin-left:10px}
+
+.popupPurchase .form table dl								{width:auto; table-layout:auto}
+.popupPurchase .form table dl dd							{padding-right:35px}
+.popupPurchase .form table dl dd input						{margin-left:7px; width:82px !important}
+
+.popupPurchase .form .limit									{}
+.popupPurchase .form .limit input							{margin:0 8px; width:75px; max-width:75px}
+.popupPurchase .form .limit div								{display:block; margin-bottom:10px}
+.popupPurchase .form .limit div + .ui-note					{margin-top:0}
+.popupPurchase .form .limit label							{margin-right:25px}
+.popupPurchase .form .limit label + label					{margin-left:0}
+
+
+
+
+
+
+/* ******** 할인 및 마일리지 팝업 ******** */
+
+.popupDiscount												{}
+.popupDiscount .middle table								{white-space:normal}
+.popupDiscount .middle table tr th							{width:185px}
+.popupDiscount .middle table tr td							{line-height:1.5}
+
+.popupDiscount .list										{padding:5px; height:300px; background-color:#f0f0f0; border:1px solid #ccc; box-sizing:border-box; overflow-y:auto}
+.popupDiscount .list > ul									{font-size:0}
+.popupDiscount .list > ul > li								{display:inline-block; width:50%; font-size:1rem}
+
+.popupDiscount .list li label								{position:relative; display:block; margin:5px; padding:10px; background-color:white; border:1px solid #ccc}
+.popupDiscount .list li input								{position:absolute; left:0; top:0; width:0; height:0; border:none}
+.popupDiscount .list li input:checked + span				{position:absolute; left:0; top:0; right:0; bottom:0; outline:1px solid #37b772}
+.popupDiscount .list li input:checked + span:after			{content:""; position:absolute; right:0; top:0; width:24px; height:24px; background:#37b772 url(/static/img/icon/icon_check_white.png) no-repeat center center / 50%}
+
+.popupDiscount .list li h4									{font-size:14px}
+.popupDiscount .list li h5									{margin-top:8px; padding-top:5px; border-top:1px dashed #ccc; font-size:1rem; color:#37b772}
+.popupDiscount .list li ul									{color:#646464}
+.popupDiscount .list li ul li								{text-overflow:ellipsis; white-space:nowrap; overflow:hidden}
+.popupDiscount .list li ul li:before						{content:"-"; margin-right:5px}
+
+
+
+
+
+/* ******** 미수금 팝업 ******** */
+
+.popupReceivables											{max-width:1280px}
+.popupReceivables .middle									{max-height:500px; overflow-y:auto}
+.popupReceivables .middle .ui-note							{position:relative; margin:0; margin-bottom:15px; padding:15px; color:#111}
+.popupReceivables .middle .ui-note .right					{position:absolute; margin:auto 0; right:20px; top:0; bottom:0; height:40px; line-height:40px; font-weight:500; color:#555}
+.popupReceivables .middle .ui-note .right div				{display:inline-block; vertical-align:middle; margin-left:12px; line-height:1.4; text-align:center; font-size:18px; color:#555}
+.popupReceivables .middle .ui-note .right div span			{display:block; text-align:center; font-size:13px; font-weight:normal; color:#ff5722}
+
+.popupReceivables .middle table td:last-child				{padding:4px 8px}
+.popupReceivables .middle table thead td:last-child			{width:150px}
+.popupReceivables .middle table td input					{margin-right:5px; width:125px; height:30px; text-align:center}
+.popupReceivables .middle table tbody tr:last-child td.em	{border-bottom:2px solid #42485a}
+
+
+
+
+
+/* ******** 옵션 변경 팝업 ******** */
+
+.popupChangeOption input,
+.popupChangeOption select									{max-width:150px; width:150px}
+.popupChangeOption .hidden									{display:none}
+.popupChangeOption td										{white-space:normal}
+.popupChangeOption .hidden + td label						{margin-right:25px}
+.popupChangeOption .hidden + td label + label				{margin-left:0}
+
+
+
+
+
+/* ******** 이용권 중지 팝업 ******** */
+
+.popupPause													{}
+.popupPause .middle											{line-height:35px}
+.popupPause .middle li + li									{margin-top:15px}
+.popupPause .middle div + div								{margin:0}
+.popupPause .middle input									{margin:0 5px}
+.popupPause .middle input[type=number]						{width:75px; text-align:center}
+/*
+.popupPause .middle label span + span						{display:none}
+.popupPause .middle label input:checked + span + span		{display:inline-block}
+*/
